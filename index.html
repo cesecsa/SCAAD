@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div id="preloader"></div>
+    <section id="home">
+      <video autoplay muted loop id="video-bg">
+        <source
+          src="resources\videos\AdobeStock_442933791_x264.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support HTML5 video.
+      </video>
+      <div class="content">
+        <h1>SOUTHLAND COLLEGE</h1>
+        <p>Analysis and Design</p>
+        <div class="getstarted">
+          <a href="home.html">Let's get started </a>
+        </div>       
+      </div>
+    </section>
+
+    <script src="index.js" charset="utf-8"></script>
+    <script>
+      window.onload = function () {
+        var preloader = document.getElementById("preloader");
+        preloader.style.opacity = "0";
+        setTimeout(function () {
+          preloader.style.display = "none";
+        }, 500);
+      };
+    </script>
+  </body>
+</html>

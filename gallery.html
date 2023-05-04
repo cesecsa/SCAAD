@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible"
+        content="IE=edge" />
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
+  <title>SC DESIGN AND ANALYSIS</title>
+  <link rel="stylesheet"
+        href="styles.css" />
+</head>
+
+<body>
+  <div id="preloader"></div>
+  <div class="bbody">
+    <div class="left">
+      <div class="container">
+        <div class="logo">
+          <a href="index.html">
+            <img src="resources\images\SC Logo.png"
+                 alt="" />
+            <span class="projname">ANALYSIS & DESIGN</span>
+          </a>
+        </div>
+      </div>
+      <div class="menu">
+        <ul class="submenu">
+          <li>
+            <a href="home.html"><img src="resources\images\home_FILL0_wght400_GRAD0_opsz48.svg"
+                   alt="" />HOME
+            </a>
+          </li>
+          <li class="submenu2">
+            <a href="slaboneway.html"><img src="resources\images\grid_4x4_FILL0_wght400_GRAD0_opsz48.svg"
+                   alt="" />SLABS
+            </a>
+            <ul class="dropdown">
+              <li><a href="slaboneway.html">ONE WAY</a></li>
+              <li><a href="slabtwoway.html">TWO WAY</a></li>
+            </ul>
+          </li>
+          <li class="submenu2">
+            <a href="singly.html"><img class="rotate"
+                   src="resources\images\border_inner_FILL0_wght400_GRAD0_opsz48.svg"
+                   alt="" />BEAMS
+            </a>
+            <ul class="dropdown">
+              <li>
+                <a href="singly.html">SINGLY</a>
+              </li>
+              <li><a href="doubly.html">DOUBLY</a></li>
+            </ul>
+          </li>
+          <li class="submenu2">
+            <a href="loaddistribution.html"><img
+                   src="resources\images\vertical_shades_closed_FILL0_wght400_GRAD0_opsz48.svg"
+                   alt="" />COLUMNS
+            </a>
+            <ul class="dropdown">
+              <li>
+                <a href="loaddistribution.html">DISTRIBUTION</a>
+              </li>
+              <li><a href="design.html">DESIGN</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="seismic.html"><img src="resources\images\landslide_FILL0_wght400_GRAD0_opsz48.svg"
+                   alt="" />SEISMIC
+            </a>
+          </li>
+          <li>
+            <a href="gallery.html"
+               class="active"><img src="resources\images\photo_camera_FILL0_wght400_GRAD0_opsz48.svg"
+                   alt="" />GALLERY
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="right">
+      <div class="gallerybox">
+        <div class="show">
+          <h1>FIRST FLOOR</h1>
+          <img src="resources\images\FIRST FLOOR.png"
+               alt="">
+        </div>
+        <div class="show">
+          <h1>SECOND FLOOR</h1>
+          <img src="resources\images\2ND FLOOR.png"
+               alt="">
+        </div>
+        <div class="show">
+          <h1>THIRD FLOOR</h1>
+          <img src="resources\images\3RD FLOOR.png"
+               alt="">
+        </div>
+        <div class="show">
+          <h1>ROOF BEAMS</h1>
+          <img src="resources\images\RB1.png"
+               alt="">
+        </div>
+        <div class="show">
+          <h1>STRUCTURAL FRAME</h1>
+          <img src="resources\images\Structural Frame.png"
+               alt="">
+        </div>
+        <div class="show">
+          <h1>3D VIEW</h1>
+          <img src="resources\images\3D View.png"
+               alt="">
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    window.onload = function () {
+      var preloader = document.getElementById("preloader");
+      preloader.style.opacity = "0";
+      setTimeout(function () {
+        preloader.style.display = "none";
+      },500);
+    };
+  </script>
+</body>
+
+</html>

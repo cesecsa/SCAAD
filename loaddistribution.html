@@ -1,0 +1,1660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible"
+        content="IE=edge" />
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
+  <title>SC DESIGN AND ANALYSIS</title>
+  <link rel="stylesheet"
+        href="styles.css" />
+</head>
+
+<body>
+  <div id="preloader"></div>
+  <div class="bbody">
+    <div class="left">
+      <div class="container">
+        <div class="logo">
+          <a href="home.html">
+            <img src="resources\images\SC Logo.png"
+                 alt="" />
+            <span class="projname">ANALYSIS & DESIGN</span>
+          </a>
+        </div>
+      </div>
+      <div class="menu">
+        <ul class="submenu">
+          <li>
+            <a href="home.html"><img src="resources\images\home_FILL0_wght400_GRAD0_opsz48.svg"
+                   alt="" />HOME
+            </a>
+          </li>
+          <li class="submenu2">
+            <a href="slaboneway.html"><img src="resources\images\grid_4x4_FILL0_wght400_GRAD0_opsz48.svg"
+                   alt="" />SLABS
+            </a>
+            <ul class="dropdown">
+              <li><a href="slaboneway.html">ONE WAY</a></li>
+              <li><a href="slabtwoway.html">TWO WAY</a></li>
+            </ul>
+          </li>
+          <li class="submenu2">
+            <a href="singly.html"><img src="resources\images\border_inner_FILL0_wght400_GRAD0_opsz48.svg"
+                   alt="" />BEAMS
+            </a>
+            <ul class="dropdown">
+              <li>
+                <a href="singly.html">SINGLY</a>
+              </li>
+              <li><a href="doubly.html">DOUBLY</a></li>
+            </ul>
+          </li>
+          <li class="submenu2">
+            <a class="active"
+               href="loaddistribution.html"><img
+                   src="resources\images\vertical_shades_closed_FILL0_wght400_GRAD0_opsz48.svg"
+                   alt="" />COLUMNS
+            </a>
+            <ul class="dropdown dropdownshow">
+              <li>
+                <a href="loaddistribution.html"
+                   style="color: #33cabb">DISTRIBUTION</a>
+              </li>
+              <li><a href="design.html">DESIGN</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="seismic.html"><img src="resources\images\landslide_FILL0_wght400_GRAD0_opsz48.svg"
+                   alt="" />SEISMIC
+            </a>
+          </li>
+          <li>
+            <a href="gallery.html"><img src="resources\images\photo_camera_FILL0_wght400_GRAD0_opsz48.svg"
+                   alt="" />GALLERY
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="right">
+      <div class="outcontainer">
+        <div class="incontainer">
+          <div class="incontainercol2">
+            <h2>COLUMN LOAD DISTRIBUTION USING REACTIONS</h2>
+            <div class="cmdBtn">
+              <button id="myBtn">Project Name</button>
+              <button id="myPrint">Print/Save</button>
+              <div id="myModal"
+                   class="modal">
+                <div class="modal-content">
+                  <textarea name="text"
+                            id="text-area"
+                            cols="30"
+                            rows="5"
+                            placeholder="Project Title Here"></textarea>
+                </div>
+                <div class="modalBtn">
+                  <button id="save">Save</button>
+                  <button id="cancel">Cancel</button>
+                </div>
+
+              </div>
+            </div>
+            <div class="datacontainer">
+              <div class="datatables">
+                <div class="incontainercol">
+                  <span class="spantitle">At Roof Beam Level</span>
+                  <div class="incontainercol3">
+                    <img src="resources\images\roofbeamlevel3.png"
+                         alt="" />
+                    <div class="incontainercol">
+                      <div>
+                        <div>
+                          <span class="spantitle">Unfactored Loads</span>
+                        </div>
+                        <div>
+                          <table id="roofUnfactoredLoads">
+                            <thead>
+                              <tr>
+                                <th>Roof Beam</th>
+                                <th>Span</th>
+                                <th>Dead Loads</th>
+                                <th>Reaction</th>
+                                <th>Live Load</th>
+                                <th>Reaction</th>
+                              </tr>
+                              <tr>
+                                <th></th>
+                                <th>(m)</th>
+                                <th>(kN/m)</th>
+                                <th>(kN)</th>
+                                <th>(kN/m)</th>
+                                <th>(kN/m)</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>RB1</td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>RB2</td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>RB3</td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>RB4</td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>RB5</td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>RB6</td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>RB7</td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>RB8</td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>RB9</td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>RB10</td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div>
+                        <div>
+                          <span class="spantitle">Concetrated Loads At Columns</span>
+                        </div>
+                        <div>
+                          <table id="roofConcentratedLoad">
+                            <thead>
+                              <tr>
+                                <th>Column</th>
+                                <th>Combination</th>
+                                <th>Total Deadload</th>
+                                <th>Total Live Load</th>
+                              </tr>
+                              <tr>
+                                <td></td>
+                                <td></td>
+                                <td>(kN)</td>
+                                <td>(kN)</td>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>C1</td>
+                                <td>RB5 + RB10</td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>C2</td>
+                                <td>RB5 + RB6</td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>C3</td>
+                                <td>RB6 + RB7</td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>C4</td>
+                                <td>RB1 + RB9 + RB10</td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>C5</td>
+                                <td>RB1 + RB2</td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>C6</td>
+                                <td>RB2 + RB7 + RB8</td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>C7</td>
+                                <td>RB3 + RB9</td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>C8</td>
+                                <td>RB3 + RB4</td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>C9</td>
+                                <td>RB4 + RB8</td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>Maximum Load</td>
+                                <td>=</td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="datacontainer">
+              <div class="datatables">
+                <div class="incontainercol">
+                  <span class="spantitle">At Floor Beam Level</span>
+                  <div class="incontainercol3">
+                    <img src="resources\images\floorbeamlevel.png"
+                         alt="" />
+                    <div class="incontainercol">
+                      <div>
+                        <div>
+                          <span class="spantitle">Unfactored Loads</span>
+                        </div>
+                        <div>
+                          <table id="floorUnfactoredLoad">
+                            <thead>
+                              <tr>
+                                <th>Roof Beam</th>
+                                <th>Span</th>
+                                <th>Dead Loads</th>
+                                <th>Reaction</th>
+                                <th>Live Load</th>
+                                <th>Reaction</th>
+                              </tr>
+                              <tr>
+                                <th></th>
+                                <th>(m)</th>
+                                <th>(kN/m)</th>
+                                <th>(kN)</th>
+                                <th>(kN/m)</th>
+                                <th>(kN/m)</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>FB1</td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>FB2</td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>FB3</td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>FB4</td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>FB5</td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>FB6</td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>FB7</td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>FB8</td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>FB9</td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>FB10</td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999"
+                                         placeholder="Enter value" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                              </tr>
+                              <td>FB11</td>
+                              <td>
+                                <input type="number"
+                                       name=""
+                                       id=""
+                                       min="0"
+                                       max="999999"
+                                       placeholder="Enter value" />
+                              </td>
+                              <td>
+                                <input type="number"
+                                       name=""
+                                       id=""
+                                       min="0"
+                                       max="999999"
+                                       placeholder="Enter value" />
+                              </td>
+                              <td>
+                                <input type="number"
+                                       name=""
+                                       id=""
+                                       min="0"
+                                       max="999999" />
+                              </td>
+                              <td>
+                                <input type="number"
+                                       name=""
+                                       id=""
+                                       min="0"
+                                       max="999999"
+                                       placeholder="Enter value" />
+                              </td>
+                              <td>
+                                <input type="number"
+                                       name=""
+                                       id=""
+                                       min="0"
+                                       max="999999" />
+                              </td>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div>
+                        <div>
+                          <span class="spantitle">Concetrated Loads At Columns</span>
+                        </div>
+                        <div>
+                          <table id="floorConcentratedLoad">
+                            <thead>
+                              <tr>
+                                <th>Column</th>
+                                <th>Combination</th>
+                                <th>Total Deadload</th>
+                                <th>Total Live Load</th>
+                              </tr>
+                              <tr>
+                                <td></td>
+                                <td></td>
+                                <td>(kN)</td>
+                                <td>(kN)</td>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>C1</td>
+                                <td>FB7 + FB8</td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>C2</td>
+                                <td>FB8 + FB9 + FB11</td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>C3</td>
+                                <td>FB9 + FB10</td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>C4</td>
+                                <td>FB2 + FB6 + FB7</td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>C5</td>
+                                <td>FB1 + FB5 + FB6 + FB11</td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>C6</td>
+                                <td>FB3 + FB5 + FB10</td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>C7</td>
+                                <td>FB2 + FB4</td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>C8</td>
+                                <td>FB1 + FB4 + FB5</td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>C9</td>
+                                <td>FB3 + FB5</td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>Maximum Load</td>
+                                <td>=</td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                                <td>
+                                  <input type="number"
+                                         name=""
+                                         id=""
+                                         min="0"
+                                         max="999999" />
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="datacontainer">
+              <div class="datatables">
+                <div class="incontainercol">
+                  <div>
+                    <span class="spantitle">ANALYSIS SUMMARY</span>
+                  </div>
+                  <div>
+                    <table id="analysisSum">
+                      <tbody>
+                        <tr>
+                          <th>Column to be Design</th>
+                          <th>Total Dead Load</th>
+                          <th></th>
+                          <th>Total Live Load</th>
+                        </tr>
+                        <tr>
+                          <td>C4</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   id=""
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                          <td>kN</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   id=""
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                          <td>kN</td>
+                        </tr>
+                        <tr>
+                          <td>C5</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   id=""
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                          <td>kN</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   id=""
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                          <td>kN</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+    <script>
+      window.onload = function () {
+        var preloader = document.getElementById("preloader");
+        preloader.style.opacity = "0";
+        setTimeout(function () {
+          preloader.style.display = "none";
+        },500);
+      };
+
+      const roofUnfactoredLoads = document.getElementById('roofUnfactoredLoads');
+      const roofConcentratedLoad = document.getElementById('roofConcentratedLoad');
+      const floorUnfactoredLoad = document.getElementById('floorUnfactoredLoad');
+      const floorConcentratedLoad = document.getElementById('floorConcentratedLoad');
+      const analysisSum = document.getElementById('analysisSum');
+      let u;
+      let v;
+
+      for (let i = 2; i < floorUnfactoredLoad.rows.length; i++) {
+        let spanCol2 = floorUnfactoredLoad.rows[i].cells[1].querySelector('input');
+        let dLCol2 = floorUnfactoredLoad.rows[i].cells[2].querySelector('input');
+        let rXnCol2 = floorUnfactoredLoad.rows[i].cells[3].querySelector('input');
+        let liveCol2 = floorUnfactoredLoad.rows[i].cells[4].querySelector('input');
+        let liverXnCol2 = floorUnfactoredLoad.rows[i].cells[5].querySelector('input');
+
+        spanCol2.addEventListener('input',newCompute);
+        dLCol2.addEventListener('input',newCompute);
+        liveCol2.addEventListener('input',newCompute);
+
+        function newCompute() {
+          if (isNaN(spanCol2.value)) {
+            spanCol2.value = 0;
+          }
+          if (isNaN(dLCol2.value)) {
+            dLCol2.value = 0;
+          }
+          if (isNaN(liveCol2.value)) {
+            dLCol2.value = 0;
+          }
+          let rXn2 = (parseFloat(spanCol2.value) * parseFloat(dLCol2.value)) / 2;
+          rXnCol2.value = rXn2;
+          let liverXn2 = (parseFloat(spanCol2.value) * parseFloat(liveCol2.value)) / 2;
+          liverXnCol2.value = liverXn2;
+
+          floorConcentratedLoad.rows[2].cells[2].querySelector('input').value = parseFloat(floorUnfactoredLoad.rows[8].cells[3].querySelector('input').value) + parseFloat(floorUnfactoredLoad.rows[9].cells[3].querySelector('input').value);
+          floorConcentratedLoad.rows[3].cells[2].querySelector('input').value = parseFloat(floorUnfactoredLoad.rows[9].cells[3].querySelector('input').value) + parseFloat(floorUnfactoredLoad.rows[10].cells[3].querySelector('input').value) + parseFloat(floorUnfactoredLoad.rows[12].cells[3].querySelector('input').value);
+          floorConcentratedLoad.rows[4].cells[2].querySelector('input').value = parseFloat(floorUnfactoredLoad.rows[10].cells[3].querySelector('input').value) + parseFloat(floorUnfactoredLoad.rows[11].cells[3].querySelector('input').value);
+          floorConcentratedLoad.rows[5].cells[2].querySelector('input').value = parseFloat(floorUnfactoredLoad.rows[3].cells[3].querySelector('input').value) + parseFloat(floorUnfactoredLoad.rows[7].cells[3].querySelector('input').value) + parseFloat(floorUnfactoredLoad.rows[8].cells[3].querySelector('input').value);
+          floorConcentratedLoad.rows[6].cells[2].querySelector('input').value = parseFloat(floorUnfactoredLoad.rows[2].cells[3].querySelector('input').value) + parseFloat(floorUnfactoredLoad.rows[6].cells[3].querySelector('input').value) + parseFloat(floorUnfactoredLoad.rows[7].cells[3].querySelector('input').value) + parseFloat(floorUnfactoredLoad.rows[12].cells[3].querySelector('input').value);
+          floorConcentratedLoad.rows[7].cells[2].querySelector('input').value = parseFloat(floorUnfactoredLoad.rows[4].cells[3].querySelector('input').value) + parseFloat(floorUnfactoredLoad.rows[6].cells[3].querySelector('input').value) + parseFloat(floorUnfactoredLoad.rows[11].cells[3].querySelector('input').value);
+          floorConcentratedLoad.rows[8].cells[2].querySelector('input').value = parseFloat(floorUnfactoredLoad.rows[3].cells[3].querySelector('input').value) + parseFloat(floorUnfactoredLoad.rows[5].cells[3].querySelector('input').value);
+          floorConcentratedLoad.rows[9].cells[2].querySelector('input').value = parseFloat(floorUnfactoredLoad.rows[2].cells[3].querySelector('input').value) + parseFloat(floorUnfactoredLoad.rows[5].cells[3].querySelector('input').value) + parseFloat(floorUnfactoredLoad.rows[6].cells[3].querySelector('input').value);
+          floorConcentratedLoad.rows[10].cells[2].querySelector('input').value = parseFloat(floorUnfactoredLoad.rows[4].cells[3].querySelector('input').value) + parseFloat(floorUnfactoredLoad.rows[6].cells[3].querySelector('input').value);
+          floorConcentratedLoad.rows[2].cells[3].querySelector('input').value = parseFloat(floorUnfactoredLoad.rows[8].cells[5].querySelector('input').value) + parseFloat(floorUnfactoredLoad.rows[9].cells[5].querySelector('input').value);
+          floorConcentratedLoad.rows[3].cells[3].querySelector('input').value = parseFloat(floorUnfactoredLoad.rows[9].cells[5].querySelector('input').value) + parseFloat(floorUnfactoredLoad.rows[10].cells[5].querySelector('input').value) + parseFloat(floorUnfactoredLoad.rows[12].cells[5].querySelector('input').value);
+          floorConcentratedLoad.rows[4].cells[3].querySelector('input').value = parseFloat(floorUnfactoredLoad.rows[10].cells[5].querySelector('input').value) + parseFloat(floorUnfactoredLoad.rows[11].cells[5].querySelector('input').value);
+          floorConcentratedLoad.rows[5].cells[3].querySelector('input').value = parseFloat(floorUnfactoredLoad.rows[3].cells[5].querySelector('input').value) + parseFloat(floorUnfactoredLoad.rows[7].cells[5].querySelector('input').value) + parseFloat(floorUnfactoredLoad.rows[8].cells[5].querySelector('input').value);
+          floorConcentratedLoad.rows[6].cells[3].querySelector('input').value = parseFloat(floorUnfactoredLoad.rows[2].cells[5].querySelector('input').value) + parseFloat(floorUnfactoredLoad.rows[6].cells[5].querySelector('input').value) + parseFloat(floorUnfactoredLoad.rows[7].cells[5].querySelector('input').value) + parseFloat(floorUnfactoredLoad.rows[12].cells[5].querySelector('input').value);
+          floorConcentratedLoad.rows[7].cells[3].querySelector('input').value = parseFloat(floorUnfactoredLoad.rows[4].cells[5].querySelector('input').value) + parseFloat(floorUnfactoredLoad.rows[6].cells[5].querySelector('input').value) + parseFloat(floorUnfactoredLoad.rows[11].cells[5].querySelector('input').value);
+          floorConcentratedLoad.rows[8].cells[3].querySelector('input').value = parseFloat(floorUnfactoredLoad.rows[3].cells[5].querySelector('input').value) + parseFloat(floorUnfactoredLoad.rows[5].cells[5].querySelector('input').value);
+          floorConcentratedLoad.rows[9].cells[3].querySelector('input').value = parseFloat(floorUnfactoredLoad.rows[2].cells[5].querySelector('input').value) + parseFloat(floorUnfactoredLoad.rows[5].cells[5].querySelector('input').value) + parseFloat(floorUnfactoredLoad.rows[6].cells[5].querySelector('input').value);
+          floorConcentratedLoad.rows[10].cells[3].querySelector('input').value = parseFloat(floorUnfactoredLoad.rows[4].cells[5].querySelector('input').value) + parseFloat(floorUnfactoredLoad.rows[6].cells[5].querySelector('input').value);
+          let tDLArray2 = [];
+          let tLLArray2 = [];
+          for (let i = 2; i < floorConcentratedLoad.rows.length - 3; i++) {
+            tDLArray2.push(floorConcentratedLoad.rows[i].cells[2].querySelector('input').value);
+            tLLArray2.push(floorConcentratedLoad.rows[i].cells[3].querySelector('input').value);
+          }
+          floorConcentratedLoad.rows[11].cells[2].querySelector('input').value = Math.max(...tDLArray2);
+          floorConcentratedLoad.rows[11].cells[3].querySelector('input').value = Math.max(...tLLArray2);
+          analysisSum.rows[1].cells[1].querySelector('input').value = parseFloat(floorConcentratedLoad.rows[5].cells[2].querySelector('input').value) + parseFloat(roofConcentratedLoad.rows[5].cells[2].querySelector('input').value);
+          analysisSum.rows[1].cells[3].querySelector('input').value = parseFloat(floorConcentratedLoad.rows[5].cells[3].querySelector('input').value) + parseFloat(roofConcentratedLoad.rows[5].cells[3].querySelector('input').value);
+          analysisSum.rows[2].cells[1].querySelector('input').value = parseFloat(floorConcentratedLoad.rows[6].cells[2].querySelector('input').value) + parseFloat(roofConcentratedLoad.rows[6].cells[2].querySelector('input').value);
+          analysisSum.rows[2].cells[3].querySelector('input').value = parseFloat(floorConcentratedLoad.rows[6].cells[3].querySelector('input').value) + parseFloat(roofConcentratedLoad.rows[6].cells[3].querySelector('input').value);
+        }
+
+        let spanCol = roofUnfactoredLoads.rows[i].cells[1].querySelector('input');
+        let dLCol = roofUnfactoredLoads.rows[i].cells[2].querySelector('input');
+        let rXnCol = roofUnfactoredLoads.rows[i].cells[3].querySelector('input');
+        let liveCol = roofUnfactoredLoads.rows[i].cells[4].querySelector('input');
+        let liverXnCol = roofUnfactoredLoads.rows[i].cells[5].querySelector('input');
+
+        spanCol.addEventListener('input',compute);
+        dLCol.addEventListener('input',compute);
+        liveCol.addEventListener('input',compute);
+
+        function compute() {
+          if (isNaN(spanCol.value)) {
+            spanCol.value = 0;
+          }
+          if (isNaN(dLCol.value)) {
+            dLCol.value = 0;
+          }
+          if (isNaN(liveCol.value)) {
+            dLCol.value = 0;
+          }
+          let rXn = (parseFloat(spanCol.value) * parseFloat(dLCol.value)) / 2;
+          rXnCol.value = rXn;
+          let liverXn = (parseFloat(spanCol.value) * parseFloat(liveCol.value)) / 2;
+          liverXnCol.value = liverXn;
+
+          roofConcentratedLoad.rows[2].cells[2].querySelector('input').value = parseFloat(roofUnfactoredLoads.rows[6].cells[3].querySelector('input').value) + parseFloat(roofUnfactoredLoads.rows[11].cells[3].querySelector('input').value);
+          roofConcentratedLoad.rows[3].cells[2].querySelector('input').value = parseFloat(roofUnfactoredLoads.rows[6].cells[3].querySelector('input').value) + parseFloat(roofUnfactoredLoads.rows[7].cells[3].querySelector('input').value);
+          roofConcentratedLoad.rows[4].cells[2].querySelector('input').value = parseFloat(roofUnfactoredLoads.rows[7].cells[3].querySelector('input').value) + parseFloat(roofUnfactoredLoads.rows[8].cells[3].querySelector('input').value);
+          roofConcentratedLoad.rows[5].cells[2].querySelector('input').value = parseFloat(roofUnfactoredLoads.rows[2].cells[3].querySelector('input').value) + parseFloat(roofUnfactoredLoads.rows[10].cells[3].querySelector('input').value) + parseFloat(roofUnfactoredLoads.rows[11].cells[3].querySelector('input').value);
+          roofConcentratedLoad.rows[6].cells[2].querySelector('input').value = parseFloat(roofUnfactoredLoads.rows[2].cells[3].querySelector('input').value) + parseFloat(roofUnfactoredLoads.rows[3].cells[3].querySelector('input').value);
+          roofConcentratedLoad.rows[7].cells[2].querySelector('input').value = parseFloat(roofUnfactoredLoads.rows[3].cells[3].querySelector('input').value) + parseFloat(roofUnfactoredLoads.rows[8].cells[3].querySelector('input').value) + parseFloat(roofUnfactoredLoads.rows[9].cells[3].querySelector('input').value);
+          roofConcentratedLoad.rows[8].cells[2].querySelector('input').value = parseFloat(roofUnfactoredLoads.rows[4].cells[3].querySelector('input').value) + parseFloat(roofUnfactoredLoads.rows[10].cells[3].querySelector('input').value);
+          roofConcentratedLoad.rows[9].cells[2].querySelector('input').value = parseFloat(roofUnfactoredLoads.rows[4].cells[3].querySelector('input').value) + parseFloat(roofUnfactoredLoads.rows[5].cells[3].querySelector('input').value);
+          roofConcentratedLoad.rows[10].cells[2].querySelector('input').value = parseFloat(roofUnfactoredLoads.rows[5].cells[3].querySelector('input').value) + parseFloat(roofUnfactoredLoads.rows[9].cells[3].querySelector('input').value);
+          roofConcentratedLoad.rows[2].cells[3].querySelector('input').value = parseFloat(roofUnfactoredLoads.rows[6].cells[5].querySelector('input').value) + parseFloat(roofUnfactoredLoads.rows[11].cells[5].querySelector('input').value);
+          roofConcentratedLoad.rows[3].cells[3].querySelector('input').value = parseFloat(roofUnfactoredLoads.rows[6].cells[5].querySelector('input').value) + parseFloat(roofUnfactoredLoads.rows[7].cells[5].querySelector('input').value);
+          roofConcentratedLoad.rows[4].cells[3].querySelector('input').value = parseFloat(roofUnfactoredLoads.rows[7].cells[5].querySelector('input').value) + parseFloat(roofUnfactoredLoads.rows[8].cells[5].querySelector('input').value);
+          roofConcentratedLoad.rows[5].cells[3].querySelector('input').value = parseFloat(roofUnfactoredLoads.rows[2].cells[5].querySelector('input').value) + parseFloat(roofUnfactoredLoads.rows[10].cells[5].querySelector('input').value) + parseFloat(roofUnfactoredLoads.rows[11].cells[5].querySelector('input').value);
+          roofConcentratedLoad.rows[6].cells[3].querySelector('input').value = parseFloat(roofUnfactoredLoads.rows[2].cells[5].querySelector('input').value) + parseFloat(roofUnfactoredLoads.rows[3].cells[5].querySelector('input').value);
+          roofConcentratedLoad.rows[7].cells[3].querySelector('input').value = parseFloat(roofUnfactoredLoads.rows[3].cells[5].querySelector('input').value) + parseFloat(roofUnfactoredLoads.rows[8].cells[5].querySelector('input').value) + parseFloat(roofUnfactoredLoads.rows[9].cells[5].querySelector('input').value);
+          roofConcentratedLoad.rows[8].cells[3].querySelector('input').value = parseFloat(roofUnfactoredLoads.rows[4].cells[5].querySelector('input').value) + parseFloat(roofUnfactoredLoads.rows[10].cells[5].querySelector('input').value);
+          roofConcentratedLoad.rows[9].cells[3].querySelector('input').value = parseFloat(roofUnfactoredLoads.rows[4].cells[5].querySelector('input').value) + parseFloat(roofUnfactoredLoads.rows[5].cells[5].querySelector('input').value);
+          roofConcentratedLoad.rows[10].cells[3].querySelector('input').value = parseFloat(roofUnfactoredLoads.rows[5].cells[5].querySelector('input').value) + parseFloat(roofUnfactoredLoads.rows[9].cells[5].querySelector('input').value);
+
+          let tDLArray = [];
+          let tLLArray = [];
+
+          for (let i = 2; i < roofConcentratedLoad.rows.length - 3; i++) {
+            tDLArray.push(roofConcentratedLoad.rows[i].cells[2].querySelector('input').value);
+            tLLArray.push(roofConcentratedLoad.rows[i].cells[3].querySelector('input').value);
+          }
+          roofConcentratedLoad.rows[11].cells[2].querySelector('input').value = Math.max(...tDLArray);
+          roofConcentratedLoad.rows[11].cells[3].querySelector('input').value = Math.max(...tLLArray);
+        }
+      }
+
+
+
+
+    </script>
+</body>
+
+</html>

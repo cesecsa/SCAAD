@@ -1,0 +1,1702 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible"
+        content="IE=edge" />
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
+  <title>SC DESIGN AND ANALYSIS</title>
+  <link rel="stylesheet"
+        href="styles.css" />
+</head>
+
+<body>
+  <div id="preloader"></div>
+  <div class="bbody">
+    <div class="left">
+      <div class="container">
+        <div class="logo">
+          <a href="home.html">
+            <img src="resources\images\SC Logo.png"
+                 alt="" />
+            <span class="projname">ANALYSIS & DESIGN</span>
+          </a>
+        </div>
+      </div>
+      <div class="menu">
+        <ul class="submenu">
+          <li>
+            <a href="home.html"><img src="resources\images\home_FILL0_wght400_GRAD0_opsz48.svg"
+                   alt="" />HOME
+            </a>
+          </li>
+          <li class="submenu2">
+            <a href="slaboneway.html"><img class="rotate"
+                   src="resources\images\grid_4x4_FILL0_wght400_GRAD0_opsz48.svg"
+                   alt="" />SLABS
+            </a>
+            <ul class="dropdown">
+              <li>
+                <a href="slaboneway.html">ONE WAY</a>
+              </li>
+              <li><a href="slabtwoway.html">TWO WAY</a></li>
+            </ul>
+          </li>
+          <li class="submenu2">
+            <a class="active"
+               href="singly.html"><img src="resources\images\border_inner_FILL0_wght400_GRAD0_opsz48.svg"
+                   alt="" />BEAMS
+            </a>
+            <ul class="dropdown dropdownshow">
+              <li>
+                <a href="singly.html">SINGLY</a>
+              </li>
+              <li><a href="doubly.html"
+                   style="color: #33cabb">DOUBLY</a></li>
+            </ul>
+          </li>
+          <li class="submenu2">
+            <a href="loaddistribution.html"><img
+                   src="resources\images\vertical_shades_closed_FILL0_wght400_GRAD0_opsz48.svg"
+                   alt="" />COLUMNS
+            </a>
+            <ul class="dropdown">
+              <li>
+                <a href="loaddistribution.html">DISTRIBUTION</a>
+              </li>
+              <li><a href="design.html">DESIGN</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="seismic.html"><img src="resources\images\landslide_FILL0_wght400_GRAD0_opsz48.svg"
+                   alt="" />SEISMIC
+            </a>
+          </li>
+          <li>
+            <a href="gallery.html"><img src="resources\images\photo_camera_FILL0_wght400_GRAD0_opsz48.svg"
+                   alt="" />GALLERY
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="right">
+      <div class="outcontainer">
+        <div class="incontainer">
+          <div class="incontainercol2">
+            <h2>FLEXURE DESIGN FOR BEAM 2</h2>
+            <div class="cmdBtn">
+              <button id="myBtn">Project Name</button>
+              <button id="myPrint">Print/Save</button>
+              <div id="myModal"
+                   class="modal">
+                <div class="modal-content">
+                  <textarea name="text"
+                            id="text-area"
+                            cols="30"
+                            rows="5"
+                            placeholder="Project Title Here"></textarea>
+                </div>
+                <div class="modalBtn">
+                  <button id="save">Save</button>
+                  <button id="cancel">Cancel</button>
+                </div>
+
+              </div>
+            </div>
+            <div class="datacontainer">
+              <div class="datatables">
+                <div class="incontainercol">
+                  <div>
+                    <span class="spantitle">Design Data</span>
+                  </div>
+                  <div>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td colspan="4">Tributary Area 1</td>
+                          <td></td>
+                          <td colspan="2">Tributary Area 2</td>
+                        </tr>
+                        <tr>
+                          <td>Floor Load</td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="floorLoadLeft"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>kN/m</td>
+                          <td>&emsp;</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="floorLoadRight"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>kN/m</td>
+                        </tr>
+                        <tr>
+                          <td>Floor Finish</td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="floorFinishLeft"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>kN/m</td>
+                          <td>&emsp;</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="floorFinishRight"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>kN/m</td>
+                        </tr>
+                        <tr>
+                          <td>Partition Load</td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="partitionLeft"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>kN/m</td>
+                          <td>&emsp;</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="partitionRight"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>kN/m</td>
+                        </tr>
+                        <tr>
+                          <td>Utilities</td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="utiLeft"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>kN/m</td>
+                          <td>&emsp;</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="utiRight"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>kN/m</td>
+                        </tr>
+                        <tr>
+                          <td>Ceiling Load</td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="ceilingLeft"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>kN/m</td>
+                          <td>&emsp;</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="ceilingRight"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>kN/m</td>
+                        </tr>
+                        <tr>
+                          <td>Live Load</td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="liveLoadLeft"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>kN/m</td>
+                          <td>&emsp;</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="liveLoadRight"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>kN/m</td>
+                        </tr>
+                        <tr>
+                          <td>Assumed Beam's Selfweight</td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="assumeLeft"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>kN/m</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="incontainercol">
+                  <div>
+                    <span class="spantitle">Load Combinations Using Strength Design & Load and
+                      Resistance Factor Design</span>
+                  </div>
+                  <div>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td>Total Dead Load (D)</td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="totalDL"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>kN/m</td>
+                        </tr>
+                        <tr>
+                          <td>Total Live Load (L)</td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="totalLL"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>kN/m</td>
+                        </tr>
+                        <tr>
+                          <td>Fluid Load (F)</td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="fluidLoad"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>kN/m</td>
+                        </tr>
+                        <tr>
+                          <td>Self-straining Force (T)</td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="selfST"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>kN/m</td>
+                        </tr>
+                        <tr>
+                          <td>Lateral Pressure (H)</td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="lateralPressure"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>kN/m</td>
+                        </tr>
+                        <tr>
+                          <td>Roof Live Load (L<sub>r</sub> )</td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="roofLL"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>kN/m</td>
+                        </tr>
+                        <tr>
+                          <td>Rain Load (R)</td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="rainLoad"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>kN/m</td>
+                        </tr>
+                        <tr>
+                          <td>Wind Pressure (W)</td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="windPressure"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>kN/m</td>
+                        </tr>
+                        <tr>
+                          <td>Earthquake Load (E)</td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="earthLoad"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>kN/m</td>
+                        </tr>
+                        <tr>
+                          <td>f<sub>1</sub></td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="fSubOne"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>kN/m</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="incontainercol">
+                  <div>
+                    <table id="tableLoads">
+                      <tbody>
+                        <tr>
+                          <td>&emsp;</td>
+                          <td colspan="2"><strong>FACTORED LOAD</strong></td>
+                          <td colspan="2">&emsp;</td>
+                          <td colspan="2"><strong>UNFACTORED LOAD</strong></td>
+                        </tr>
+                        <tr>
+                          <td>1.4(D + F)</td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   id=""
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                          <td>kN/m</td>
+                          <td>&emsp;</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   id=""
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                          <td>kN/m</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            1.2(D + F + T) + 1.6(L + H) + 0.5(L<sub>r</sub> or R)
+                          </td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   id=""
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                          <td>kN/m</td>
+                          <td>&emsp;</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   id=""
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                          <td>kN/m</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            1.2D + 1.6(L<sub>r</sub> or R) + (f<sub>1</sub>L or 0.8W)
+                          </td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   id=""
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                          <td>kN/m</td>
+                          <td>&emsp;</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   id=""
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                          <td>kN/m</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            1.2D + 1.6W + f<sub>1</sub>L+0.5( L<sub>r</sub> or R)
+                          </td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   id=""
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                          <td>kN/m</td>
+                          <td>&emsp;</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   id=""
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                          <td>kN/m</td>
+                        </tr>
+                        <tr>
+                          <td>1.2D + 1.0E + f<sub>1</sub>L</td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   id=""
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                          <td>kN/m</td>
+                          <td>&emsp;</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   id=""
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                          <td>kN/m</td>
+                        </tr>
+                        <tr>
+                          <td>0.9D + 1.6W + 1.6H</td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   id=""
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                          <td>kN/m</td>
+                          <td>&emsp;</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   id=""
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                          <td>kN/m</td>
+                        </tr>
+                        <tr>
+                          <td>0.9D + 1.0E + 1.6H</td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   id=""
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                          <td>kN/m</td>
+                          <td>&emsp;</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   id=""
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                          <td>kN/m</td>
+                        </tr>
+                        <tr>
+                          <td>Use Max Load</td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   id=""
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                          <td>kN/m</td>
+                          <td>&emsp;</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   id=""
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                          <td>kN/m</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="sidenote">
+                <span>f<sub>1</sub> = 1.0 For floors in places of public assembly, for
+                  live load in excess of 4.8 kPa and for garage live load
+                </span>
+                <span>f<sub>1</sub> = 0.5 for other live loads</span>
+              </div>
+            </div>
+            <div class="datacontainer">
+              <h3>ANALYSIS & DESIGN</h3>
+              <div class="datatabales">
+                <div class="incontainercol">
+
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td>Factored Load</td>
+                        <td colspan="2"></td>
+                        <td>=</td>
+                        <td><input type="number"
+                                 name=""
+                                 class="factoredLoad"
+                                 min="0"
+                                 max="999999" /></td>
+                        <td>N/mm</td>
+                      </tr>
+                      <tr>
+                        <td>Effective Span</td>
+                        <td colspan="2"></td>
+                        <td>=</td>
+                        <td><input type="number"
+                                 name=""
+                                 class="effectiveSpan"
+                                 min="0"
+                                 max="999999"
+                                 placeholder="Enter value" /></td>
+                        <td>mm</td>
+                      </tr>
+                      <tr>
+                        <td>Moment at Midspan</td>
+                        <td colspan="2"></td>
+                        <td>=</td>
+                        <td><input type="number"
+                                 name=""
+                                 class="momentMidSpan"
+                                 min="0"
+                                 max="999999" /></td>
+                        <td>N mm</td>
+                      </tr>
+                      <tr>
+                        <td>Moment at Support</td>
+                        <td colspan="2"></td>
+                        <td>=</td>
+                        <td><input type="number"
+                                 name=""
+                                 class="momentSupport"
+                                 min="0"
+                                 max="999999" /></td>
+                        <td>N mm</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Design Parameters</strong></td>
+                      </tr>
+                      <tr>
+                        <td>f<sub>c</sub>'</td>
+                        <td colspan="2"></td>
+                        <td>=</td>
+                        <td><input type="number"
+                                 name=""
+                                 class="fSubC"
+                                 min="0"
+                                 max="999999"
+                                 placeholder="Enter value" /></td>
+                        <td>Mpa</td>
+                      </tr>
+                      <tr>
+                        <td>f<sub>y</sub></td>
+                        <td colspan="2"></td>
+                        <td>=</td>
+                        <td><input type="number"
+                                 name=""
+                                 class="fSubY"
+                                 min="0"
+                                 max="999999"
+                                 placeholder="Enter value" /></td>
+                        <td>Mpa</td>
+                      </tr>
+                      <tr>
+                        <td>β</td>
+                        <td colspan="2"></td>
+                        <td>=</td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="bETA"
+                                 min="0"
+                                 max="999999" />
+                        </td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>Φ</td>
+                        <td colspan="2"></td>
+                        <td>=</td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="pHI"
+                                 min="0"
+                                 max="999999"
+                                 placeholder="Enter value" />
+                        </td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td><strong>Steel Ration Limitations</strong></td>
+                      </tr>
+                      <tr>
+                        <td>&rho;<sub>B</sub></td>
+                        <td>=</td>
+                        <td>
+                          0.85β<sub>1</sub>(f<sub>c</sub>'/f<sub>y</sub>)(600/(600+f<sub>y</sub>))
+                        </td>
+                        <td>=</td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="rHoSubB"
+                                 min="0"
+                                 max="999999" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>&rho;<sub>max</sub></td>
+                        <td>=</td>
+                        <td>3/7(0.85f<sub>c</sub>'β<sub>1</sub>/f<sub>y</sub>)</td>
+                        <td>=</td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="rHoMaxtop"
+                                 min="0"
+                                 max="999999" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>&rho;<sub>min</sub></td>
+                        <td>=</td>
+                        <td>
+                          √f<sub>c</sub>'/4f<sub>y</sub> ≥ 1.4/<sub>y</sub>
+                        </td>
+                        <td>=</td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="rHoMin"
+                                 min="0"
+                                 max="999999" />
+                        </td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="rHoMinLt"
+                                 min="0"
+                                 max="999999" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="3"></td>
+                        <td>use</td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="rHoUse"
+                                 min="0"
+                                 max="999999" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><strong>Beam Dimension</strong></td>
+                      </tr>
+                      <tr>
+                        <td>B</td>
+                        <td colspan="2"></td>
+                        <td>=</td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="beamW"
+                                 min="0"
+                                 max="999999"
+                                 placeholder="Enter value" />
+                        </td>
+                        <td>mm</td>
+                      </tr>
+                      <tr>
+                        <td>h</td>
+                        <td colspan="2"></td>
+                        <td>=</td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="beamH"
+                                 min="0"
+                                 max="999999"
+                                 placeholder="Enter value" />
+                        </td>
+                        <td>mm</td>
+                      </tr>
+                      <tr>
+                        <td colspan="6">AT FACE OF SUPPORT</td>
+                      </tr>
+                      <tr>
+                        <td colspan="6"><strong>Steel Ratio Assumption</strong></td>
+                      </tr>
+                      <tr>
+                        <td>use &rho;<sub>max</sub></td>
+                        <td colspan="2"></td>
+                        <td>=</td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="rHoMax"
+                                 min="0"
+                                 max="999999" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="6">
+                          <strong>Tension Reinforcement Index</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>&omega;</td>
+                        <td>=</td>
+                        <td>&rho;f<sub>y</sub>/f<sub>c</sub>'</td>
+                        <td>=</td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="oMega"
+                                 min="0"
+                                 max="999999" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="6">
+                          <strong>Maximum Moment Capacity of Section</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Minimum Concrete Cover</td>
+                        <td colspan="2"></td>
+                        <td>=</td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="minCC"
+                                 min="0"
+                                 max="999999"
+                                 placeholder="Enter value" />
+                        </td>
+                        <td>mm</td>
+                      </tr>
+                      <tr>
+                        <td>Shear Reinforcement &Oslash;</td>
+                        <td colspan="2"></td>
+                        <td>=</td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="shearR"
+                                 min="0"
+                                 max="999999"
+                                 placeholder="Enter value" />
+                        </td>
+                        <td>mm</td>
+                      </tr>
+                      <tr>
+                        <td>Tension Reinforcement &Oslash;</td>
+                        <td colspan="2"></td>
+                        <td>=</td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="tensionR"
+                                 min="0"
+                                 max="999999"
+                                 placeholder="Enter value" />
+                        </td>
+                        <td>mm</td>
+                      </tr>
+                      <tr>
+                        <td>Compression Reinforcement &Oslash;</td>
+                        <td colspan="2"></td>
+                        <td>=</td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="compR"
+                                 min="0"
+                                 max="999999"
+                                 placeholder="Enter value" />
+                        </td>
+                        <td>mm</td>
+                      </tr>
+                      <tr>
+                        <td>Effective Depth (d)</td>
+                        <td colspan="2"></td>
+                        <td>=</td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="eDepth"
+                                 min="0"
+                                 max="999999" />
+                        </td>
+                        <td>mm</td>
+                      </tr>
+                      <tr>
+                        <td>M <sub>u max</sub></td>
+                        <td>=</td>
+                        <td>
+                          &phi;f<sub>c</sub>'&omega;bd <sup>2</sup>(1 - 0.59&omega;)
+                        </td>
+                        <td>=</td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="mUMax"
+                                 min="0"
+                                 max="999999" />
+                        </td>
+                        <td>N &middot; mm</td>
+                      </tr>
+                      <tr>
+                        <td>Remarks:</td>
+                        <td colspan="5"
+                            class="mURemark"></td>
+                        <!-- Place Tension Bars in One Layer -->
+                      </tr>
+                      <tr>
+                        <td><strong> Excess Moment</strong></td>
+                      </tr>
+                      <tr>
+                        <td>M <sub>2</sub></td>
+                        <td>=</td>
+                        <td>M <sub>u</sub> - M <sub>u max</sub></td>
+                        <td>=</td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="mSubTwo"
+                                 min="0"
+                                 max="999999" />
+                        </td>
+                        <td>N &middot; mm</td>
+                        <td>0 if singly</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Area of Tension Reinforcement</strong></td>
+                      </tr>
+                      <tr>
+                        <td>Effective Depth (d')</td>
+                        <td colspan="2"></td>
+                        <td>=</td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="effectiveD"
+                                 min="0"
+                                 max="999999" />
+                        </td>
+                        <td>mm</td>
+                      </tr>
+                      <tr>
+                        <td>A <sub>s1</sub></td>
+                        <td>=</td>
+                        <td>&rho;<sub>max</sub>bd</td>
+                        <td>=</td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="aSubSOne"
+                                 min="0"
+                                 max="999999" />
+                        </td>
+                        <td>mm <sup>2</sup></td>
+                        <td>0 if singly</td>
+                      </tr>
+                      <tr>
+                        <td>A<sub>s2</sub></td>
+                        <td>=</td>
+                        <td>
+                          M<sub>2</sub>/ &phi;f <sub>y</sub>(d - d <sub>1</sub>)
+                        </td>
+                        <td>=</td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="aSubSTwo"
+                                 min="0"
+                                 max="999999" />
+                        </td>
+                        <td>mm<sup>2</sup></td>
+                        <td>0 if singly</td>
+                      </tr>
+                      <tr>
+                        <td>A <sub>s</sub></td>
+                        <td>=</td>
+                        <td>A <sub>s1</sub> + A <sub>s2</sub></td>
+                        <td>=</td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="aStotal"
+                                 min="0"
+                                 max="999999" />
+                        </td>
+                        <td>mm<sup>2</sup></td>
+                        <td>0 if singly</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Number of Tension Reinforcement</strong></td>
+                      </tr>
+                      <tr>
+                        <td>N</td>
+                        <td>=</td>
+                        <td>4A<sub>s</sub>/&pi;D<sup>2</sup></td>
+                        <td>=</td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="nTension"
+                                 min="0"
+                                 max="999999" />
+                        </td>
+                        <td>Bars</td>
+                      </tr>
+                      <tr>
+                        <td colspan="3"></td>
+                        <td>say</td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="nTensionSay"
+                                 min="0"
+                                 max="999999" />
+                        </td>
+                        <td>Bars</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Check For Actual Layer Spacing</strong></td>
+                      </tr>
+                      <tr>
+                        <td>S</td>
+                        <td>=</td>
+                        <td>(B - 2MCC - 2SR&Oslash; - ND<sub>b</sub>)/(N-1)</td>
+                        <td>=</td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="sS"
+                                 min="0"
+                                 max="999999" />
+                        </td>
+                        <td>mm</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Stress in Compression Steel</strong></td>
+                      </tr>
+                      <tr>
+                        <td>a</td>
+                        <td>=</td>
+                        <td>A<sub>s</sub>f<sub>y</sub>/0.85f<sub>c</sub>'b</td>
+                        <td>=</td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="sA"
+                                 min="0"
+                                 max="999999" />
+                        </td>
+                        <td>mm</td>
+                      </tr>
+                      <tr>
+                        <td>c</td>
+                        <td>=</td>
+                        <td>a/&beta;</td>
+                        <td>=</td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="sC"
+                                 min="0"
+                                 max="999999" />
+                        </td>
+                        <td>mm</td>
+                      </tr>
+                      <tr>
+                        <td>f<sub>s</sub>'</td>
+                        <td>=</td>
+                        <td>600(c - d'/c)</td>
+                        <td>=</td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="fSubS"
+                                 min="0"
+                                 max="999999" />
+                        </td>
+                        <td>MPa</td>
+                      </tr>
+                      <tr>
+                        <td><em>Conditions:</em></td>
+                      </tr>
+                      <tr>
+                        <td colspan="5">
+                          <em>
+                            If f<sub>s</sub>' &geq; f<sub>y</sub>, then use
+                            f<sub>s</sub>' &equals; f<sub>y</sub> (Compression Steel
+                            Yields)</em>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>A<sub>s</sub>'</td>
+                        <td>=</td>
+                        <td>A<sub>s2</sub></td>
+                        <td>=</td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="aSubS"
+                                 min="0"
+                                 max="999999" />
+                        </td>
+                        <td>mm<sup>2</sup></td>
+                      </tr>
+                      <tr>
+                        <td colspan="5">
+                          <em>
+                            If f<sub>s</sub>' &lt; f<sub>y</sub>, then use
+                            f<sub>s</sub>' (Compression Steel Does Not Yields)</em>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>A<sub>s</sub>'</td>
+                        <td>=</td>
+                        <td>A<sub>s2</sub>(f<sub>y</sub>/f<sub>s</sub>')</td>
+                        <td>=</td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="aSubSS"
+                                 min="0"
+                                 max="999999" />
+                        </td>
+                        <td>mm<sup>2</sup></td>
+                      </tr>
+                      <tr>
+                        <td><strong>Number of Compression Reinforcement</strong></td>
+                      </tr>
+                      <tr>
+                        <td>N</td>
+                        <td>=</td>
+                        <td>4A<sub>s</sub>'/&pi;D<sup>2</sup></td>
+                        <td>=</td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="nComp"
+                                 min="0"
+                                 max="999999" />
+                        </td>
+                        <td>Bars</td>
+                      </tr>
+                      <tr>
+                        <td colspan="3"></td>
+                        <td>say</td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="nCompSay"
+                                 min="0"
+                                 max="999999" />
+                        </td>
+                        <td>Bars</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Check For Actual Layer Spacing</strong></td>
+                      </tr>
+                      <tr>
+                        <td>S</td>
+                        <td>=</td>
+                        <td>(B - 2MCC - 2SR&Oslash; - ND<sub>b</sub>)/(N-1)</td>
+                        <td>=</td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="sS2"
+                                 min="0"
+                                 max="999999" />
+                        </td>
+                        <td>mm</td>
+                      </tr>
+                      <tr>
+                        <td>Remarks:</td>
+                        <td colspan="5"
+                            class="sSRemark"></td>
+                        <!-- Number of Compression Reinforcement -->
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="datacontainer">
+              <div class="datatables">
+                <div class="incontainercol">
+                  <div>
+                    <span class="spantitle">
+                      BEAM SPECIFICATIONS
+                    </span>
+                  </div>
+                  <div>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <th></th>
+                        </tr>
+                        <tr>
+                          <td><strong>Width, b</strong></td>
+                          <td><input type="number"
+                                   name=""
+                                   class="specW"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td>mm</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Depth, h</strong></td>
+                          <td><input type="number"
+                                   name=""
+                                   class="specD"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td>mm</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Tension Bars</strong></td>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <th>No.</th>
+                          <th>&Oslash;</th>
+                          <th>Unit</th>
+                          <th>Spacing</th>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td><input type="number"
+                                   name=""
+                                   class="specNo"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   class="specO"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td>mm</td>
+                          <td><input type="number"
+                                   name=""
+                                   class="specSpace"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td>mm C.S.</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Compression Bars</strong></td>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <th>No.</th>
+                          <th>&Oslash;</th>
+                          <th>Unit</th>
+                          <th>Spacing</th>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td><input type="number"
+                                   name=""
+                                   class="specNo2"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   class="specO2"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td>mm</td>
+                          <td><input type="number"
+                                   name=""
+                                   class="specSpace2"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td>mm C.S.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="index.js"></script>
+      <script>
+        window.onload = function () {
+          var preloader = document.getElementById("preloader");
+          preloader.style.opacity = "0";
+          setTimeout(function () {
+            preloader.style.display = "none";
+          },500);
+        };
+
+        const factoredLoad = document.querySelector('.factoredLoad');
+        const effectiveSpan = document.querySelector('.effectiveSpan');
+        const momentMidSpan = document.querySelector('.momentMidSpan');
+        const momentSupport = document.querySelector('.momentSupport');
+        const floorLoadLeft = document.querySelector('.floorLoadLeft');
+        const floorLoadRight = document.querySelector('.floorLoadRight');
+        const floorFinishLeft = document.querySelector('.floorFinishLeft');
+        const floorFinishRight = document.querySelector('.floorFinishRight');
+        const partitionLeft = document.querySelector('.partitionLeft');
+        const partitionRight = document.querySelector('.partitionRight');
+        const utiLeft = document.querySelector('.utiLeft');
+        const utiRight = document.querySelector('.utiRight');
+        const ceilingLeft = document.querySelector('.ceilingLeft');
+        const ceilingRight = document.querySelector('.ceilingRight');
+        const liveLoadLeft = document.querySelector('.liveLoadLeft');
+        const liveLoadRight = document.querySelector('.liveLoadRight');
+        const assumeLeft = document.querySelector('.assumeLeft');
+        const fSubC = document.querySelector('.fSubC');
+        const fSubY = document.querySelector('.fSubY');
+        const bETA = document.querySelector('.bETA');
+        const pHI = document.querySelector('.pHI');
+        const rHoSubB = document.querySelector('.rHoSubB');
+        const rHoMaxtop = document.querySelector('.rHoMaxtop');
+        const rHoMin = document.querySelector('.rHoMin');
+        const rHoMinLt = document.querySelector('.rHoMinLt');
+        const rHoUse = document.querySelector('.rHoUse');
+        const totalDL = document.querySelector('.totalDL');
+        const totalLL = document.querySelector('.totalLL');
+        const fluidLoad = document.querySelector('.fluidLoad');
+        const selfST = document.querySelector('.selfST');
+        const lateralPressure = document.querySelector('.lateralPressure');
+        const roofLL = document.querySelector('.roofLL');
+        const rainLoad = document.querySelector('.rainLoad');
+        const windPressure = document.querySelector('.windPressure');
+        const earthLoad = document.querySelector('.earthLoad');
+        const fSubOne = document.querySelector('.fSubOne');
+        const tableLoads = document.getElementById('tableLoads');
+        const beamW = document.querySelector('.beamW');
+        const beamH = document.querySelector('.beamH');
+        const rHoMax = document.querySelector('.rHoMax');
+        const oMega = document.querySelector('.oMega');
+        const minCC = document.querySelector('.minCC');
+        const shearR = document.querySelector('.shearR');
+        const tensionR = document.querySelector('.tensionR');
+        const compR = document.querySelector('.compR');
+        const eDepth = document.querySelector('.eDepth');
+        const mUMax = document.querySelector('.mUMax');
+        const mURemark = document.querySelector('.mURemark');
+        const mSubTwo = document.querySelector('.mSubTwo');
+        const effectiveD = document.querySelector('.effectiveD');
+        const aSubSOne = document.querySelector('.aSubSOne');
+        const aSubSTwo = document.querySelector('.aSubSTwo');
+        const aStotal = document.querySelector('.aStotal');
+        const nTension = document.querySelector('.nTension');
+        const nTensionSay = document.querySelector('.nTensionSay');
+        const sS = document.querySelector('.sS');
+        const sA = document.querySelector('.sA');
+        const sC = document.querySelector('.sC');
+        const fSubS = document.querySelector('.fSubS');
+        const aSubS = document.querySelector('.aSubS');
+        const aSubSS = document.querySelector('.aSubSS');
+        const nComp = document.querySelector('.nComp');
+        const nCompSay = document.querySelector('.nCompSay');
+        const sS2 = document.querySelector('.sS2');
+        const sSRemark = document.querySelector('.sSRemark');
+        const specW = document.querySelector('.specW');
+        const specD = document.querySelector('.specD');
+        const specNo = document.querySelector('.specNo');
+        const specO = document.querySelector('.specO');
+        const specSpace = document.querySelector('.specSpace');
+        const specNo2 = document.querySelector('.specNo2');
+        const specO2 = document.querySelector('.specO2');
+        const specSpace2 = document.querySelector('.specSpace2');
+
+        floorLoadLeft.addEventListener('input',computation);
+        floorLoadRight.addEventListener('input',computation);
+        floorFinishLeft.addEventListener('input',computation);
+        floorFinishRight.addEventListener('input',computation);
+        partitionLeft.addEventListener('input',computation);
+        partitionRight.addEventListener('input',computation);
+        utiLeft.addEventListener('input',computation);
+        utiRight.addEventListener('input',computation);
+        ceilingLeft.addEventListener('input',computation);
+        ceilingRight.addEventListener('input',computation);
+        // liveLoadLeft.addEventListener('input',computation);
+        // liveLoadRight.addEventListener('input',computation);
+        assumeLeft.addEventListener('input',computation);
+
+
+
+        function computation() {
+
+          let floorLoadLeftValue = parseFloat(floorLoadLeft.value);
+          let floorLoadRightValue = parseFloat(floorLoadRight.value);
+          let floorFinishLeftValue = parseFloat(floorFinishLeft.value);
+          let floorFinishRightValue = parseFloat(floorFinishRight.value);
+          let partitionLeftValue = parseFloat(partitionLeft.value);
+          let partitionRightValue = parseFloat(partitionRight.value);
+          let utiLeftValue = parseFloat(utiLeft.value);
+          let utiRightValue = parseFloat(utiRight.value);
+          let ceilingLeftValue = parseFloat(ceilingLeft.value);
+          let ceilingRightValue = parseFloat(ceilingRight.value);
+          let liveLoadLeftValue = parseFloat(liveLoadLeft.value);
+          let liveLoadRightValue = parseFloat(liveLoadRight.value);
+          let assumeLeftValue = parseFloat(assumeLeft.value);
+
+
+          if (isNaN(floorLoadLeftValue)) {
+            floorLoadLeftValue = 0;
+          }
+          if (isNaN(floorLoadRightValue)) {
+            floorLoadRightValue = 0;
+          }
+          if (isNaN(floorFinishLeftValue)) {
+            floorFinishLeftValue = 0;
+          }
+          if (isNaN(floorFinishRightValue)) {
+            floorFinishRightValue = 0;
+          }
+          if (isNaN(partitionLeftValue)) {
+            partitionLeftValue = 0;
+          }
+          if (isNaN(partitionRightValue)) {
+            partitionRightValue = 0;
+          }
+          if (isNaN(utiLeftValue)) {
+            utiLeftValue = 0;
+          }
+          if (isNaN(utiRightValue)) {
+            utiRightValue = 0;
+          }
+
+          if (isNaN(ceilingLeftValue)) {
+            ceilingLeftValue = 0;
+          }
+          if (isNaN(ceilingRightValue)) {
+            ceilingRightValue = 0;
+          }
+
+          if (isNaN(liveLoadLeftValue)) {
+            liveLoadLeftValue = 0;
+          }
+          if (isNaN(liveLoadRightValue)) {
+            liveLoadRightValue = 0;
+          }
+
+          if (isNaN(assumeLeftValue)) {
+            assumeLeftValue = 0;
+          }
+          // //      
+
+          // totalLL.value = liveLoadLeftValue + liveLoadRightValue;
+
+        }
+
+        effectiveSpan.addEventListener('input',loadTable);
+        // liveLoadLeft.addEventListener('input',loadTable);
+        totalDL.addEventListener('input',loadTable);
+        totalLL.addEventListener('input',loadTable);
+        fluidLoad.addEventListener('input',loadTable);
+        selfST.addEventListener('input',loadTable);
+        lateralPressure.addEventListener('input',loadTable);
+        roofLL.addEventListener('input',loadTable);
+        rainLoad.addEventListener('input',loadTable);
+        windPressure.addEventListener('input',loadTable);
+        earthLoad.addEventListener('input',loadTable);
+        fSubOne.addEventListener('input',loadTable);
+
+        function loadTable() {
+
+          let totalDLValue = parseFloat(totalDL.value);      //14
+          let totalLLValue = parseFloat(totalLL.value);       //15
+          let fluidLoadValue = parseFloat(fluidLoad.value); //16
+          let selfSTValue = parseFloat(selfST.value);//17
+          let lateralPressureValue = parseFloat(lateralPressure.value);   //18
+          let roofLLValue = parseFloat(roofLL.value);   //19 
+          let rainLoadValue = parseFloat(rainLoad.value);     //20
+          let windPressureValue = parseFloat(windPressure.value);   //21
+          let earthLoadValue = parseFloat(earthLoad.value);   //22
+          let fSubOneValue = parseFloat(fSubOne.value);   //23
+          let effectiveSpanValue = parseFloat(effectiveSpan.value);
+
+          if (isNaN(totalDLValue)) {
+            totalDLValue = 0;
+          }
+
+          if (isNaN(totalLLValue)) {
+            totalLLValue = 0;
+          }
+
+          if (isNaN(fluidLoadValue)) {
+            fluidLoadValue = 0;
+          }
+
+          if (isNaN(selfSTValue)) {
+            selfSTValue = 0;
+          }
+
+          if (isNaN(lateralPressureValue)) {
+            lateralPressureValue = 0;
+          }
+
+          if (isNaN(roofLLValue)) {
+            roofLLValue = 0;
+          }
+
+          if (isNaN(rainLoadValue)) {
+            rainLoadValue = 0;
+          }
+
+          if (isNaN(windPressureValue)) {
+            windPressureValue = 0;
+          }
+
+          if (isNaN(earthLoadValue)) {
+            earthLoadValue = 0;
+          }
+
+          if (isNaN(fSubOneValue)) {
+            fSubOneValue = 0;
+          }
+
+          if (isNaN(
+            effectiveSpanValue)) {
+            effectiveSpanValue = 0;
+          }
+
+          tableLoads.rows[1].cells[2].querySelector('input').value = 1.4 * (totalDLValue + fluidLoadValue);
+          tableLoads.rows[1].cells[5].querySelector('input').value = totalDLValue + fluidLoadValue;
+
+          tableLoads.rows[2].cells[2].querySelector('input').value = (1.2 * (totalDLValue + selfSTValue + fluidLoadValue) + 1.6 * (totalLLValue + lateralPressureValue) + 0.5 * (roofLLValue) + 0.5 * (rainLoadValue));
+          tableLoads.rows[2].cells[5].querySelector('input').value = ((totalDLValue + selfSTValue + fluidLoadValue) + (totalLLValue + lateralPressureValue) + (roofLLValue) + (rainLoadValue));
+
+          tableLoads.rows[3].cells[2].querySelector('input').value = 1.2 * (totalDLValue) + 1.6 * (roofLLValue) + 1.6 * (rainLoadValue) + fSubOneValue * totalLLValue + 0.8 * windPressureValue;
+          tableLoads.rows[3].cells[5].querySelector('input').value = totalDLValue + roofLLValue + rainLoadValue + fSubOneValue * totalLLValue + windPressureValue;
+
+          tableLoads.rows[4].cells[2].querySelector('input').value = 1.2 * (totalDLValue) + 1.6 * (windPressureValue) + fSubOneValue * totalLLValue + 0.5 * roofLLValue + 0.5 * rainLoadValue;
+          tableLoads.rows[4].cells[5].querySelector('input').value = totalDLValue + windPressureValue + fSubOneValue * totalLLValue + roofLLValue + rainLoadValue;
+
+          tableLoads.rows[5].cells[2].querySelector('input').value = 1.2 * (totalDLValue) + 1 * (earthLoadValue) + totalLLValue * (fSubOneValue);
+          tableLoads.rows[5].cells[5].querySelector('input').value = totalDLValue + earthLoadValue + totalLLValue * (fSubOneValue);
+
+          tableLoads.rows[6].cells[2].querySelector('input').value = 0.9 * (totalDLValue) + 1.6 * (windPressureValue) + 1.6 * (lateralPressureValue);
+          tableLoads.rows[6].cells[5].querySelector('input').value = totalDLValue + windPressureValue + lateralPressureValue;
+
+          tableLoads.rows[7].cells[2].querySelector('input').value = 0.9 * (totalDLValue) + 1 * (earthLoadValue) + 1.6 * (lateralPressureValue);
+          tableLoads.rows[7].cells[5].querySelector('input').value = totalDLValue + earthLoadValue + lateralPressureValue;
+
+          let tableArraya = [];
+          let tableArrayb = [];
+
+          for (let i = 1; i < tableLoads.rows.length - 1; i++) {
+            tableArraya.push(parseFloat(tableLoads.rows[i].cells[2].querySelector('input').value));
+            tableArrayb.push(parseFloat(tableLoads.rows[i].cells[5].querySelector('input').value));
+          }
+
+          let maxa = Math.max(...tableArraya);
+          tableLoads.rows[8].cells[2].querySelector('input').value = maxa;
+
+          let maxb = Math.max(...tableArrayb);
+          tableLoads.rows[8].cells[5].querySelector('input').value = maxb;
+
+          factoredLoad.value = tableLoads.rows[8].cells[2].querySelector('input').value;
+          momentMidSpan.value = ((parseFloat(factoredLoad.value) * Math.pow(effectiveSpanValue,2)) / 24).toFixed(2);
+          momentSupport.value = ((parseFloat(factoredLoad.value) * Math.pow(effectiveSpanValue,2)) / 12).toFixed(2);
+        }
+
+
+        fSubC.addEventListener('input',betaValue);
+        function betaValue() {
+
+          if (fSubC.value > 56) {
+            bETA.value = 0.65;
+          } else if (fSubC.value < 28.1) {
+            bETA.value = 0.85;
+          } else {
+            bETA.value = 0.85 - 0.05 * ((fSubC.value - 28) / 7);
+          }
+
+        }
+
+        fSubC.addEventListener('input',designAnalysis);
+        fSubY.addEventListener('input',designAnalysis);
+        pHI.addEventListener('input',designAnalysis);
+        beamW.addEventListener('input',designAnalysis);
+        beamH.addEventListener('input',designAnalysis);
+        minCC.addEventListener('input',designAnalysis);
+        shearR.addEventListener('input',designAnalysis);
+        tensionR.addEventListener('input',designAnalysis);
+        compR.addEventListener('input',designAnalysis);
+        // effectiveD.addEventListener('input',designAnalysis);
+        // nTensionSay.addEventListener('input',designAnalysis);
+
+        function designAnalysis() {
+
+          let fSubCValue = parseFloat(fSubC.value);
+          let bETAValue = parseFloat(bETA.value);
+          let fSubYValue = parseFloat(fSubY.value);
+          let pHIValue = parseFloat(pHI.value);
+          let beamWValue = parseFloat(beamW.value);
+          let beamHValue = parseFloat(beamH.value);
+          let minCCValue = parseFloat(minCC.value);
+          let shearRValue = parseFloat(shearR.value);
+          let tensionRValue = parseFloat(tensionR.value);
+          let compRValue = parseFloat(compR.value);
+          // let nTensionSayValue = parseFloat(nTensionSay.value);
+
+          rHoSubB.value = (0.85 * (bETAValue) * (fSubCValue / fSubYValue) * (600 / (600 + fSubYValue))).toFixed(9);
+
+
+          rHoMaxtop.value = (3 / 7 * ((0.85 * fSubCValue * bETAValue) / (fSubYValue))).toFixed(9);
+          rHoMin.value = (Math.sqrt(fSubCValue) / (4 * fSubYValue)).toFixed(9);
+          rHoMinLt.value = (1.4 / fSubYValue).toFixed(9);
+          let rhoUseMax = [rHoMin.value,rHoMinLt.value];
+          rHoUse.value = (Math.max(...rhoUseMax)).toFixed(9);
+          rHoMax.value = rHoMaxtop.value;
+
+          oMega.value = ((rHoMax.value * fSubY.value) / fSubC.value).toFixed(9);
+          eDepth.value = beamHValue - minCCValue - shearRValue - tensionRValue - (compRValue / 2);
+          mUMax.value = ((pHIValue * fSubCValue * oMega.value * beamWValue * Math.pow(eDepth.value,2)) * (1 - 0.59 * oMega.value)).toFixed(2);
+
+          mSubTwo.value = (parseFloat(momentSupport.value) - parseFloat(mUMax.value));
+          effectiveD.value = minCCValue + shearRValue + (compRValue / 2);
+          aSubSOne.value = rHoMax.value * beamWValue * eDepth.value;
+          aSubSTwo.value = (mSubTwo.value) / (pHIValue * fSubYValue * (eDepth.value - effectiveD.value))
+          aStotal.value = parseFloat(aSubSOne.value) + parseFloat(aSubSTwo.value);
+
+          nTension.value = (4 * aSubSOne.value) / (Math.PI * Math.pow(tensionRValue,2));
+          nTensionSay.value = Math.ceil(nTension.value);
+
+          sS.value = (beamWValue - (2 * minCCValue) - (2 * shearRValue) - (nTensionSay.value * tensionRValue)) / (nTensionSay.value - 1);
+          sA.value = (aSubSOne.value * fSubYValue) / (0.85 * fSubCValue * beamWValue);
+          sC.value = sA.value / bETAValue;
+          fSubS.value = (600) * ((sC.value - effectiveD.value) / (sC.value));
+
+          if (parseFloat(fSubS.value) > parseFloat(fSubY.value)) {
+            aSubS.value = parseFloat(aSubSTwo.value);
+            aSubSS.value = 0;
+          } else {
+            aSubS.value = 0;
+            aSubSS.value = parseFloat(aSubSTwo.value) * (parseFloat(fSubS.value) / parseFloat(fSubS.value));
+          }
+
+
+          nComp.value = (4 * Math.max(aSubS.value,aSubSS.value)) / (Math.PI * Math.pow(compRValue,2));
+
+
+          nCompSay.value = Math.ceil(nComp.value);
+
+
+          sS2.value = (beamWValue - (2 * minCCValue) - (2 * shearRValue) - (nCompSay.value * compRValue)) / (nCompSay.value - 1);
+
+          specW.value = beamWValue;
+          specD.value = beamHValue;
+
+          specNo.value = nTensionSay.value;
+          specO.value = tensionRValue;
+          specSpace.value = Math.ceil(parseFloat(sS.value));
+
+          specNo2.value = nCompSay.value;
+          specO2.value = compRValue;
+          specSpace2.value = sS2.value;
+
+        }
+      </script>
+</body>
+
+</html>

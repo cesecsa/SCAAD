@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible"
+        content="IE=edge" />
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
+  <title>SC DESIGN AND ANALYSIS</title>
+  <link rel="stylesheet"
+        href="styles.css" />
+</head>
+
+<body>
+  <div id="preloader"></div>
+  <div class="bbody">
+    <div class="left">
+      <div class="container">
+        <div class="logo">
+          <a href="hhome.html">
+            <img src="resources\images\SC Logo.png"
+                 alt="" />
+            <span class="projname">ANALYSIS & DESIGN</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="menu">
+        <ul class="submenu">
+          <li>
+            <a href="home.html"><img src="resources\images\home_FILL0_wght400_GRAD0_opsz48.svg"
+                   alt="" />HOME
+            </a>
+          </li>
+          <li class="submenu2">
+            <a href="slaboneway.html"><img class="rotate"
+                   src="resources\images\grid_4x4_FILL0_wght400_GRAD0_opsz48.svg"
+                   alt="" />SLABS
+            </a>
+            <ul class="dropdown">
+              <li><a href="slaboneway.html">ONE WAY</a></li>
+              <li><a href="slabtwoway.html">TWO WAY</a></li>
+            </ul>
+          </li>
+          <li class="submenu2">
+            <a href="singly.html"><img src="resources\images\border_inner_FILL0_wght400_GRAD0_opsz48.svg"
+                   alt="" />BEAMS
+            </a>
+            <ul class="dropdown">
+              <li>
+                <a href="singly.html">SINGLY</a>
+              </li>
+              <li><a href="doubly.html">DOUBLY</a></li>
+            </ul>
+          </li>
+          <li class="submenu2">
+            <a href="loaddistribution.html"><img
+                   src="resources\images\vertical_shades_closed_FILL0_wght400_GRAD0_opsz48.svg"
+                   alt="" />COLUMNS
+            </a>
+            <ul class="dropdown">
+              <li>
+                <a href="loaddistribution.html">DISTRIBUTION</a>
+              </li>
+              <li><a href="design.html">DESIGN</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="active"
+               href="seismic.html"><img src="resources\images\landslide_FILL0_wght400_GRAD0_opsz48.svg"
+                   alt="" />SEISMIC
+            </a>
+          </li>
+          <li>
+            <a href="gallery.html"><img src="resources\images\photo_camera_FILL0_wght400_GRAD0_opsz48.svg"
+                   alt="" />GALLERY
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="right">
+      <div class="outcontainer">
+        <div class="incontainer">
+          <div class="incontainercol2">
+            <h2>SEISMIC ANALYSIS</h2>
+            <div class="cmdBtn">
+              <button id="myBtn">Project Name</button>
+              <button id="myPrint">Print/Save</button>
+              <div id="myModal"
+                   class="modal">
+                <div class="modal-content">
+                  <textarea name="text"
+                            id="text-area"
+                            cols="30"
+                            rows="5"
+                            placeholder="Project Title Here"></textarea>
+                </div>
+                <div class="modalBtn">
+                  <button id="save">Save</button>
+                  <button id="cancel">Cancel</button>
+                </div>
+
+              </div>
+            </div>
+            <div class="datacontainer">
+              <div class="datatables">
+                <div class="incontainercol">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td>Project Location:</td>
+                        <td></td>
+                        <td colspan="4"><textarea name=""
+                                    id=""
+                                    cols="50"
+                                    rows="2"
+                                    placeholder="Your Location Address"
+                                    style="resize: none; width: fit-content; outline: none;"></textarea></td>
+                      </tr>
+                      <tr>
+                        <td>Zone Classification (Zone 4)</td>
+                        <td>=</td>
+                        <td>
+                          <select name=""
+                                  id="zoneC">
+                            <option value="">Select</option>
+                            <option value="1">0.2</option>
+                            <option value="2">0.4</option>
+                          </select>
+                      </tr>
+                      <tr>
+                        <td>Importance Factor</td>
+                        <td>=</td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="iFactor"
+                                 min="0"
+                                 value=""
+                                 max="999999"
+                                 placeholder="Enter value" />
+                        </td>
+                      <tr>
+                        <td>Seismic Source Type</td>
+                        <td>=</td>
+                        <td>
+                          <select name=""
+                                  id="sST">
+                            <option value="">Select</option>
+                            <option value="1">A</option>
+                            <option value="2">B</option>
+                            <option value="3">C</option>
+                          </select>
+                        </td>
+                      <tr>
+                        <td>Assumed Soil Type Profiles</td>
+                        <td>=</td>
+                        <td>
+                          <select name=""
+                                  id="aST">
+                            <option value="">Select</option>
+                            <option value="1">S<sub>A</sub></option>
+                            <option value="2">S<sub>B</sub></option>
+                            <option value="3">S<sub>C</sub></option>
+                            <option value="4">S<sub>D</sub></option>
+                            <option value="5">S<sub>E</sub></option>
+                            <option value="6">S<sub>F</sub></option>
+
+                          </select>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><strong>Seismic Zone 4 Near-Source Factor</strong></td>
+                      </tr>
+                      <tr>
+                        <td>N<sub>a</sub></td>
+                        <td>=</td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="nA"
+                                 min="0"
+                                 max="99999"
+                                 placeholder="Enter value" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="6">Interpolated Value Based on distance of Structure as per NSCP 2015, Table 208-5
+                          Near Source
+                          Factor, Na</td>
+                      </tr>
+                      <tr>
+                        <td>N<sub>v</sub></td>
+                        <td>=</td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="nV"
+                                 min="0"
+                                 max="99999"
+                                 placeholder="Enter value" />
+                        </td>
+
+                      </tr>
+                      <tr>
+                        <td colspan="6">Interpolated Value Based on distance of Structure as per NSCP 2015, Table 208-6
+                          Near Source
+                          Factor, Nv </td>
+                      </tr>
+                      <tr>
+                        <td><strong>Seismic Response Coefficient</strong></td>
+                      </tr>
+                      <tr>
+                        <td>C <sub>a</sub></td>
+                        <td>=</td>
+                        <td class="nAT"></td>
+                        <td>=</td>
+                        <td><input type="number"
+                                 name=""
+                                 class="nAC"
+                                 min="0"
+                                 max="999999"
+                                 value="" /></td>
+                        <td> <input type="number"
+                                 name=""
+                                 class="nACF"
+                                 min="0"
+                                 max="999999"
+                                 value="" /></td>
+                        <td> <input type="number"
+                                 name=""
+                                 class="nACFR"
+                                 min="0"
+                                 max="999999"
+                                 value="" /></td>
+                      </tr>
+                      <tr>
+                        <td>C<sub>v</sub></td>
+                        <td>=</td>
+                        <td class="nVT"></td>
+                        <td>=</td>
+                        <td><input type="number"
+                                 name=""
+                                 class="nVC"
+                                 min="0"
+                                 max="999999"
+                                 value="" /></td>
+                        <td> <input type="number"
+                                 name=""
+                                 class="nVCF"
+                                 min="0"
+                                 max="999999"
+                                 value="" /></td>
+                        <td> <input type="number"
+                                 name=""
+                                 class="nVCFR"
+                                 min="0"
+                                 max="999999"
+                                 value="" /></td>
+                      </tr>
+                      <tr>
+                        <td><strong>Seismic Zone 4 Near-Source Factor</strong></td>
+                      </tr>
+                      <tr>
+                        <td>R</td>
+                        <td>=</td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="aR"
+                                 min="0"
+                                 max="99999"
+                                 value=""
+                                 placeholder="Enter value" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="8">Special Reinforced Concrete moment Frames as per NSCP 2015, Table 208-11A
+                          Earthquake-Force Resisting Structural System of Concrete</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Structure Period</strong></td>
+                      </tr>
+                      <tr>
+                        <td>h<sub>n</sub></td>
+                        <td>=</td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="hN"
+                                 min="0"
+                                 max="99999"
+                                 placeholder="Enter value" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>W<sub>T</sub></td>
+                        <td>=</td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="wT"
+                                 min="0"
+                                 max="99999"
+                                 placeholder="Enter value" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>C<sub>t</sub></td>
+                        <td>=</td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="cT"
+                                 min="0"
+                                 max="99999"
+                                 placeholder="Enter value" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="8">For Reinforced Concrete Moment-Resisting Frames & Eccentrically Braced Frame
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>T</td>
+                        <td>=</td>
+                        <td>C<sub>t</sub>(h<sub>n</sub><sup>3/4</sup>)</td>
+                        <td>=</td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="tI"
+                                 min="0"
+                                 max="99999"
+                                 value="" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><strong>Design Base Shear</strong></td>
+                      </tr>
+                      <tr>
+                        <td>V</td>
+                        <td>=</td>
+                        <td>
+                          C<sub>v</sub>I/RTW
+                        </td>
+                        <td>=</td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="vI"
+                                 min="0"
+                                 max="99999"
+                                 value="" />
+                        </td>
+                        <td>kN</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Force Limitations Parameters</strong></td>
+                      </tr>
+                      <tr>
+                        <td>V</td>
+                        <td>&leq;</td>
+                        <td>
+                          0.25C<sub>a</sub>/RW
+                        </td>
+                        <td>=</td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="vI2"
+                                 min="0"
+                                 max="99999"
+                                 value="" />
+                        </td>
+                        <td>kN</td>
+                      </tr>
+                      <tr>
+                        <td>V</td>
+                        <td>&geq;</td>
+                        <td>
+                          0.11C<sub>a</sub>IW
+                        </td>
+                        <td>=</td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="vI3"
+                                 min="0"
+                                 max="99999"
+                                 value="" />
+                        </td>
+                        <td>kN</td>
+                      </tr>
+                      <tr>
+                        <td>V</td>
+                        <td>&geq;</td>
+                        <td>
+                          0.80ZN<sub>v</sub>I/RW
+                        </td>
+                        <td>=</td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="vI4"
+                                 min="0"
+                                 max="99999"
+                                 value="" />
+                        </td>
+                        <td>kN</td>
+                      </tr>
+                      <tr>
+                        <td colspan="3">Base Shear, V</td>
+                        <td>=</td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="baseV"
+                                 min="0"
+                                 max="99999"
+                                 value="" />
+                        </td>
+                        <td>kN</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Additional Force, F<sub>t</sub></strong></td>
+                      </tr>
+                      <tr>
+                        <td>F<sub>t</sub></td>
+                        <td>=</td>
+                        <td>0.7TV&leq;0.25V</td>
+                        <td>=</td>
+                        <td>
+                          <input type="number"
+                                 name=""
+                                 class="fT"
+                                 min="0"
+                                 max="99999"
+                                 value="" />
+                        </td>
+                        <td>kN</td>
+                      </tr>
+                      <tr>
+                        <td>If T &lt; 0.70sec F<sub>t</sub> = 0</td>
+                      </tr>
+                      <tr>
+                        <td>Remarks:</td>
+                        <td class="ftRemarks"
+                            colspan="5"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="datacontainer">
+              <div class="datatables">
+                <div class="incontainercol">
+                  <table id="sTable">
+                    <thead>
+                      <tr>
+                        <th>Level</th>
+                        <th>W<sub>i</sub></th>
+                        <th>h<sub>i</sub></th>
+                        <th>W<sub>i</sub>h<sub>i</sub></th>
+                        <th>F<sub>x</sub></th>
+                        <th>F<sub>i</sub></th>
+                        <th>F<sub>i</sub>h<sub>i</sub></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td></td>
+                        <td>kN</td>
+                        <td>m</td>
+                        <td>kNm</td>
+                        <td>kN</td>
+                        <td>kN</td>
+                        <td>kNm</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td><input type="number"
+                                 name=""
+                                 class=""
+                                 min="0"
+                                 max="999999"
+                                 placeholder="Enter value" /></td>
+                        <td><input type="number"
+                                 name=""
+                                 class=""
+                                 min="0"
+                                 max="999999"
+                                 placeholder="Enter value" /></td>
+                        <td><input type="number"
+                                 name=""
+                                 class=""
+                                 min="0"
+                                 max="999999" /></td>
+                        <td><input type="number"
+                                 name=""
+                                 class=""
+                                 min="0"
+                                 max="999999" /></td>
+                        <td><input type="number"
+                                 name=""
+                                 class=""
+                                 min="0"
+                                 max="999999" /></td>
+                        <td><input type="number"
+                                 name=""
+                                 class=""
+                                 min="0"
+                                 max="999999" /></td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td><input type="number"
+                                 name=""
+                                 class=""
+                                 min="0"
+                                 max="999999"
+                                 placeholder="Enter value" /></td>
+                        <td><input type="number"
+                                 name=""
+                                 class=""
+                                 min="0"
+                                 max="999999"
+                                 placeholder="Enter value" /></td>
+                        <td><input type="number"
+                                 name=""
+                                 class=""
+                                 min="0"
+                                 max="999999" /></td>
+                        <td><input type="number"
+                                 name=""
+                                 class=""
+                                 min="0"
+                                 max="999999" /></td>
+                        <td><input type="number"
+                                 name=""
+                                 class=""
+                                 min="0"
+                                 max="999999" /></td>
+                        <td><input type="number"
+                                 name=""
+                                 class=""
+                                 min="0"
+                                 max="999999" /></td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td><input type="number"
+                                 name=""
+                                 class=""
+                                 min="0"
+                                 max="999999"
+                                 placeholder="Enter value" /></td>
+                        <td><input type="number"
+                                 name=""
+                                 class=""
+                                 min="0"
+                                 max="999999"
+                                 placeholder="Enter value" /></td>
+                        <td><input type="number"
+                                 name=""
+                                 class=""
+                                 min="0"
+                                 max="999999" /></td>
+                        <td><input type="number"
+                                 name=""
+                                 class=""
+                                 min="0"
+                                 max="999999" /></td>
+                        <td><input type="number"
+                                 name=""
+                                 class=""
+                                 min="0"
+                                 max="999999" /></td>
+                        <td><input type="number"
+                                 name=""
+                                 class=""
+                                 min="0"
+                                 max="999999" /></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td><input type="number"
+                                 name=""
+                                 class="wIsum"
+                                 min="0"
+                                 max="999999" /></td>
+                        <td><input type="number"
+                                 name=""
+                                 class="hIsum"
+                                 min="0"
+                                 max="999999" /></td>
+                        <td><input type="number"
+                                 name=""
+                                 class="wIhIsum"
+                                 min="0"
+                                 max="999999" /></td>
+                        <td><input type="number"
+                                 name=""
+                                 class="fXsum"
+                                 min="0"
+                                 max="999999" /></td>
+                        <td><input type="number"
+                                 name=""
+                                 class="fIsum"
+                                 min="0"
+                                 max="999999" /></td>
+                        <td><input type="number"
+                                 name=""
+                                 class="fIhIsum"
+                                 min="0"
+                                 max="999999" /></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="datacontainer">
+              <div class="datatables">
+                <div class="incontainercol">
+                  <table>
+                    <tbody>
+                      <thead>
+                        <th>FACTOR OF SAFETY AGAINSTS OVERTURNING</th>
+                      </thead>
+                      <tr>
+                        <td><strong>LONGITUDINAL DIRECTION</strong></td>
+                      </tr>
+                      <tr>
+                        <td>F.S.</td>
+                        <td>=</td>
+                        <td>&sum;Wxd/&sum;F<sub>i</sub>h<sub>i</sub> &gt; 2.0 safe</td>
+                        <td>=</td>
+                        <td><input type="number"
+                                 name=""
+                                 class="fSL"
+                                 min="0"
+                                 max="999999" /></td>
+                      </tr>
+                      <tr>
+                        <td>Remarks:</td>
+                        <td class="longR"></td>
+                      </tr>
+                      <tr>
+                        <td><strong>TRANSVERSE DIRECTION</strong></td>
+                      </tr>
+                      <tr>
+                        <td>F.S.</td>
+                        <td>=</td>
+                        <td>&sum;Wxd/&sum;F<sub>i</sub>h<sub>i</sub> &gt; 2.0 safe</td>
+                        <td>=</td>
+                        <td><input type="number"
+                                 name=""
+                                 class="fST"
+                                 min="0"
+                                 max="999999" /></td>
+                      </tr>
+                      <tr>
+                        <td>Remarks:</td>
+                        <td class="transR"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+    <script src="index.js"></script>
+  <script>
+    window.onload = function () {
+      var preloader = document.getElementById("preloader");
+      preloader.style.opacity = "0";
+      setTimeout(function () {
+        preloader.style.display = "none";
+      },500);
+    };
+    const zoneC = document.getElementById('zoneC');
+    const iFactor = document.querySelector('.iFactor');
+    const sSt = document.querySelector('.sSt');
+    const nA = document.querySelector('.nA');
+    const nV = document.querySelector('.nV');
+    const nAC = document.querySelector('.nAC');
+    const nACF = document.querySelector('.nACF');
+    const nACFR = document.querySelector('.nACFR');
+    const nVC = document.querySelector('.nVC');
+    const nVCF = document.querySelector('.nVCF');
+    const nVCFR = document.querySelector('.nVCFR');
+    const aR = document.querySelector('.aR');
+    const hN = document.querySelector('.hN');
+    const wT = document.querySelector('.wT');
+    const cT = document.querySelector('.cT');
+    const tI = document.querySelector('.tI');
+    const vI = document.querySelector('.vI');
+    const vI2 = document.querySelector('.vI2');
+    const vI3 = document.querySelector('.vI3');
+    const vI4 = document.querySelector('.vI4');
+    const baseV = document.querySelector('.baseV');
+    const fT = document.querySelector('.fT');
+    const ftRemarks = document.querySelector('.ftRemarks');
+    const sTable = document.getElementById('sTable'); //id
+    const fSL = document.querySelector('.fSL');
+    const longR = document.querySelector('.longR');
+    const fST = document.querySelector('.fST');
+    const transR = document.querySelector('.transR');
+    const aST = document.getElementById('aST');
+    const nAT = document.querySelector('.nAT');
+    const nVT = document.querySelector('.nVT');
+
+    iFactor.addEventListener('input',sCompute);
+    // zoneC.addEventListener('input',sCompute);
+    nA.addEventListener('input',sCompute);
+    nV.addEventListener('input',sCompute);
+    aST.addEventListener('change',sCompute);
+    zoneC.addEventListener('change',sCompute);
+    aR.addEventListener('input',sCompute);
+    hN.addEventListener('input',sCompute);
+    wT.addEventListener('input',sCompute);
+    cT.addEventListener('input',sCompute);
+
+
+
+    function sCompute() {
+      nACF.value = nA.value;
+      nVCF.value = nV.value;
+
+      let aSTOption = aST.options[aST.selectedIndex].value;
+      let zoneCOption = zoneC.options[zoneC.selectedIndex].innerHTML;
+
+      if (aSTOption === '1') {
+        nAC.value = 0.32;
+        nVC.value = 0.32;
+        nAT.textContent = "0.32Na";
+        nVT.textContent = "0.32Nv";
+      } else if (aSTOption === '2') {
+        nAC.value = 0.40;
+        nVC.value = 0.40;
+        nAT.textContent = "0.40Na";
+        nVT.textContent = "0.40Nv";
+      } else if (aSTOption === '3') {
+        nAC.value = 0.40;
+        nVC.value = 0.56;
+        nAT.textContent = "0.40Na";
+        nVT.textContent = "0.56Nv";
+      } else if (aSTOption === '4') {
+        nAC.value = 0.44;
+        nVC.value = 0.64;
+        nAT.textContent = "0.44Na";
+        nVT.textContent = "0.64Nv";
+      } else if (aSTOption === '5') {
+        nAC.value = 0.44;
+        nVC.value = 0.96;
+        nAT.textContent = "0.44Na";
+        nVT.textContent = "0.96Nv";
+      } else if (aSTOption === '') {
+        nAC.value = '';
+        nVC.value = '';
+        nAT.textContent = '';
+        nVT.textContent = '';
+      }
+
+      nACFR.value = nACF.value * nAC.value;
+      nVCFR.value = nVCF.value * nVC.value;
+      tI.value = parseFloat(cT.value) * Math.pow(parseFloat(hN.value),3 / 4);
+      vI.value = (parseFloat(nVCFR.value) * parseFloat(iFactor.value) * parseFloat(wT.value)) / (parseFloat(aR.value) * parseFloat(tI.value));
+      vI2.value = (2.5 * parseFloat(nACFR.value) * parseFloat(iFactor.value) * parseFloat(wT.value)) / (parseFloat(aR.value));
+      vI3.value = (0.11 * parseFloat(nACFR.value) * parseFloat(iFactor.value) * parseFloat(wT.value));
+      vI4.value = (0.8 * parseFloat(nV.value) * zoneCOption * parseFloat(iFactor.value) * parseFloat(wT.value)) / (parseFloat(aR.value));
+
+      if (parseFloat(vI.value) < parseFloat(vI2.value)) {
+        baseV.value = parseFloat(vI.value);
+      } else if (parseFloat(vI2.value) > parseFloat(vI3.value) || parseFloat(vI2.value) > parseFloat(vI4.value)) {
+        baseV.value = parseFloat(vI2.value);
+      } else {
+        baseV.value = parseFloat(vI4.value);
+      }
+
+      if (parseFloat(tI.value) < 0.7) {
+        fT.value = 0;
+        ftRemarks.textContent = "Ft = 0";
+      } else {
+        fT.value = 0.7 * tI.value * baseV.value;
+        ftRemarks.textContent = "Ft = 0.7TV";
+      }
+
+    }
+
+    let sumOne = 0;
+    let sumTwo = 0;
+    let sumThree = 0;
+    for (let i = 2; i < sTable.rows.length - 1; i++) {
+      let colOneValue = parseFloat(sTable.rows[i].cells[1].querySelector('input').value);
+      sumOne += colOneValue;
+
+      let colTwoValue = parseFloat(sTable.rows[i].cells[2].querySelector('input').value);
+      sumTwo += colTwoValue;
+
+      let sumColValue = parseFloat(sTable.rows[i].cells[3].querySelector('input').value);
+      sumThree += sumColValue;
+    }
+
+    sTable.rows[5].cells[1].querySelector('input').value = sumOne;
+    sTable.rows[5].cells[2].querySelector('input').value = sumTwo;
+
+
+    for (let i = 2; i < sTable.rows.length - 1; i++) {
+
+      let colOne = sTable.rows[i].cells[1].querySelector('input');
+      let colTwo = sTable.rows[i].cells[2].querySelector('input');
+
+      colOne.addEventListener('input',calcRow);
+      colTwo.addEventListener('input',calcRow);
+      colOne.addEventListener('input',calcRow4);
+      colTwo.addEventListener('input',calcRow4);
+      fT.addEventListener('input',calcRow4);
+      baseV.addEventListener('input',calcRow4);
+      colOne.addEventListener('input',calcRow5);
+      colTwo.addEventListener('input',calcRow5);
+      colOne.addEventListener('input',calcRow6);
+      colTwo.addEventListener('input',calcRow6);
+
+      colOne.addEventListener('input',function () {
+        let newSumOne = 0;
+        let newSumTwo = 0;
+
+        for (let j = 2; j < sTable.rows.length - 1; j++) {
+          let colOneValue = parseFloat(sTable.rows[j].cells[1].querySelector('input').value);
+          newSumOne += colOneValue;
+
+          let colTwoValue = parseFloat(sTable.rows[j].cells[2].querySelector('input').value);
+          newSumTwo += colTwoValue;
+        }
+
+        sTable.rows[5].cells[1].querySelector('input').value = newSumOne;
+        sTable.rows[5].cells[2].querySelector('input').value = newSumTwo;
+
+      });
+
+      colTwo.addEventListener('input',function () {
+        let newSumOne = 0;
+        let newSumTwo = 0;
+        let newSumThree = 0;
+
+        for (let j = 2; j < sTable.rows.length - 1; j++) {
+          let colOneValue = parseFloat(sTable.rows[j].cells[1].querySelector('input').value);
+          newSumOne += colOneValue;
+
+          let colTwoValue = parseFloat(sTable.rows[j].cells[2].querySelector('input').value);
+          newSumTwo += colTwoValue;
+
+        }
+
+        sTable.rows[5].cells[1].querySelector('input').value = newSumOne;
+        sTable.rows[5].cells[2].querySelector('input').value = newSumTwo;
+
+      });
+
+      function calcRow() {
+        let sum = 0;
+        for (let i = 2; i < sTable.rows.length - 1; i++) {
+          const input1 = sTable.rows[i].cells[1].querySelector('input');
+          const input2 = sTable.rows[i].cells[2].querySelector('input');
+          const input3 = sTable.rows[i].cells[3].querySelector('input');
+          let value1 = isNaN(parseFloat(input1.value)) ? 0 : parseFloat(input1.value);
+          let value2 = isNaN(parseFloat(input2.value)) ? 0 : parseFloat(input2.value);
+          input3.value = value1 * value2;
+          sum += parseFloat(input3.value);
+        }
+        sTable.rows[5].cells[3].querySelector('input').value = sum;
+      }
+
+
+      function calcRow4() {
+        let sum = 0;
+        for (let i = 2; i < sTable.rows.length - 1; i++) {
+          const input3 = sTable.rows[i].cells[3].querySelector('input');
+          const input4 = sTable.rows[i].cells[4].querySelector('input');
+          input4.value = (parseFloat(input3.value) / parseFloat(sTable.rows[5].cells[3].querySelector('input').value)) * (parseFloat(baseV.value) - parseFloat(fT.value));
+          sum += parseFloat(input4.value);
+        }
+        sTable.rows[5].cells[4].querySelector('input').value = sum;
+      }
+
+      function calcRow5() {
+        let sum = 0;
+        for (let i = 2; i < sTable.rows.length - 1; i++) {
+          const input4 = sTable.rows[i].cells[4].querySelector('input');
+          const input5 = sTable.rows[i].cells[5].querySelector('input');
+          input5.value = parseFloat(input4.value) + parseFloat(fT.value);
+          sum += parseFloat(input5.value);
+        }
+        sTable.rows[5].cells[5].querySelector('input').value = sum;
+      }
+
+      function calcRow6() {
+        let sum = 0;
+        for (let i = 2; i < sTable.rows.length - 1; i++) {
+          const input2 = sTable.rows[i].cells[2].querySelector('input');
+          const input5 = sTable.rows[i].cells[5].querySelector('input');
+          const input6 = sTable.rows[i].cells[6].querySelector('input');
+          input6.value = parseFloat(input2.value) * parseFloat(input5.value);
+          sum += parseFloat(input6.value);
+        }
+        sTable.rows[5].cells[6].querySelector('input').value = sum;
+
+
+        fSL.value = (sTable.rows[5].cells[1].querySelector('input').value * (8 / 2)) / (sTable.rows[5].cells[6].querySelector('input').value);
+        fST.value = (sTable.rows[5].cells[1].querySelector('input').value * (6 / 2)) / (sTable.rows[5].cells[6].querySelector('input').value);
+      }
+
+    }
+
+
+  </script>
+</body>
+
+</html>
