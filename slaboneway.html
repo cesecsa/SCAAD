@@ -1343,9 +1343,11 @@
     fc.addEventListener("input",effectiveDepth);
     fy.addEventListener("input",effectiveDepth);
     dReq.addEventListener("input",effectiveDepth);
-    dActual.addEventListener("input",effectiveDepth);
-
+   mainBar.addEventListener("input",effectiveDepth);
+    minThickness.addEventListener("input",effectiveDepth);
+            
     function effectiveDepth() {
+      dActual.value = parseFloat(minThickness.value) - 20 - (parseFloat(mainBar.value) / 2);
       if (fc.value < 30) {
         beta1.value = 0.85;
       } else {
