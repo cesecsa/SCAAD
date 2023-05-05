@@ -1,0 +1,1964 @@
+<!DOCTYPE html>
+<html lang="en" id="slaboneway">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-CoMPatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SC DESIGN AND ANALYSIS</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div id="preloader"></div>
+    <div class="mainbody">
+      <div class="left">
+        <div class="container">
+          <div class="logo">
+            <a href="home.html">
+              <img src="resources\images\SC Logo.png" alt="" />
+              <span class="projname">ANALYSIS & DESIGN</span>
+            </a>
+          </div>
+        </div>
+        <div class="menu">
+          <ul class="submenu">
+            <li>
+              <a href="home.html"
+                ><img
+                  src="resources\images\home_FILL0_wght400_GRAD0_opsz48.svg"
+                  alt=""
+                />HOME
+              </a>
+            </li>
+            <li class="submenu2">
+              <a class="active" href="slaboneway.html"
+                ><img
+                  class="rotate"
+                  src="resources\images\grid_4x4_FILL0_wght400_GRAD0_opsz48.svg"
+                  alt=""
+                />SLABS
+              </a>
+              <ul class="dropdown dropdownshow">
+                <li>
+                  <a href="slaboneway.html" style="color: #33cabb">ONE WAY</a>
+                </li>
+                <li><a href="slabtwoway.html">TWO WAY</a></li>
+              </ul>
+            </li>
+            <li class="submenu2">
+              <a href="singly.html"
+                ><img
+                  src="resources\images\border_inner_FILL0_wght400_GRAD0_opsz48.svg"
+                  alt=""
+                />BEAMS
+              </a>
+              <ul class="dropdown">
+                <li>
+                  <a href="singly.html">SINGLY</a>
+                </li>
+                <li><a href="doubly.html">DOUBLY</a></li>
+              </ul>
+            </li>
+            <li class="submenu2">
+              <a href="loaddistribution.html"
+                ><img
+                  src="resources\images\vertical_shades_closed_FILL0_wght400_GRAD0_opsz48.svg"
+                  alt=""
+                />COLUMNS
+              </a>
+              <ul class="dropdown">
+                <li>
+                  <a href="loaddistribution.html">DISTRIBUTION</a>
+                </li>
+                <li><a href="design.html">DESIGN</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="seismic.html"
+                ><img
+                  src="resources\images\landslide_FILL0_wght400_GRAD0_opsz48.svg"
+                  alt=""
+                />SEISMIC
+              </a>
+            </li>
+            <li>
+              <a href="gallery.html"
+                ><img
+                  src="resources\images\photo_camera_FILL0_wght400_GRAD0_opsz48.svg"
+                  alt=""
+                />GALLERY
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="right">
+        <div class="outcontainer">
+          <div class="incontainer">
+            <div class="incontainercol2">
+              <h2 id="projTitle">DESIGN OF SECOND (2ND) FLOOR SLAB - 2FS</h2>
+              <div class="cmdBtn">
+                <button id="myBtn">Project Name</button>
+                <button id="myPrint">Print/Save</button>
+                <div id="myModal" class="modal">
+                  <div class="modal-content">
+                    <textarea
+                      name="text"
+                      id="text-area"
+                      cols="30"
+                      rows="5"
+                      placeholder="Project Title Here"
+                    ></textarea>
+                  </div>
+                  <div class="modalBtn">
+                    <button id="save">Save</button>
+                    <button id="cancel">Cancel</button>
+                  </div>
+                </div>
+              </div>
+              <div class="datacontainer">
+                <div class="datatables">
+                  <div class="incontainercol">
+                    <div>
+                      <span class="spantitle">Design Data</span>
+                    </div>
+                    <div>
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td>f<sub>c</sub>'</td>
+                            <td>=</td>
+                            <td>
+                              <input
+                                type="number"
+                                name=""
+                                id=""
+                                min="0"
+                                max="999999"
+                                class="fc"
+                                placeholder="Enter value"
+                              />
+                            </td>
+                            <td>MPa</td>
+                          </tr>
+                          <tr>
+                            <td>f<sub>y</sub></td>
+                            <td>=</td>
+                            <td>
+                              <input
+                                type="number"
+                                name=""
+                                id=""
+                                min="0"
+                                max="999999"
+                                class="fy"
+                                placeholder="Enter value"
+                              />
+                            </td>
+                            <td>MPa</td>
+                          </tr>
+                          <tr>
+                            <td>Live Load</td>
+                            <td>=</td>
+                            <td>
+                              <input
+                                type="number"
+                                name=""
+                                id=""
+                                min="0"
+                                max="999999"
+                                class="liveLoad"
+                                placeholder="Enter value"
+                              />
+                            </td>
+                            <td>kPa</td>
+                          </tr>
+                          <tr>
+                            <td>Dead Load(excluding own weight)</td>
+                            <td>=</td>
+                            <td>
+                              <input
+                                type="number"
+                                name=""
+                                id=""
+                                min="0"
+                                max="999999"
+                                class="deadLoad"
+                                placeholder="Enter value"
+                              />
+                            </td>
+                            <td>kPa</td>
+                          </tr>
+                          <tr>
+                            <td>Beam Width</td>
+                            <td>=</td>
+                            <td>
+                              <input
+                                type="number"
+                                name=""
+                                id=""
+                                min="0"
+                                max="999999"
+                                class="beamWidth"
+                                placeholder="Enter value"
+                              />
+                            </td>
+                            <td>mm</td>
+                          </tr>
+                          <tr>
+                            <td>Assumed Slam Width</td>
+                            <td>=</td>
+                            <td>
+                              <input
+                                type="number"
+                                name=""
+                                id=""
+                                min="0"
+                                max="999999"
+                                class="assumedSlamWidth"
+                                placeholder="Enter value"
+                              />
+                            </td>
+                            <td>mm</td>
+                          </tr>
+                          <tr>
+                            <td>Long Span(l)</td>
+                            <td>=</td>
+                            <td>
+                              <input
+                                type="number"
+                                name=""
+                                id=""
+                                min="0"
+                                max="999999"
+                                class="longSpan"
+                                placeholder="Enter value"
+                              />
+                            </td>
+                            <td>m</td>
+                          </tr>
+                          <tr>
+                            <td>Short Span(s)</td>
+                            <td>=</td>
+                            <td>
+                              <input
+                                type="number"
+                                name=""
+                                id=""
+                                min="0"
+                                max="999999"
+                                class="shortSpan"
+                                placeholder="Enter value"
+                              />
+                            </td>
+                            <td>m</td>
+                          </tr>
+                          <tr>
+                            <td>Main Bar Diameter</td>
+                            <td>=</td>
+                            <td>
+                              <input
+                                type="number"
+                                name=""
+                                id=""
+                                min="0"
+                                max="999999"
+                                class="mainBar"
+                                placeholder="Enter value"
+                              />
+                            </td>
+                            <td>mm</td>
+                          </tr>
+                          <tr>
+                            <td>Temperature Bar Diameter</td>
+                            <td>=</td>
+                            <td>
+                              <input
+                                type="number"
+                                name=""
+                                id=""
+                                min="0"
+                                max="999999"
+                                class="tempBar"
+                                placeholder="Enter value"
+                              />
+                            </td>
+                            <td>mm</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="incontainercol1">
+                    <div class="incontainercol">
+                      <span class="spantitle"
+                        >Verify if One Way (r&gt;0.5) or Two Way Slab
+                        (r&lt;0.5)</span
+                      >
+                      <div>
+                        <table>
+                          <tbody>
+                            <tr>
+                              <td>L <sub>l</sub></td>
+                              <td colspan="2"></td>
+                              <td>=</td>
+                              <td>
+                                <input
+                                  type="number"
+                                  name=""
+                                  id=""
+                                  min="0"
+                                  max="999999"
+                                  class="Ll"
+                                />
+                              </td>
+                              <td>m</td>
+                            </tr>
+                            <tr>
+                              <td>L <sub>s</sub></td>
+                              <td colspan="2"></td>
+                              <td>=</td>
+                              <td>
+                                <input
+                                  type="number"
+                                  name=""
+                                  id=""
+                                  min="0"
+                                  max="999999"
+                                  class="Ls"
+                                />
+                              </td>
+                              <td>m</td>
+                            </tr>
+                            <tr>
+                              <td>r</td>
+                              <td>=</td>
+                              <td>L <sub>l</sub>/L<sub>s</sub></td>
+                              <td>=</td>
+                              <td>
+                                <input
+                                  type="number"
+                                  name=""
+                                  id=""
+                                  min="0"
+                                  max="999999"
+                                  class="spanRatio"
+                                />
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+
+                      <div>
+                        <span class="spanValidation"></span>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="incontainercol">
+                        <span class="spantitle">Minimum Thickness</span>
+                        <div>
+                          <table>
+                            <tbody>
+                              <tr>
+                                <td>h</td>
+                                <td>=</td>
+                                <td>
+                                  <input
+                                    type="number"
+                                    name=""
+                                    id=""
+                                    min="0"
+                                    max="999999"
+                                    class="minThickness"
+                                  />
+                                </td>
+                                <td>mm</td>
+                              </tr>
+                              <tr>
+                                <td colspan="4">
+                                  <button id="myBtn1">
+                                    NSCP TABLE 407.3.1.1
+                                  </button>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="incontainercol1">
+                    <div class="incontainercol">
+                      <span class="spantitle">
+                        Compute Factored Loads (Factors: 1.2DL and 1.6LL)</span
+                      >
+                      <div>
+                        <table>
+                          <tbody>
+                            <tr>
+                              <td>&#612;<sub>concrete</sub></td>
+                              <td>=</td>
+                              <td>
+                                <input
+                                  type="number"
+                                  name=""
+                                  id=""
+                                  min="0"
+                                  max="999999"
+                                  placeholder="Enter value"
+                                />
+                              </td>
+                              <td>kN/m<sup>3</sup></td>
+                            </tr>
+                            <tr>
+                              <td>Factored L<sub>L</sub></td>
+                              <td>=</td>
+                              <td>
+                                <input
+                                  type="number"
+                                  name=""
+                                  id=""
+                                  min="0"
+                                  max="999999"
+                                  class="factoredLl"
+                                />
+                              </td>
+                              <td>kN/m</td>
+                            </tr>
+                            <tr>
+                              <td>Factored D<sub>L</sub></td>
+                              <td>=</td>
+                              <td>
+                                <input
+                                  type="number"
+                                  name=""
+                                  id=""
+                                  min="0"
+                                  max="999999"
+                                  class="factoredDl"
+                                />
+                              </td>
+                              <td>kN/m</td>
+                            </tr>
+                            <tr>
+                              <td>Self Weight</td>
+                              <td>=</td>
+                              <td>
+                                <input
+                                  type="number"
+                                  name=""
+                                  id=""
+                                  min="0"
+                                  max="999999"
+                                  class="selfWeight"
+                                />
+                              </td>
+                              <td>kN/m</td>
+                            </tr>
+                            <tr>
+                              <td>Total</td>
+                              <td>=</td>
+                              <td>
+                                <input
+                                  type="number"
+                                  name=""
+                                  id=""
+                                  min="0"
+                                  max="999999"
+                                  class="factoredTotal"
+                                />
+                              </td>
+                              <td>kN/m</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <button id="myBtn2">NSCP TABLE 204-1</button>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="incontainercol">
+                      <div>
+                        <span class="spantitle">Check ACI Limitations</span>
+                      </div>
+                      <div>
+                        <table>
+                          <tbody>
+                            <tr>
+                              <td>LL/DL</td>
+                              <td>=</td>
+                              <td>
+                                <input
+                                  type="number"
+                                  name=""
+                                  id=""
+                                  min="0"
+                                  max="999999"
+                                  class="llDl"
+                                />
+                              </td>
+                              <td class="valLlDl"></td>
+                            </tr>
+                            <tr>
+                              <td>(L-S)/S</td>
+                              <td>=</td>
+                              <td>
+                                <input
+                                  type="number"
+                                  name=""
+                                  id=""
+                                  min="0"
+                                  max="999999"
+                                  class="lSs"
+                                />
+                              </td>
+                              <td class="valLs"></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="datacontainer">
+                <div class="datatables">
+                  <div class="incontainercol">
+                    <div>
+                      <span class="spantitle">ACI Moment Factors</span>
+                    </div>
+                    <div>
+                      <div>
+                        <label for="myRadio">Select type:</label>
+                        <label>
+                          <input
+                            type="radio"
+                            name="myRadio"
+                            value="option1"
+                            id="cantliliver"
+                          />
+                          Cantiliver
+                        </label>
+                        <label>
+                          <input
+                            type="radio"
+                            name="myRadio"
+                            value="option2"
+                            id="continuous"
+                          />
+                          Continuous
+                        </label>
+                      </div>
+                      <div>
+                        <label for="rowInput"
+                          >Number of Span (Maximum of 10):</label
+                        >
+                        <input
+                          type="number"
+                          id="rowInput"
+                          name="rowInput"
+                          min="1"
+                          max="10"
+                          value=""
+                          placeholder="Max of 10"
+                        />
+                      </div>
+
+                      <div class="incontainercol2">
+                        <div>
+                          <button id="myButton">Add Rows</button>
+                          <button id="clearTdsButton">Clear Table</button>
+                        </div>
+
+                        <div>
+                          <button id="myBtn3">NSCP TABLE 406.5.2</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="incontainercol">
+                    <div>
+                      <label for="spanW">W:</label>
+                      <input
+                        type="number"
+                        id="rowInput"
+                        name="spanW"
+                        min="1"
+                        max="9999"
+                        value=""
+                        class="aciW"
+                        placeholder="Enter value"
+                      />
+                      kN/m
+                    </div>
+                    <table id="myTable">
+                      <thead>
+                        <tr>
+                          <th>Span No.</th>
+                          <th>Span Length</th>
+                          <th>M <sub>1</sub></th>
+                          <th>M <sub>mid</sub></th>
+                          <th>M <sub>2</sub></th>
+                          <th>M <sub>canti</sub></th>
+                          <th>Unit</th>
+                        </tr>
+                      </thead>
+                      <tbody></tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="datacontainer">
+                <div class="datatables">
+                  <div class="incontainercol">
+                    <div>
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td>( - )</td>
+                            <td>M <sub>1</sub></td>
+                            <td>=</td>
+                            <td>1/24</td>
+                            <td>x W<sub>u</sub>L<sup>2</sup></td>
+                            <td>=</td>
+                            <td>
+                              <input
+                                type="number"
+                                name=""
+                                id=""
+                                min="0"
+                                max="999999"
+                                class="moMent"
+                              />
+                            </td>
+                            <td>kN - m</td>
+                          </tr>
+                          <tr>
+                            <td>( + )</td>
+                            <td>M<sub>2</sub></td>
+                            <td>=</td>
+                            <td>1/14</td>
+                            <td>x W<sub>u</sub>L<sup>2</sup></td>
+                            <td>=</td>
+                            <td>
+                              <input
+                                type="number"
+                                name=""
+                                id=""
+                                min="0"
+                                max="999999"
+                                class="moMent"
+                              />
+                            </td>
+                            <td>kN - m</td>
+                          </tr>
+                          <tr>
+                            <td>( - )</td>
+                            <td>M<sub>3 </sub></td>
+                            <td>=</td>
+                            <td>1/10</td>
+                            <td>x W<sub>u</sub>L<sup>2</sup></td>
+                            <td>=</td>
+                            <td>
+                              <input
+                                type="number"
+                                name=""
+                                id=""
+                                min="0"
+                                max="999999"
+                                class="moMent"
+                              />
+                            </td>
+                            <td>kN - m</td>
+                          </tr>
+                          <tr>
+                            <td>( + )</td>
+                            <td>M<sub>4</sub></td>
+                            <td>=</td>
+                            <td>1/16</td>
+                            <td>x W<sub>u</sub>L<sup>2</sup></td>
+                            <td>=</td>
+                            <td>
+                              <input
+                                type="number"
+                                name=""
+                                id=""
+                                min="0"
+                                max="999999"
+                                class="moMent"
+                              />
+                            </td>
+                            <td>kN - m</td>
+                          </tr>
+                          <tr>
+                            <td>( - )</td>
+                            <td>M<sub>5</sub></td>
+                            <td>=</td>
+                            <td>1/11</td>
+                            <td>x W<sub>u</sub>L<sup>2</sup></td>
+                            <td>=</td>
+                            <td>
+                              <input
+                                type="number"
+                                name=""
+                                id=""
+                                min="0"
+                                max="999999"
+                                class="moMent"
+                              />
+                            </td>
+                            <td>kN - m</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="incontainercol">
+                    <div>
+                      <div>
+                        <span class="spantitle"
+                          >Effective Depth Required for Deflection</span
+                        >
+                      </div>
+                      <div>
+                        <table>
+                          <tbody>
+                            <tr>
+                              <td>&#223; <sub>1</sub></td>
+                              <td>=</td>
+                              <td>
+                                <input
+                                  type="number"
+                                  name=""
+                                  id=""
+                                  min="0"
+                                  max="999999"
+                                  class="beta1"
+                                />
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>&Phi;</td>
+                              <td>=</td>
+                              <td>
+                                <input
+                                  type="number"
+                                  name=""
+                                  id=""
+                                  min="0"
+                                  max="999999"
+                                  class="deflectionPhi"
+                                  placeholder="Enter value"
+                                />
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>&rho;<sub>min</sub></td>
+                              <td>=</td>
+                              <td>
+                                <input
+                                  type="number"
+                                  name=""
+                                  id=""
+                                  min="0"
+                                  max="999999"
+                                  class="rHomin"
+                                />
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>&rho;<sub>max</sub></td>
+                              <td>=</td>
+                              <td>
+                                <input
+                                  type="number"
+                                  name=""
+                                  id=""
+                                  min="0"
+                                  max="999999"
+                                  class="rHomax"
+                                />
+                              </td>
+                              <td class="valrHomax"></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                &rho; = 0.18(f<sub>c</sub>'/f<sub>y</sub>)
+                              </td>
+                              <td>=</td>
+                              <td>
+                                <input
+                                  type="number"
+                                  name=""
+                                  id=""
+                                  min="0"
+                                  max="999999"
+                                  class="rHo"
+                                />
+                              </td>
+                              <td class="valrHo"></td>
+                            </tr>
+                            <tr>
+                              <td>m = f<sub>y</sub>/(0.85f<sub>c</sub>')</td>
+                              <td>=</td>
+                              <td>
+                                <input
+                                  type="number"
+                                  name=""
+                                  id=""
+                                  min="0"
+                                  max="999999"
+                                  class="mRatio"
+                                />
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                R<sub>u</sub> = &rho;
+                                f<sub>y</sub>[1-(&rho;m/2)]
+                              </td>
+                              <td>=</td>
+                              <td>
+                                <input
+                                  type="number"
+                                  name=""
+                                  id=""
+                                  min="0"
+                                  max="999999"
+                                  class="rU"
+                                />
+                              </td>
+                              <td>MPa</td>
+                            </tr>
+                            <tr>
+                              <td colspan="2"></td>
+                              <td>
+                                <input
+                                  type="number"
+                                  name=""
+                                  id=""
+                                  min="0"
+                                  max="999999"
+                                  class="dReq"
+                                />
+                              </td>
+                              <td>mm</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                d<sub>actual</sub> = h-(d<sub>b</sub>/2)-20
+                              </td>
+                              <td>=</td>
+                              <td>
+                                <input
+                                  type="number"
+                                  name=""
+                                  id=""
+                                  min="0"
+                                  max="999999"
+                                  class="dActual"
+                                />
+                              </td>
+                              <td>mm</td>
+                            </tr>
+                            <tr>
+                              <td colspan="2">
+                                d<sub>req</sub>&gt;d<sub>actual</sub>
+                              </td>
+                              <td colspan="2" class="dRemarks"></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="incontainercol">
+                    <div>
+                      <span class="spantitle">Check for Shear</span>
+                    </div>
+                    <div>
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td colspan="6">Due to load</td>
+                          </tr>
+                          <tr>
+                            <td>V</td>
+                            <td>=</td>
+                            <td colspan="3">(1.15/2)(WuL)</td>
+                            <td>=</td>
+                            <td>
+                              <input
+                                type="number"
+                                name=""
+                                id=""
+                                min="0"
+                                max="999999"
+                                class="v"
+                              />
+                            </td>
+                            <td>kN</td>
+                          </tr>
+                          <tr>
+                            <td colspan="6">
+                              Shear @ distance "d<sub>actual</sub>" from the
+                              face of the support
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>V<sub>u</sub></td>
+                            <td>=</td>
+                            <td colspan="3">V - Wud<sub>actual</sub></td>
+                            <td>=</td>
+                            <td>
+                              <input
+                                type="number"
+                                name=""
+                                id=""
+                                min="0"
+                                max="999999"
+                                class="vU"
+                              />
+                            </td>
+                            <td>kN</td>
+                          </tr>
+                          <tr>
+                            <td colspan="6">Shear capacity of slab</td>
+                          </tr>
+                          <tr>
+                            <td>&Phi;V<sub>c</sub></td>
+                            <td>=</td>
+                            <td colspan="3">
+                              0.17&Phi;&lambda;bd(f<sub>c</sub>')<sup>0.5</sup>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colspan="3">&lambda;</td>
+                            <td colspan="2"></td>
+                            <td>=</td>
+                            <td>
+                              <input
+                                type="number"
+                                name=""
+                                id=""
+                                min="0"
+                                max="999999"
+                                class="lamBda"
+                                placeholder="Enter value"
+                              />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colspan="3">&Phi;</td>
+                            <td colspan="2"></td>
+                            <td>=</td>
+                            <td>
+                              <input
+                                type="number"
+                                name=""
+                                id=""
+                                min="0"
+                                max="999999"
+                                class="pHi"
+                                placeholder="Enter value"
+                              />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colspan="3">&Phi;V<sub>c</sub></td>
+                            <td colspan="2"></td>
+                            <td>=</td>
+                            <td>
+                              <input
+                                type="number"
+                                name=""
+                                id=""
+                                min="0"
+                                max="999999"
+                                class="pHiVc1"
+                              />
+                            </td>
+                            <td>N</td>
+                          </tr>
+                          <tr>
+                            <td colspan="3">&Phi;V<sub>c</sub></td>
+                            <td colspan="2"></td>
+                            <td>=</td>
+                            <td>
+                              <input
+                                type="number"
+                                name=""
+                                id=""
+                                min="0"
+                                max="999999"
+                                class="pHiVc2"
+                              />
+                            </td>
+                            <td>kN</td>
+                          </tr>
+                          <tr>
+                            <td colspan="6">
+                              Shear Capacity &gt; V<sub>u</sub>
+                            </td>
+                            <td class="pHiremarks"></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="datacontainer">
+                <div class="datatables">
+                  <div class="incontainercol">
+                    <div>
+                      <span class="spantitle">Compute Reinforcements</span>
+                    </div>
+                    <div>
+                      <table id="myTable2">
+                        <thead>
+                          <tr>
+                            <th>Moment Direction</th>
+                            <th>Section</th>
+                            <th>Moment (kN&middot;m)</th>
+                            <th>R<sub>u</sub>(MPa)</th>
+                            <th>Req &rho;</th>
+                            <th>Used &rho;</th>
+                            <th>As (mm<sup>2</sup>)</th>
+                            <th>Theoretical Spacing (mm)</th>
+                            <th>Actual Spacing (mm)</th>
+                          </tr>
+                        </thead>
+                        <tbody></tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="incontainercol">
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td>A <sub>b</sub></td>
+                          <td>=</td>
+                          <td>
+                            <input
+                              type="number"
+                              name=""
+                              class="aB"
+                              min="0"
+                              max="999999"
+                            />
+                          </td>
+                          <td>mm<sup>2</sup></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div>
+                      <span class="spantitle">Spacing of Temperature Bars</span>
+                    </div>
+                    <div>
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td>A <sub>t</sub></td>
+                            <td>=</td>
+                            <td>
+                              <input
+                                type="number"
+                                name=""
+                                class="spacingAt"
+                                min="0"
+                                max="999999"
+                              />
+                            </td>
+                            <td>mm<sup>2</sup></td>
+                          </tr>
+                          <tr>
+                            <td>A <sub>st</sub></td>
+                            <td>=</td>
+                            <td>
+                              <input
+                                type="number"
+                                name=""
+                                class="spacingAst"
+                                min="0"
+                                max="999999"
+                              />
+                            </td>
+                            <td>mm<sup>2</sup></td>
+                          </tr>
+                          <tr>
+                            <td>S</td>
+                            <td>=</td>
+                            <td>
+                              <input
+                                type="number"
+                                name=""
+                                class="spacingS"
+                                min="0"
+                                max="999999"
+                              />
+                            </td>
+                            <td>mm<sup>2</sup></td>
+                          </tr>
+                          <tr>
+                            <td>say</td>
+                          </tr>
+                          <tr>
+                            <td>S</td>
+                            <td>=</td>
+                            <td>
+                              <input
+                                type="number"
+                                name=""
+                                class="spacingSayS"
+                                min="0"
+                                max="999999"
+                              />
+                            </td>
+                            <td>mm</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="datacontainer">
+                <div class="datatables">
+                  <div class="incontainercol">
+                    <div>
+                      <span class="spantitle">SLAB SPECIFICATIONS</span>
+                    </div>
+                    <div>
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td></td>
+                            <td>
+                              <button id="myBtn4">NSCP TABLE 407.3.1.1</button>
+                            </td>
+                            <td>mm THICK</td>
+                            <td>RC Slab</td>
+                          </tr>
+                          <tr>
+                            <td>Type</td>
+                            <td>Main Reinforcement Bars</td>
+                          </tr>
+                          <tr>
+                            <td>GRADE 33</td>
+                            <td>
+                              <input
+                                type="number"
+                                name=""
+                                class="mainBarGrade"
+                                min="0"
+                                max="999999"
+                              />
+                            </td>
+                            <td>mm spaced</td>
+                            <td>
+                              <input
+                                type="number"
+                                name=""
+                                class="mainBarSpacing"
+                                min="0"
+                                max="999999"
+                              />
+                            </td>
+                            <td>mm Within</td>
+                            <td>
+                              <input
+                                type="number"
+                                name=""
+                                class="mmWithin"
+                                min="0"
+                                max="999999"
+                              />
+                            </td>
+                            <td>m</td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td>Temperature Reinforcement Bars</td>
+                          </tr>
+                          <tr>
+                            <td>GRADE 33</td>
+                            <td>
+                              <input
+                                type="number"
+                                name=""
+                                class="tempBarGrade"
+                                min="0"
+                                max="999999"
+                              />
+                            </td>
+                            <td>mm spaced</td>
+                            <td>
+                              <input
+                                type="number"
+                                name=""
+                                class="tempBarSpacing"
+                                min="0"
+                                max="999999"
+                              />
+                            </td>
+                            <td>mm Within</td>
+                            <td>Both ways</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="myModal1" class="modal">
+        <div class="modal-content">
+          <img src="resources\images\407.3.1.1.png" alt="" />
+          <span class="close1 close">&times;</span>
+        </div>
+      </div>
+      <div id="myModal2" class="modal">
+        <div class="modal-content">
+          <img class="table204" src="resources\images\204-1.png" alt="" />
+          <span class="close2 close">&times;</span>
+        </div>
+      </div>
+      <div id="myModal3" class="modal">
+        <div class="modal-content">
+          <img class="4052" src="resources\images\406.5.2.png" alt="" />
+          <span class="close3 close">&times;</span>
+        </div>
+      </div>
+      <div id="myModal4" class="modal">
+        <div class="modal-content">
+          <img src="resources\images\407.3.1.1.png" alt="" />
+          <span class="close1 close">&times;</span>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+    <script>
+      const longSpan = document.querySelector(".longSpan");
+      const shortSpan = document.querySelector(".shortSpan");
+      const Ll = document.querySelector(".Ll");
+      const Ls = document.querySelector(".Ls");
+      const spanRatio = document.querySelector(".spanRatio");
+      const spanValidation = document.querySelector(".spanValidation");
+      const minThickness = document.querySelector(".minThickness");
+      const fy = document.querySelector(".fy");
+      const liveLoad = document.querySelector(".liveLoad");
+      const deadLoad = document.querySelector(".deadLoad");
+      const factoredLl = document.querySelector(".factoredLl");
+      const factoredDl = document.querySelector(".factoredDl");
+      const selfWeight = document.querySelector(".selfWeight");
+      const factoredTotal = document.querySelector(".factoredTotal");
+      const llDl = document.querySelector(".llDl");
+      const lSs = document.querySelector(".lSs");
+      const valLlDl = document.querySelector(".valLlDl");
+      const valLs = document.querySelector(".valLs");
+      const moMent = document.querySelectorAll(".moMent");
+      const assumedSlamWidth = document.querySelector(".assumedSlamWidth");
+      const mainBar = document.querySelector(".mainBar");
+      const tempBar = document.querySelector(".tempBar");
+      const aB = document.querySelector(".aB");
+      const spacingAt = document.querySelector(".spacingAt");
+      const spacingAst = document.querySelector(".spacingAst");
+      const spacingS = document.querySelector(".spacingS");
+      const spacingSayS = document.querySelector(".spacingSayS");
+      const mainBarSpacing = document.querySelector(".mainBarSpacing");
+      const tempBarSpacing = document.querySelector(".tempBarSpacing");
+      const mmWithin = document.querySelector(".mmWithin");
+      const mainBarGrade = document.querySelector(".mainBarGrade");
+      const tempBarGrade = document.querySelector(".tempBarGrade");
+      const fc = document.querySelector(".fc");
+      const beta1 = document.querySelector(".beta1");
+      const rHo = document.querySelector(".rHo");
+      const rHomin = document.querySelector(".rHomin");
+      const rHomax = document.querySelector(".rHomax");
+      const mRatio = document.querySelector(".mRatio");
+      const valrHo = document.querySelector(".valrHo");
+      const valrHomax = document.querySelector(".valrHomax");
+      const rU = document.querySelector(".rU");
+      const dReq = document.querySelector(".dReq");
+      const dActual = document.querySelector(".dActual");
+      const dRemarks = document.querySelector(".dRemarks");
+      const v = document.querySelector(".v");
+      const vU = document.querySelector(".vU");
+      const lamBda = document.querySelector(".lamBda");
+      const pHi = document.querySelector(".pHi");
+      const pHiVc1 = document.querySelector(".pHiVc1");
+      const pHiVc2 = document.querySelector(".pHiVc2");
+      const pHiremarks = document.querySelector(".pHiremarks");
+      const table = document.getElementById("myTable");
+      const table2 = document.getElementById("myTable2");
+      const button = document.getElementById("myButton");
+      const clearTdsButton = document.getElementById("clearTdsButton");
+      const cantileverRadioButton = document.getElementById("cantliliver");
+      const continuousRadioButton = document.getElementById("continuous");
+
+      mainBar.addEventListener("input", mainBarAb);
+
+      assumedSlamWidth.addEventListener("input", aSwAst);
+      longSpan.addEventListener("input", aSwAst);
+      fy.addEventListener("input", aSwAst);
+
+      Ll.addEventListener("input", updateRatio);
+      Ls.addEventListener("input", updateRatio);
+
+      tempBar.addEventListener("input", tempBarAt);
+      fy.addEventListener("input", tempBarAt);
+      longSpan.addEventListener("input", tempBarAt);
+      spacingAst.addEventListener("input", tempBarAt);
+      assumedSlamWidth.addEventListener("input", tempBarAt);
+
+      longSpan.addEventListener("input", LlmmWithin);
+
+      mainBar.addEventListener("input", barGrade);
+      tempBar.addEventListener("input", barGrade);
+
+      function mainBarAb() {
+        aB.value = ((3.1416 * Math.pow(mainBar.value, 2)) / 4).toFixed(2);
+      }
+
+      function tempBarAt() {
+        spacingAt.value = ((3.1416 * Math.pow(tempBar.value, 2)) / 4).toFixed(
+          2
+        );
+        spacingS.value = (1000 * (spacingAt.value / aSwAst())).toFixed(1);
+        spacingSayS.value = Math.floor(spacingS.value / 25) * 25;
+        tempBarSpacing.value = Math.floor(spacingSayS.value / 100) * 100;
+      }
+
+      function aSwAst() {
+        spacingAst.value = (
+          0.002 *
+          assumedSlamWidth.value *
+          ((longSpan.value * 1000) / 24) *
+          (0.4 + fy.value / 700)
+        ).toFixed(2);
+        return spacingAst.value;
+      }
+
+      function LlmmWithin() {
+        mmWithin.value = longSpan.value;
+      }
+
+      function barGrade() {
+        mainBarGrade.value = mainBar.value;
+        tempBarGrade.value = tempBar.value;
+      }
+
+      function updateRatio() {
+        const value1 = parseFloat(longSpan.value);
+        const value2 = parseFloat(shortSpan.value);
+        let factoredTotalValue, spanRatioValue;
+        Ll.value = value1;
+        Ls.value = value2;
+        spanRatio.value = value1 / value2;
+        spanRatioValue = spanRatio.value;
+
+        if (isNaN(value1) || isNaN(value2)) {
+          spanValidation.innerHTML = "";
+        } else if (spanRatio.value > 0.5) {
+          spanValidation.innerHTML = "ONE Way";
+        } else {
+          spanValidation.innerHTML = "TWO Way";
+        }
+
+        if (spanRatio.value >= 2) {
+          minThickness.value =
+            ((value1 * 1000) / 24) *
+            (0.4 + parseFloat(parseInt(fy.value) / 700));
+        } else {
+          minThickness.value = "";
+        }
+
+        factorLoads(value1, value2);
+      }
+
+      function factorLoads(value1, value2) {
+        let factoredTotalValue;
+        let newValue1 = value1;
+        factoredLl.value = (parseFloat(liveLoad.value) * 1 * 1.6).toFixed(2);
+        factoredDl.value = (
+          parseFloat(deadLoad.value) *
+          1 *
+          (minThickness.value / 1000)
+        ).toFixed(2);
+        selfWeight.value = parseFloat(
+          23.6 * (minThickness.value / 1000) * 1.2
+        ).toFixed(2);
+
+        const factoredValues = [
+          factoredLl.value,
+          factoredDl.value,
+          selfWeight.value,
+        ];
+        let sum = 0;
+        for (let i = 0; i < factoredValues.length; i++) {
+          sum += parseFloat(factoredValues[i]);
+        }
+        factoredTotal.value = sum.toFixed(2);
+        factoredTotalValue = factoredTotal.value;
+        llDl.value = factoredLl.value / 1.6 / (selfWeight.value / 1.2);
+        if (llDl.value < 3) {
+          valLlDl.textContent = "OK";
+          valLlDl.style.backgroundColor = "transparent";
+        } else {
+          valLlDl.textContent = "Adjust values!";
+          valLlDl.style.backgroundColor = "#33ccbd";
+        }
+
+        lSs.value = (value1 - value2) / value2;
+        if (lSs.value > 0.8) {
+          valLs.textContent = "OK";
+          valLs.style.backgroundColor = "transparent";
+        } else {
+          valLs.textContent = "Adjust values!";
+          valLs.style.backgroundColor = "#33ccbd";
+        }
+
+        momentFractions();
+        checkForShear(newValue1);
+      }
+
+      function momentFractions() {
+        for (let i = 0; i < moMent.length; i++) {
+          const fraction = [1 / 24, 1 / 14, 1 / 10, 1 / 16, 1 / 11];
+          const value = (
+            fraction[i] *
+            parseFloat(factoredTotal.value) *
+            Math.pow(parseFloat(Ll.value), 2)
+          ).toFixed(3);
+          moMent[i].value = value;
+        }
+        let w84 = parseFloat(moMent[2].value);
+        let d97 = parseFloat(rU.value);
+        let dReqValue = Math.sqrt((w84 * Math.pow(10, 6)) / (0.9 * d97 * 1000));
+        dReq.value = dReqValue.toFixed(7);
+      }
+
+      fy.addEventListener("input", updateRatio);
+      liveLoad.addEventListener("input", updateRatio);
+      deadLoad.addEventListener("input", updateRatio);
+      longSpan.addEventListener("input", updateRatio);
+      shortSpan.addEventListener("input", updateRatio);
+      fc.addEventListener("input", effectiveDepth);
+      fy.addEventListener("input", effectiveDepth);
+      dReq.addEventListener("input", effectiveDepth);
+      mainBar.addEventListener("input", effectiveDepth);
+      minThickness.addEventListener("input", effectiveDepth);
+
+      function effectiveDepth() {
+        dActual.value =
+          parseFloat(minThickness.value) - 20 - parseFloat(mainBar.value) / 2;
+        if (fc.value < 30) {
+          beta1.value = 0.85;
+        } else {
+          beta1.value = (0.85 - (0.05 / 7) * (fc.value - 30)).toFixed(5);
+        }
+        rHo.value = 0.18 * (parseFloat(fc.value) / parseFloat(fy.value));
+        rHomin.value = parseFloat(1.4 / parseFloat(fy.value));
+        rHomax.value = parseFloat(
+          (0.75 * (0.85 * parseFloat(fc.value) * beta1.value * 600)) /
+            (parseFloat(fy.value) * (600 + parseFloat(fy.value)))
+        );
+        mRatio.value = parseFloat(fy.value) / (0.85 * parseFloat(fc.value));
+        if (parseFloat(rHo.value) > parseFloat(rHomax.value)) {
+          valrHo.textContent = "Use";
+          valrHomax.textContent = "";
+          valrHo.textContent = "";
+        } else {
+          valrHomax.textContent = "Use";
+        }
+        rU.value = (
+          parseFloat(parseFloat(rHo.value) * parseFloat(fy.value)) *
+          (1 - (parseFloat(rHo.value) * parseFloat(mRatio.value)) / 2)
+        ).toFixed(5);
+
+        if (!dActual.value) {
+          dRemarks.textContent = "";
+        } else if (parseFloat(dReq.value) > parseFloat(dActual.value)) {
+          dRemarks.textContent = "NOT OK";
+          dRemarks.style.backgroundColor = "#33ccbd";
+        } else {
+          dRemarks.style.backgroundColor = "transparent";
+          dRemarks.textContent = "OK";
+        }
+      }
+
+      function checkForShear() {
+        v.value = parseFloat(
+          (1.15 / 2) * (factoredTotal.value * Ll.value)
+        ).toFixed(5);
+        vU.value = parseFloat(
+          v.value - factoredTotal.value * (dActual.value / 1000)
+        ).toFixed(5);
+        pHiVc1.value = (
+          0.17 *
+          parseFloat(lamBda.value) *
+          parseFloat(pHi.value) *
+          parseFloat(dActual.value) *
+          parseFloat(assumedSlamWidth.value) *
+          Math.sqrt(parseFloat(fc.value))
+        ).toFixed(4);
+        pHiVc2.value = (pHiVc1.value / 1000).toFixed(4);
+
+        if (pHiVc2.value > vU.value) {
+          pHiremarks.textContent = "OK";
+          pHiremarks.style.backgroundColor = "transparent";
+        } else {
+          pHiremarks.textContent = "NOT OK";
+          pHiremarks.style.backgroundColor = "#33ccbd";
+        }
+      }
+
+      factoredTotal.addEventListener("input", checkForShear);
+      Ll.addEventListener("input", checkForShear);
+      dActual.addEventListener("input", checkForShear);
+      lamBda.addEventListener("input", checkForShear);
+      pHi.addEventListener("input", checkForShear);
+      assumedSlamWidth.addEventListener("input", checkForShear);
+      fc.addEventListener("input", checkForShear);
+
+      button.addEventListener("click", function () {
+        const numRows = document.getElementById("rowInput").value;
+
+        // if (cantileverRadioButton.checked && numRows === "1") {
+        //   alert("Span Minimum is 2");
+        // } else {
+        const currentNumRows = table.tBodies[0].rows.length;
+        const totalNumRows = currentNumRows + parseInt(numRows);
+
+        if (totalNumRows > 10) {
+          alert("Maximum number of rows is 10.");
+          return;
+        }
+        if (numRows == null) {
+          alert("Please enter number of Span");
+          return;
+        }
+
+        for (let i = 0; i < numRows; i++) {
+          const tr = document.createElement("tr");
+          const cellContent = [
+            currentNumRows + i + 1,
+            "<input type='number' class='spanLength' min = '0'>",
+            "<input type='number' class='moment1' min = '0'>",
+            "<input type='number' class='momentMid' min = '0'>",
+            "<input type='number' class='moment2' min = '0'>",
+            "<input type='number' class='momentCanti' min = '0'>",
+            "kN/m",
+          ];
+          for (let j = 0; j < cellContent.length; j++) {
+            const td = document.createElement("td");
+            const content = document.createElement("div");
+            content.innerHTML = cellContent[j];
+            td.appendChild(content);
+            tr.appendChild(td);
+          }
+          table.tBodies[0].appendChild(tr);
+        }
+
+        for (let i = 0; i < numRows * 3; i++) {
+          const tr = document.createElement("tr");
+          const cellContent = [
+            (currentNumRows + i + 1) % 2 == 0 ? "+" : "-",
+            (i % 3) + 1,
+            "<input type='number' min = '0' >",
+            "<input type='number' min = '0' >",
+            "<input type='number' min = '0' >",
+            "<input type='number' min = '0' >",
+            "<input type='number' min = '0' >",
+            "<input type='number' min = '0' >",
+            "<input type='number' min = '0' >",
+          ];
+          for (let j = 0; j < cellContent.length; j++) {
+            const td = document.createElement("td");
+            const content = document.createElement("div");
+            content.innerHTML = cellContent[j];
+            td.appendChild(content);
+            tr.appendChild(td);
+          }
+          table2.tBodies[0].appendChild(tr);
+        }
+
+        const tablebody = document.querySelector("#myTable tbody");
+        const spanLength = document.querySelectorAll(".spanLength");
+        const moment1 = document.querySelectorAll(".moment1");
+        const momentMid = document.querySelectorAll(".momentMid");
+        const moment2 = document.querySelectorAll(".moment2");
+        const momentCanti = document.querySelectorAll(".momentCanti");
+        const aciW = document.querySelector(".aciW");
+        const deflectionPhi = document.querySelector(".deflectionPhi");
+        deflectionPhi.addEventListener("input", computeCantiliver);
+        dActual.addEventListener("input", computeCantiliver);
+
+        if (continuousRadioButton.checked) {
+          spanLength.forEach((element) =>
+            element.addEventListener("input", computeContinuous)
+          );
+          aciW.addEventListener("input", computeContinuous);
+          computeContinuous();
+          for (let i = 1; i < table2.rows.length; i++) {
+            const cell2Value =
+              table2.rows[i].cells[2].querySelector("input").value;
+            const deflectionPhi =
+              document.querySelector(".deflectionPhi").value;
+            const dActualValue = dActual.value;
+            const calculatedValue =
+              (cell2Value * Math.pow(10, 6)) /
+              (deflectionPhi * Math.pow(dActualValue, 2) * 1000);
+            const formattedValue = calculatedValue.toFixed(6);
+            table2.rows[i].cells[3].querySelector("input").value =
+              formattedValue;
+          }
+        } else if (cantileverRadioButton.checked) {
+          spanLength.forEach((element) =>
+            element.addEventListener("input", computeCantiliver)
+          );
+          aciW.addEventListener("input", computeCantiliver);
+          computeCantiliver();
+        }
+
+        function computeCantiliver() {
+          for (let i = 0; i < tablebody.rows.length; i++) {
+            const spanLengthRow = parseFloat(spanLength[i].value);
+            const numerator =
+              parseFloat(aciW.value) * Math.pow(spanLengthRow, 2);
+            if (tablebody.rows.length === 1) {
+              moment1[i].value = "";
+              momentMid[i].value = "";
+              moment2[i].value = "";
+              momentCanti[i].value = (numerator / 2).toFixed(5);
+            } else if (tablebody.rows.length === 2) {
+              if (i === 0) {
+                moment1[i].value = (numerator / 16).toFixed(5);
+                momentMid[i].value = (numerator / 14).toFixed(5);
+                moment2[i].value = (numerator / 16).toFixed(5);
+                momentCanti[i].value = "";
+              } else {
+                moment1[i].value = "";
+                momentMid[i].value = "";
+                moment2[i].value = "";
+                momentCanti[i].value = (numerator / 2).toFixed(5);
+              }
+            } else if (tablebody.rows.length === 3) {
+              moment1[i].value = (numerator / 16).toFixed(5);
+              momentMid[i].value = (numerator / 14).toFixed(5);
+              moment2[i].value = (numerator / 16).toFixed(5);
+              if (i === 2) {
+                moment1[i].value = "";
+                momentMid[i].value = "";
+                moment2[i].value = "";
+                momentCanti[i].value = (numerator / 2).toFixed(5);
+              }
+            } else if (tablebody.rows.length > 3) {
+              if (i === 0 || i === tablebody.rows.length - 2) {
+                moment1[i].value = (numerator / 16).toFixed(5);
+                momentMid[i].value = (numerator / 14).toFixed(5);
+                moment2[i].value = (numerator / 16).toFixed(5);
+              } else if (i === tablebody.rows.length - 1) {
+                moment1[i].value = "";
+                momentMid[i].value = "";
+                moment2[i].value = "";
+                momentCanti[i].value = (numerator / 2).toFixed(5);
+              } else if (i > 0 || i < tablebody.rows.length - 2) {
+                moment1[i].value = (numerator / 11).toFixed(5);
+                momentMid[i].value = (numerator / 16).toFixed(5);
+                moment2[i].value = (numerator / 11).toFixed(5);
+              } 
+            }
+          }
+          var array = [];
+          for (let i = 1; i < table2.rows.length; i++) {
+            let row = i + 1;
+            let col = 2;
+            let table2Input = table2.rows[i].cells[col].querySelector("input");
+            let tableInput =
+              table.rows[Math.floor((i - 1) / 3) + 1].cells[
+                ((i - 1) % 3) + 2
+              ].querySelector("input");
+            table2Input.value = tableInput.value;
+
+            // if(i === 0){
+
+            // }
+
+            if (i === table2.rows.length - 2) {
+              const thirdToLastRow = table2.rows[table2.rows.length - 3];
+              const thirdCell = thirdToLastRow.cells[2];
+              const input1 = thirdCell.querySelector("input");
+
+              const lastRow = table.rows[table.rows.length - 1];
+              const secondToLastCell = lastRow.cells[lastRow.cells.length - 2];
+              const input2 = secondToLastCell.querySelector("input");
+
+              input1.value = input2.value;
+            }
+
+            //Ru (Mpa)
+            let ruMpaCol = table2.rows[i].cells[3].querySelector("input");
+            ruMpaCol.value = (
+              (table2Input.value * Math.pow(10, 6)) /
+              (document.querySelector(".deflectionPhi").value *
+                Math.pow(dActual.value, 2) *
+                1000)
+            ).toFixed(6);
+
+            //Req ρ
+
+            let reqPCol = table2.rows[i].cells[4].querySelector("input");
+            let ruMpaCol2 = 2 * parseFloat(ruMpaCol.value);
+            let ruNumRatio = ruMpaCol2 / fy.value;
+            let ruNumRatioPow = 1 - Math.pow(ruNumRatio, 0.5);
+            let mRatioValue =
+              parseFloat(fy.value) / (0.85 * parseFloat(fc.value));
+            reqPCol.value = ((1 / mRatioValue) * (1 - ruNumRatioPow)).toFixed(
+              8
+            );
+
+            //Used ρ
+
+            let usedP = table2.rows[i].cells[5].querySelector("input");
+            if (reqPCol.value < rHomin.value) {
+              usedP.value = ruMpaCol.value;
+            } else {
+              usedP.value = reqPCol.value;
+            }
+
+            // As mm2
+
+            let Asmm = table2.rows[i].cells[6].querySelector("input");
+            Asmm.value = (
+              usedP.value *
+              dActual.value *
+              assumedSlamWidth.value
+            ).toFixed(5);
+
+            // Theoretical Spacing(mm)
+
+            let tSpacing = table2.rows[i].cells[7].querySelector("input");
+            tSpacing.value = (1000 * (aB.value / Asmm.value)).toFixed(5);
+
+            //Actual Spacing(mm)
+
+            let actualSpacing = table2.rows[i].cells[8].querySelector("input");
+            actualSpacing.value = Math.floor(tSpacing.value / 25) * 25;
+
+            //Main Bar Spacing
+          }
+          var exclude = 0;
+          var newarray = array.filter(function (value) {
+            return value !== exclude;
+            mainBarSpacing.value = Math.min(...newarray);
+          });
+        }
+
+        function computeContinuous() {
+          for (let i = 0; i < tablebody.rows.length; i++) {
+            const moment1Row = moment1[i];
+            const momentMidRow = momentMid[i];
+            const moment2Row = moment2[i];
+
+            const numerator =
+              parseFloat(aciW.value) *
+              Math.pow(parseFloat(spanLength[i].value), 2);
+            if (tablebody.rows.length === 1) {
+              momentMidRow.value = (numerator / 8).toFixed(5);
+            } else if (tablebody.rows.length > 1) {
+              if (i === 0 || i === tablebody.rows.length - 1) {
+                moment1Row.value = (numerator / 16).toFixed(5);
+                momentMidRow.value = (numerator / 14).toFixed(5);
+                moment2Row.value = (numerator / 10).toFixed(5);
+              } else {
+                moment1Row.value = (numerator / 11).toFixed(5);
+                momentMidRow.value = (numerator / 16).toFixed(5);
+                moment2Row.value = (numerator / 11).toFixed(5);
+              }
+            }
+          }
+          computeReinforcements();
+        }
+
+        function computeReinforcements() {
+          var array = [];
+          //Moment (KN-m)
+          for (let i = 1; i < table2.rows.length; i++) {
+            let row = i + 1;
+            let col = 2;
+            let table2Input = table2.rows[i].cells[col].querySelector("input");
+            let tableInput =
+              table.rows[Math.floor((i - 1) / 3) + 1].cells[
+                ((i - 1) % 3) + 2
+              ].querySelector("input");
+            table2Input.value = tableInput.value;
+
+            //Ru (Mpa)
+            let ruMpaCol = table2.rows[i].cells[3].querySelector("input");
+            ruMpaCol.value = (
+              (table2Input.value * Math.pow(10, 6)) /
+              (document.querySelector(".deflectionPhi").value *
+                Math.pow(dActual.value, 2) *
+                1000)
+            ).toFixed(6);
+
+            //Req ρ
+
+            let reqPCol = table2.rows[i].cells[4].querySelector("input");
+            let ruMpaCol2 = 2 * parseFloat(ruMpaCol.value);
+            let ruNumRatio = ruMpaCol2 / fy.value;
+            let ruNumRatioPow = 1 - Math.pow(ruNumRatio, 0.5);
+            let mRatioValue =
+              parseFloat(fy.value) / (0.85 * parseFloat(fc.value));
+            reqPCol.value = ((1 / mRatioValue) * (1 - ruNumRatioPow)).toFixed(
+              8
+            );
+
+            //Used ρ
+
+            let usedP = table2.rows[i].cells[5].querySelector("input");
+            if (reqPCol.value < rHomin.value) {
+              usedP.value = ruMpaCol.value;
+            } else {
+              usedP.value = reqPCol.value;
+            }
+
+            // As mm2
+
+            let Asmm = table2.rows[i].cells[6].querySelector("input");
+            Asmm.value = (
+              usedP.value *
+              dActual.value *
+              assumedSlamWidth.value
+            ).toFixed(5);
+
+            // Theoretical Spacing(mm)
+
+            let tSpacing = table2.rows[i].cells[7].querySelector("input");
+            tSpacing.value = (1000 * (aB.value / Asmm.value)).toFixed(5);
+
+            //Actual Spacing(mm)
+
+            let actualSpacing = table2.rows[i].cells[8].querySelector("input");
+            actualSpacing.value = Math.floor(tSpacing.value / 25) * 25;
+
+            //Main Bar Spacing
+
+            var actual = Number(actualSpacing.value);
+            array.push(actual);
+          }
+          var exclude = 0;
+          var newarray = array.filter(function (value) {
+            return value !== exclude;
+          });
+
+          mainBarSpacing.value = Math.min(...newarray);
+        }
+
+        mainBar.addEventListener("input", computeReinforcements);
+        aB.addEventListener("input", computeReinforcements);
+        mRatio.addEventListener("input", computeReinforcements);
+        fc.addEventListener("input", computeReinforcements);
+        fy.addEventListener("input", computeReinforcements);
+        dActual.addEventListener("input", computeReinforcements);
+        deflectionPhi.addEventListener("input", computeReinforcements);
+        assumedSlamWidth.addEventListener("input", computeReinforcements);
+        updateRowNumbers();
+      });
+
+      function updateRowNumbers() {
+        const rows = document.querySelectorAll("#myTable tbody tr");
+        rows.forEach((row, index) => {
+          row.querySelector("td:first-child").textContent = index + 1;
+        });
+      }
+
+      clearTdsButton.addEventListener("click", function () {
+        const rows = table.tBodies[0].querySelectorAll("tr");
+        rows.forEach((row) => row.remove());
+        const numRows = document.getElementById("rowInput");
+        numRows.value = "";
+        const rows2 = table2.tBodies[0].querySelectorAll("tr");
+        rows2.forEach((row) => row.remove());
+        const numRows2 = document.getElementById("rowInput");
+        numRows2.value = "";
+      });
+
+      window.onload = function () {
+        let preloader = document.getElementById("preloader");
+        preloader.style.opacity = "0";
+        setTimeout(function () {
+          preloader.style.display = "none";
+        }, 500);
+      };
+
+      let modal1 = document.getElementById("myModal1");
+      let myBtn1 = document.getElementById("myBtn1");
+      let span1 = document.getElementsByClassName("close1")[0];
+
+      myBtn1.onclick = function () {
+        modal1.style.display = "flex";
+      };
+
+      span1.onclick = function () {
+        modal1.style.display = "none";
+      };
+
+      let modal2 = document.getElementById("myModal2");
+      let myBtn2 = document.getElementById("myBtn2");
+      let span2 = document.getElementsByClassName("close2")[0];
+
+      myBtn2.onclick = function () {
+        modal2.style.display = "flex";
+      };
+
+      span2.onclick = function () {
+        modal2.style.display = "none";
+      };
+
+      let modal3 = document.getElementById("myModal3");
+      let myBtn3 = document.getElementById("myBtn3");
+      let span3 = document.getElementsByClassName("close3")[0];
+
+      myBtn3.onclick = function () {
+        modal3.style.display = "flex";
+      };
+
+      span3.onclick = function () {
+        modal3.style.display = "none";
+      };
+
+      let modal4 = document.getElementById("myModal4");
+      let myBtn4 = document.getElementById("myBtn4");
+      let span4 = document.getElementsByClassName("close4")[0];
+
+      myBtn4.onclick = function () {
+        modal1.style.display = "flex";
+      };
+
+      span4.onclick = function () {
+        modal1.style.display = "none";
+      };
+
+      window.onclick = function (event) {
+        if (event.target == modal1) {
+          modal1.style.display = "none";
+        } else if (event.target == modal2) {
+          modal2.style.display = "none";
+        } else if (event.target == modal3) {
+          modal3.style.display = "none";
+        } else if (event.target == modal4) {
+          modal4.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>
