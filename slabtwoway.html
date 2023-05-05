@@ -2625,7 +2625,7 @@
           cellRefUseP.value = cellRefReqP.value;
         }
 
-        cellRefAs.value = (Math.round(cellRefUseP.value * cStrip.value * 1000 * sbDfur.value * 1000) / 1000).toFixed(3);
+        cellRefAs.value = (Math.round(cellRefUseP.value * beamWidth.value * 1000 * sbDfur.value * 1000) / 1000).toFixed(3);
         cellRefSpacing.value = Math.floor((1000 * parseFloat(steelAb.value)) / cellRefAs.value / 10) * 10;
       }
 
