@@ -832,6 +832,28 @@ button:hover::before {
   width: clamp(43.75rem, 35.893rem + 12.277vw, 50.625rem);
 }
 
+#slabSpec thead th {
+  text-align: center;
+  /* width: 15rem; */
+}
+
+/* #slabSpec thead th: */
+
+#slabSpec tbody tr td {
+  text-align: center;
+}
+
+#slabSpec tbody tr td:first-child {
+  text-align: left;
+}
+.oneWayImg{
+  display: flex;
+  justify-content: center ;
+}
+.oneWayImg img{
+  width: 87%;
+}
+
 @-webkit-keyframes focus-in-expand {
   0% {
     letter-spacing: -0.5em;
@@ -984,9 +1006,6 @@ button:hover::before {
   border-radius: 4px;
   cursor: pointer;
 }
-
-#cancel {}
-
 
 #myBtn,
 #myPrint {
