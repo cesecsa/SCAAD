@@ -332,11 +332,12 @@
                                        id=""
                                        min="0"
                                        max="999999"
-                                       class="minThickness" />
+                                       class="minThickness"
+                                       placeholder="Enter value" />
                               </td>
                               <td>mm</td>
                             </tr>
-                            <tr>
+                            <!-- <tr>
                               <td>Say</td>
                               <td></td>
                               <td>
@@ -348,7 +349,7 @@
                                        class="mTSay" />
                               </td>
                               <td>mm</td>
-                            </tr>
+                            </tr> -->
                             <tr>
                               <td colspan="4">
                                 <button id="myBtn1">
@@ -1030,80 +1031,124 @@
               <div class="datatables">
                 <div class="incontainercol">
                   <div>
-                    <span class="spantitle">SLAB SPECIFICATIONS</span>
-                  </div>
-                  <div>
-                    <table>
+                    <table id="slabSpec">
+                      <thead>
+                        <tr>
+                          <th colspan="8">SLAB SPECIFICATIONS</th>
+                        </tr>
+                        <tr>
+                          <th>RC SLAB THICKNESS</th>
+                          <th>REBAR (mm)</th>
+                          <th colspan="2">LEFT SUPPORT</th>
+                          <th colspan="2">MIDSPAN</th>
+                          <th colspan="2">RIGHT SUPPORT</th>
+                        </tr>
+                        <tr>
+                          <th>
+                            <input type="number"
+                                   name=""
+                                   class="rcSlab"
+                                   min="0"
+                                   max="999999" />
+                          </th>
+                          <th></th>
+                          <th>TOP</th>
+                          <th>BOTTOM</th>
+                          <th>TOP</th>
+                          <th>BOTTOM</th>
+                          <th>TOP</th>
+                          <th>BOTTOM</th>
+                        </tr>
+                      </thead>
                       <tbody>
                         <tr>
+                          <td>MAIN REINFORCEMENT BARS SPACING (mm)</td>
                           <td><input type="number"
                                    name=""
-                                   class="mTSaySize "
+                                   class="mBarRebar"
                                    min="0"
                                    max="999999" /></td>
-                          <td>
-                            <button id="myBtn4">NSCP TABLE 407.3.1.1</button>
-                          </td>
-                          <td>mm THICK</td>
-                          <td>RC Slab</td>
+                          <td><input type="number"
+                                   name=""
+                                   class="mBarLT"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   class="mBarLB"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   class="mBarMT"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   class="mBarMB"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   class="mBarRT"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   class="mBarRB"
+                                   min="0"
+                                   max="999999" /></td>
                         </tr>
                         <tr>
-                          <td>Type</td>
-                          <td>Main Reinforcement Bars</td>
-                        </tr>
-                        <tr>
-                          <td>GRADE 33</td>
-                          <td>
-                            <input type="number"
+                          <td>TEMPERATURE REINFORCEMENT BARS SPACING (mm)</td>
+                          <td><input type="number"
                                    name=""
-                                   class="mainBarGrade"
+                                   class="tBarRebar"
                                    min="0"
-                                   max="999999" />
-                          </td>
-                          <td>mm spaced</td>
-                          <td>
-                            <input type="number"
+                                   max="999999" /></td>
+                          <td><input type="number"
                                    name=""
-                                   class="mainBarSpacing"
+                                   class="tBarLT"
                                    min="0"
-                                   max="999999" />
-                          </td>
-                          <td>mm Within</td>
-                          <td>
-                            <input type="number"
+                                   max="999999" /></td>
+                          <td><input type="number"
                                    name=""
-                                   class="mmWithin"
+                                   class="tBarLB"
                                    min="0"
-                                   max="999999" />
-                          </td>
-                          <td>m</td>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <td>Temperature Reinforcement Bars</td>
-                        </tr>
-                        <tr>
-                          <td>GRADE 33</td>
-                          <td>
-                            <input type="number"
+                                   max="999999" /></td>
+                          <td><input type="number"
                                    name=""
-                                   class="tempBarGrade"
+                                   class="tBarMT"
                                    min="0"
-                                   max="999999" />
-                          </td>
-                          <td>mm spaced</td>
-                          <td>
-                            <input type="number"
+                                   max="999999" /></td>
+                          <td><input type="number"
                                    name=""
-                                   class="tempBarSpacing"
+                                   class="tBarMB"
                                    min="0"
-                                   max="999999" />
-                          </td>
-                          <td>mm Within</td>
-                          <td>Both ways</td>
+                                   max="999999" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   class="tBarRT"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   class="tBarRB"
+                                   min="0"
+                                   max="999999" /></td>
                         </tr>
                       </tbody>
                     </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="datacontainer">
+              <div class="datatables">
+                <div class="incontainercol">
+                  <div class="oneWayImg">
+                    <img src="resources\images\oneway1.png"
+                         alt="">
                   </div>
                 </div>
               </div>
@@ -1209,12 +1254,29 @@
     const cantileverRadioButton = document.getElementById("cantliliver");
     const continuousRadioButton = document.getElementById("continuous");
 
+    const rcSlab = document.querySelector(".rcSlab");
+    const mBarRebar = document.querySelector(".mBarRebar");
+    const tBarRebar = document.querySelector(".tBarRebar");
+    const mBarLT = document.querySelector(".mBarLT");
+    const mBarLB = document.querySelector(".mBarLB");
+    const mBarMT = document.querySelector(".mBarMT");
+    const mBarMB = document.querySelector(".mBarMB");
+    const mBarRT = document.querySelector(".mBarRT");
+    const mBarRB = document.querySelector(".mBarRB");
+    const tBarLT = document.querySelector(".tBarLT");
+    const tBarLB = document.querySelector(".tBarLB");
+    const tBarMT = document.querySelector(".tBarMT");
+    const tBarMB = document.querySelector(".tBarMB");
+    const tBarRT = document.querySelector(".tBarRT");
+    const tBarRB = document.querySelector(".tBarRB");
+
     mainBar.addEventListener("input",mainBarAb);
 
     assumedSlamWidth.addEventListener("input",aSwAst);
     longSpan.addEventListener("input",aSwAst);
     fy.addEventListener("input",aSwAst);
 
+    minThickness.addEventListener("input",updateRatio);
     Ll.addEventListener("input",updateRatio);
     Ls.addEventListener("input",updateRatio);
 
@@ -1223,12 +1285,14 @@
     longSpan.addEventListener("input",tempBarAt);
     spacingAst.addEventListener("input",tempBarAt);
     assumedSlamWidth.addEventListener("input",tempBarAt);
-
+    minThickness.addEventListener("input",tempBarAt);
     longSpan.addEventListener("input",LlmmWithin);
 
     mainBar.addEventListener("input",barGrade);
     tempBar.addEventListener("input",barGrade);
 
+    minThickness.addEventListener("input",aSwAst);
+    assumedSlamWidth.addEventListener("input",aSwAst);
     function mainBarAb() {
       aB.value = ((3.1416 * Math.pow(mainBar.value,2)) / 4).toFixed(2);
     }
@@ -1238,16 +1302,14 @@
         2
       );
       spacingS.value = (1000 * (spacingAt.value / aSwAst())).toFixed(1);
-      spacingSayS.value = Math.floor(spacingS.value / 25) * 25;
-      tempBarSpacing.value = Math.floor(spacingSayS.value / 100) * 100;
+      spacingSayS.value = Math.round(spacingS.value / 10) * 10;
     }
 
     function aSwAst() {
       spacingAst.value = (
         0.002 *
         assumedSlamWidth.value *
-        ((longSpan.value * 1000) / 24) *
-        (0.4 + fy.value / 700)
+        minThickness.value
       ).toFixed(2);
       return spacingAst.value;
     }
@@ -1284,15 +1346,6 @@
       Ls.value = value2;
       spanRatio.value = value1 / value2;
       spanRatioValue = spanRatio.value;
-      minThickness.value = parseFloat((value1 * 1000) / 28);
-
-      if (minThickness.value < 125) {
-        mTSay.value = 125;
-      } else {
-        mTSay.value = parseFloat(minThickness.value);
-      }
-
-      mTSaySize.value = mTSay.value;
 
       if (isNaN(value1) || isNaN(value2)) {
         spanValidation.innerHTML = "";
@@ -1308,6 +1361,7 @@
     function factorLoads(value1,value2) {
       let factoredTotalValue;
       let newValue1 = value1;
+
       factoredLl.value = (parseFloat(liveLoad.value) * 1 * 1.6).toFixed(2);
       factoredDl.value = (
         parseFloat(deadLoad.value) *
@@ -1329,22 +1383,26 @@
       }
       factoredTotal.value = sum.toFixed(2);
       factoredTotalValue = factoredTotal.value;
+
+
+
       llDl.value = factoredLl.value / 1.6 / (selfWeight.value / 1.2);
+      if (isNaN(factoredLl.value.value) || isNaN(selfWeight.value)) {
+        valLlDl.textContent = "";
+      }
+
       if (llDl.value < 3) {
         valLlDl.textContent = "OK";
-        valLlDl.style.backgroundColor = "transparent";
       } else {
         valLlDl.textContent = "Adjust values!";
-        valLlDl.style.backgroundColor = "#33ccbd";
       }
 
       lSs.value = (value1 - value2) / value2;
       if (lSs.value > 0.8) {
         valLs.textContent = "OK";
-        valLs.style.backgroundColor = "transparent";
       } else {
         valLs.textContent = "Adjust values!";
-        valLs.style.backgroundColor = "#33ccbd";
+
       }
 
       momentFractions();
@@ -1524,7 +1582,7 @@
       const momentCanti = document.querySelectorAll(".momentCanti");
       const aciW = document.querySelector(".aciW");
       const deflectionPhi = document.querySelector(".deflectionPhi");
-      deflectionPhi.addEventListener("input",computeCantiliver);
+
       dActual.addEventListener("input",computeCantiliver);
 
 
@@ -1533,6 +1591,7 @@
           element.addEventListener("input",computeContinuous)
         );
         aciW.addEventListener("input",computeContinuous);
+        deflectionPhi.addEventListener("input",computeReinforcements);
         computeContinuous();
         for (let i = 1; i < table2.rows.length; i++) {
           const cell2Value =
@@ -1552,6 +1611,7 @@
           element.addEventListener("input",computeCantiliver)
         );
         aciW.addEventListener("input",computeCantiliver);
+        deflectionPhi.addEventListener("input",computeCantiliver);
         computeCantiliver();
       }
 
@@ -1687,6 +1747,27 @@
           mainBarSpacing.value = Math.min(...newarray);
         });
 
+        var leftSupport = [];
+        for (let i = 1; i <= table2.rows.length - 2; i += 3) {
+          leftSupport.push(parseFloat(table2.rows[i].cells[8].querySelector('input').value));
+        }
+        mBarLT.value = Math.max(...leftSupport);
+
+        var midSupport = [];
+        for (let i = 2; i <= table2.rows.length - 2; i += 3) {
+          midSupport.push(parseFloat(table2.rows[i].cells[8].querySelector('input').value));
+        }
+        mBarMT.value = Math.max(...midSupport);
+
+        var rightSupport = [];
+        for (let i = 3; i <= table2.rows.length - 2; i += 3) {
+          rightSupport.push(parseFloat(table2.rows[i].cells[8].querySelector('input').value));
+        }
+        mBarRT.value = Math.max(...rightSupport);
+
+        tBarLT.value = spacingSayS.value;
+        tBarMB.value = spacingSayS.value;
+        tBarRT.value = spacingSayS.value;
 
       }
 
@@ -1716,8 +1797,19 @@
         computeReinforcements();
       }
 
+      mainBar.addEventListener("input",computeReinforcements);
+      aB.addEventListener("input",computeReinforcements);
+      mRatio.addEventListener("input",computeReinforcements);
+      fc.addEventListener("input",computeReinforcements);
+      fy.addEventListener("input",computeReinforcements);
+      dActual.addEventListener("input",computeReinforcements);
+      assumedSlamWidth.addEventListener("input",computeReinforcements);
+
       function computeReinforcements() {
+
         var array = [];
+
+
         //Moment (KN-m)
         for (let i = 1; i < table2.rows.length; i++) {
           let row = i + 1;
@@ -1783,24 +1875,52 @@
           var actual = Number(actualSpacing.value);
           array.push(actual);
         }
+
         var exclude = 0;
         var newarray = array.filter(function (value) {
           return value !== exclude;
         });
 
+        var leftSupport = [];
+        for (let i = 1; i <= table2.rows.length - 2; i += 3) {
+          leftSupport.push(parseFloat(table2.rows[i].cells[8].querySelector('input').value));
+        }
+        mBarLT.value = Math.max(...leftSupport);
+
+        var midSupport = [];
+        for (let i = 2; i <= table2.rows.length - 2; i += 3) {
+          midSupport.push(parseFloat(table2.rows[i].cells[8].querySelector('input').value));
+        }
+        mBarMT.value = Math.max(...midSupport);
+
+        var rightSupport = [];
+        for (let i = 3; i <= table2.rows.length - 2; i += 3) {
+          rightSupport.push(parseFloat(table2.rows[i].cells[8].querySelector('input').value));
+        }
+        mBarRT.value = Math.max(...rightSupport);
+
+        tBarLT.value = spacingSayS.value;
+        tBarMB.value = spacingSayS.value;
+        tBarRT.value = spacingSayS.value;
         mainBarSpacing.value = Math.min(...newarray);
+
+
       }
 
-      mainBar.addEventListener("input",computeReinforcements);
-      aB.addEventListener("input",computeReinforcements);
-      mRatio.addEventListener("input",computeReinforcements);
-      fc.addEventListener("input",computeReinforcements);
-      fy.addEventListener("input",computeReinforcements);
-      dActual.addEventListener("input",computeReinforcements);
-      deflectionPhi.addEventListener("input",computeReinforcements);
-      assumedSlamWidth.addEventListener("input",computeReinforcements);
+
       updateRowNumbers();
     });
+    mainBar.addEventListener('input',mTbar);
+    tempBar.addEventListener('input',mTbar);
+
+    function mTbar() {
+      mBarRebar.value = parseFloat(mainBar.value);
+      tBarRebar.value = parseFloat(tempBar.value);
+
+    }
+
+
+
 
     function updateRowNumbers() {
       const rows = document.querySelectorAll("#myTable tbody tr");
