@@ -678,11 +678,12 @@
                                    name=""
                                    class="mThickness"
                                    min="0"
-                                   max="999999" />
+                                   max="999999"
+                                   placeholder="Enter value" />
                           </td>
                           <td>mm</td>
                         </tr>
-                        <tr>
+                        <!-- <tr>
                           <td>say</td>
                           <td></td>
                           <td>
@@ -693,7 +694,7 @@
                                    max="999999" />
                           </td>
                           <td>mm</td>
-                        </tr>
+                        </tr> -->
                       </tbody>
                     </table>
                   </div>
@@ -1859,102 +1860,202 @@
             <div class="datacontainer">
               <div class="datatables">
                 <div class="incontainercol">
-                  <span class="spantitle">SLAB SPECIFICATIONS</span>
-                  <table>
-                    <tbody>
-                      <tr>
-                        <td><input type="number"
-                                 name=""
-                                 class="twThick"
-                                 min="0"
-                                 max="999999" /></td>
-                        <td>mm THICK</td>
-                        <td>RC Slab</td>
-                      </tr>
-                      <tr>
-                        <td>Type</td>
-                        <td>Main Reinforcement Bars</td>
-                      </tr>
-                      <tr>
-                        <td>GRADE 33</td>
-                        <td>
-                          <input type="number"
-                                 name=""
-                                 class="twMainBarGrade1"
-                                 min="0"
-                                 max="999999" />
-                        </td>
-                        <td>mm spaced @</td>
-                        <td>
-                          <input type="number"
-                                 name=""
-                                 class="twMainBarSpacing1"
-                                 min="0"
-                                 max="999999" />
-                        </td>
-                        <td>mm Within</td>
-                        <td>
-                          <input type="number"
-                                 name=""
-                                 class="twmmWithin1"
-                                 min="0"
-                                 max="999999" />
-                        </td>
-                        <td>m</td>
-                      </tr>
-                      <tr>
-                        <td>GRADE 33</td>
-                        <td>
-                          <input type="number"
-                                 name=""
-                                 class="twMainBarGrade2"
-                                 min="0"
-                                 max="999999" />
-                        </td>
-                        <td>mm spaced @</td>
-                        <td>
-                          <input type="number"
-                                 name=""
-                                 class="twMainBarSpacing2"
-                                 min="0"
-                                 max="999999" />
-                        </td>
-                        <td>mm Within</td>
-                        <td>
-                          <input type="number"
-                                 name=""
-                                 class="twmmWithin2"
-                                 min="0"
-                                 max="999999" />
-                        </td>
-                        <td>m</td>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td>Temperature Reinforcement Bars</td>
-                      </tr>
-                      <tr>
-                        <td>GRADE 33</td>
-                        <td>
-                          <input type="number"
-                                 name=""
-                                 class="twTempBarGrade"
-                                 min="0"
-                                 max="999999" />
-                        </td>
-                        <td>mm spaced @</td>
-                        <td>
-                          <input type="number"
-                                 name=""
-                                 class="twTempBarSpacing"
-                                 min="0"
-                                 max="999999" />
-                        </td>
-                        <td>mm Within</td>
-                        <td>Both ways</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  <div>
+                    <table id="slabSpec">
+                      <thead>
+                        <tr>
+                          <th colspan="8">SLAB SPECIFICATIONS</th>
+                        </tr>
+                        <tr>
+                          <th>RC SLAB THICKNESS</th>
+                          <th>REBAR (mm)</th>
+                          <th colspan="2">LEFT SUPPORT</th>
+                          <th colspan="2">MIDSPAN</th>
+                          <th colspan="2">RIGHT SUPPORT</th>
+                        </tr>
+                        <tr>
+                          <th>
+                            <input type="number"
+                                   name=""
+                                   class="rcSlab"
+                                   min="0"
+                                   max="999999" />
+                          </th>
+                          <th></th>
+                          <th>TOP</th>
+                          <th>BOTTOM</th>
+                          <th>TOP</th>
+                          <th>BOTTOM</th>
+                          <th>TOP</th>
+                          <th>BOTTOM</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>MAIN REINFORCEMENT BAR SPACING ALONG L<sub>s</sub> (mm)</td>
+                          <td><input type="number"
+                                   name=""
+                                   class="mLsBarRebar"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   class="mLsBarLT"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   class="mLsBarLB"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   class="mLsBarMT"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   class="mLsBarMB"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   class="mLsBarRT"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   class="mLsBarRB"
+                                   min="0"
+                                   max="999999" /></td>
+                        </tr>
+                        <tr>
+                          <td>MAIN REINFORCEMENT BAR SPACING ALONG L<sub>l</sub> (mm)</td>
+                          <td><input type="number"
+                                   name=""
+                                   class="mLlBarRebar"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   class="mLlBarLT"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   class="mLlBarLB"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   class="mLlBarMT"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   class="mLlBarMB"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   class="mLlBarRT"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   class="mLlBarRB"
+                                   min="0"
+                                   max="999999" /></td>
+                        </tr>
+                        <tr>
+                          <td>TEMPERATURE REINFORCEMENT BARS SPACING ALONG L<sub>s</sub> (mm)</td>
+                          <td><input type="number"
+                                   name=""
+                                   class="tLsBarRebar"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   class="tLsBarLT"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   class="tLsBarLB"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   class="tLsBarMT"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   class="tLsBarMB"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   class="tLsBarRT"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   class="tLsBarRB"
+                                   min="0"
+                                   max="999999" /></td>
+                        </tr>
+                        <tr>
+                          <td>TEMPERATURE REINFORCEMENT BARS SPACING ALONG L<sub>l</sub> (mm)</td>
+                          <td><input type="number"
+                                   name=""
+                                   class="tLlBarRebar"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   class="tLlBarLT"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   class="tLlBarLB"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   class="tLlBarMT"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   class="tLlBarMB"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   class="tLlBarRT"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   class="tLlBarRB"
+                                   min="0"
+                                   max="999999" /></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="datacontainer">
+              <div class="datatables">
+                <div class="incontainercol">
+                  <div class="oneWayImg">
+                    <img src="resources\images\twoway1.png"
+                         alt="">
+                  </div>
                 </div>
               </div>
             </div>
@@ -1998,7 +2099,7 @@
     const beamWidth = document.querySelector(".beamWidth");
     const cStrip = document.querySelector(".cStrip");
     const mThickness = document.querySelector(".mThickness");
-    const mThicknessSay = document.querySelector(".mThicknessSay");
+    // const mThicknessSay = document.querySelector(".mThicknessSay");
     const lSubLVerify = document.querySelector(".lSubLVerify");
     const lSubSVerify = document.querySelector(".lSubSVerify");
     const mRatio = document.querySelector(".mRatio");
@@ -2067,14 +2168,43 @@
     const twTempBarSpacing = document.querySelector(".twTempBarSpacing");
     var select = document.getElementById("mySelect");
 
+    const mLsBarRebar = document.querySelector(".mLsBarRebar");
+    const mLlBarRebar = document.querySelector(".mLlBarRebar");
+    const tLsBarRebar = document.querySelector(".tLsBarRebar");
+    const tLlBarRebar = document.querySelector(".tLlBarRebar");
+    const mLsBarLT = document.querySelector(".mLsBarLT");
+    const mLsBarLB = document.querySelector(".mLsBarLB");
+    const mLsBarMT = document.querySelector(".mLsBarMT");
+    const mLsBarMB = document.querySelector(".mLsBarMB");
+    const mLsBarRT = document.querySelector(".mLsBarRT");
+    const mLsBarRB = document.querySelector(".mLsBarRB");
+    const mLlBarLT = document.querySelector(".mLlBarLT");
+    const mLlBarLB = document.querySelector(".mLlBarLB");
+    const mLlBarMT = document.querySelector(".mLlBarMT");
+    const mLlBarMB = document.querySelector(".mLlBarMB");
+    const mLlBarRT = document.querySelector(".mLlBarRT");
+    const mLlBarRB = document.querySelector(".mLlBarRB");
+    const tLsBarLT = document.querySelector(".tLsBarLT");
+    const tLsBarLB = document.querySelector(".tLsBarLB");
+    const tLsBarMT = document.querySelector(".tLsBarMT");
+    const tLsBarMB = document.querySelector(".tLsBarMB");
+    const tLsBarRT = document.querySelector(".tLsBarRT");
+    const tLsBarRB = document.querySelector(".tLsBarRB");
+    const tLlBarLT = document.querySelector(".tLlBarLT");
+    const tLlBarLB = document.querySelector(".tLlBarLB");
+    const tLlBarMT = document.querySelector(".tLlBarMT");
+    const tLlBarMB = document.querySelector(".tLlBarMB");
+    const tLlBarRT = document.querySelector(".tLlBarRT");
+    const tLlBarRB = document.querySelector(".tLlBarRB");
+
     inputGamma.addEventListener("input",swValue);
-    mThicknessSay.addEventListener("input",swValue);
+    mThickness.addEventListener("input",swValue);
 
     selfWeight.addEventListener("input",sumToDeadLoad);
     floorFinish.addEventListener("input",sumToDeadLoad);
     partitionLoad.addEventListener("input",sumToDeadLoad);
     ceilingLoad.addEventListener("input",sumToDeadLoad);
-    mThicknessSay.addEventListener("input",sumToDeadLoad);
+    mThickness.addEventListener("input",sumToDeadLoad);
 
     inputGamma.addEventListener("input",sumToDeadLoad);
     deadLoad.addEventListener("input",sumToDeadLoad);
@@ -2090,7 +2220,7 @@
     earthLoad.addEventListener("input",factorTableCompute);
     fSubOne.addEventListener("input",factorTableCompute);
     maxLoad.addEventListener("input",factorTableCompute);
-    mThicknessSay.addEventListener("input",factorTableCompute);
+    mThickness.addEventListener("input",factorTableCompute);
 
     beamWidth.addEventListener("input",verifyTwoWay);
     lSubL.addEventListener("input",verifyTwoWay);
@@ -2099,14 +2229,14 @@
     deadLoad.addEventListener("input",uniformLoads);
     liveLoad.addEventListener("input",uniformLoads);
     cStrip.addEventListener("input",uniformLoads);
-    mThicknessSay.addEventListener("input",uniformLoads);
+    mThickness.addEventListener("input",uniformLoads);
 
     fSubC.addEventListener("input",depthDeflection);
     fSubY.addEventListener("input",depthDeflection);
     edmaxFM.addEventListener("input",depthDeflection);
     edpHi.addEventListener("input",depthDeflection);
     edrU.addEventListener("input",depthDeflection);
-    mThicknessSay.addEventListener("input",depthDeflection);
+    mThickness.addEventListener("input",depthDeflection);
     sbDiameter.addEventListener("input",depthDeflection);
     sbConcrete.addEventListener("input",depthDeflection);
 
@@ -2115,13 +2245,13 @@
     mCase.addEventListener("change",caseMomentCoef);
     lSubLVerify.addEventListener("change",caseMomentCoef);
     wU.addEventListener("change",caseMomentCoef);
-    mThicknessSay.addEventListener("input",caseMomentCoef);
+    mThickness.addEventListener("input",caseMomentCoef);
     select.addEventListener("change",momentValues);
     noCase.addEventListener("change",momentValues);
     mCase.addEventListener("change",momentValues);
     lSubLVerify.addEventListener("input",momentValues);
     wU.addEventListener("input",momentValues);
-    mThicknessSay.addEventListener("input",momentValues);
+    // mThicknessSay.addEventListener("input",momentValues);
     lSmsEndLeft.addEventListener("input",momentValues);
     lSmsEndRight.addEventListener("input",momentValues);
     lLmsEndLeft.addEventListener("input",momentValues);
@@ -2137,7 +2267,7 @@
     sbDfur.addEventListener('input',steelReinforcements);
 
     tbSBdiameter.addEventListener('input',tempBarsCompute);
-    mThicknessSay.addEventListener('input',tempBarsCompute);
+    mThickness.addEventListener('input',tempBarsCompute);
     cStrip.addEventListener('input',tempBarsCompute);
 
     edpHi.addEventListener('input',momentValuesTable);
@@ -2172,7 +2302,7 @@
 
     function swValue() {
       selfWeight.value = parseFloat(
-        (inputGamma.value * mThicknessSay.value) / 1000
+        (inputGamma.value * mThickness.value) / 1000
       ).toFixed(2);
     }
 
@@ -2306,20 +2436,22 @@
       const lSubLValue = parseFloat(lSubL.value);
       const beamWidthValue = parseFloat(beamWidth.value);
 
-      lSubSVerify.value = lSubSValue - beamWidthValue;
-      lSubLVerify.value = lSubLValue - beamWidthValue;
-
-      mThickness.value = (parseFloat(lSubL.value) * 1000) / 28;
-      if (mThickness.value < 125) {
-        mThicknessSay.value = 125;
-      } else {
-        mThicknessSay.value = mThickness.value;
-      }
-      twThick.value = mThicknessSay.value;
+      lSubSVerify.value = lSubSValue;
+      lSubLVerify.value = lSubLValue;
 
       mRatio.value = parseFloat(
         lSubSVerify.value / lSubLVerify.value
       ).toFixed(3);
+
+      // mThickness.value = (parseFloat(lSubL.value) * 1000) / 28;
+      // if (mThickness.value < 125) {
+      //   mThicknessSay.value = 125;
+      // } else {
+      //   mThicknessSay.value = mThickness.value;
+      // }
+      // twThick.value = mThicknessSay.value;
+
+
 
       if (mRatio.value > 0.5) {
         verifyRemarks.textContent = "TWO Way";
@@ -2361,22 +2493,25 @@
       ];
       edmaxFM.value = Math.max(...edmaxFMarray);
 
+      sbDfur.value =
+        mThickness.value - sbDiameter.value / 2 - sbConcrete.value;
+
       edDreq.value = Math.pow(
         (edmaxFM.value * 10 ** 6) /
         (edpHi.value * edrU.value * cStrip.value * 1000),
         1 / 2
       ).toFixed(3);
 
-      sbDfur.value =
-        mThicknessSay.value - sbDiameter.value / 2 - sbConcrete.value;
-
-      if (edDreq.value < sbDfur.value) {
+      if (parseFloat(sbDfur.value) > parseFloat(edDreq.value)) {
         edRemarks.textContent = "Slab Thickness is Adequate";
       } else {
         edRemarks.textContent = "Not Adequate - Increase Slab Thickness";
       }
+
       momentValuesTable();
     }
+
+
 
     function caseMomentCoef() {
       let x = mCase.value - 1;
@@ -2625,7 +2760,7 @@
         let cellRefSpacing = momentTable.rows[i].cells[7].querySelector('input');
 
         cellRefRu.value = Math.round((cellRefMu.value * Math.pow(10,6)) / (edpHi.value * beamWidth.value * 1000 * Math.pow(sbDfur.value,2)) * 1000) / 1000;
-        cellRefReqP.value = ((1 / edmRatio.value) * (1 - Math.pow(1 - (2 * cellRefRu.value * edmRatio.value) / fSubY.value,1 / 2))).toFixed(6);
+        cellRefReqP.value = ((1 / edmRatio.value) * (1 - Math.pow(1 - (2 * cellRefRu.value * edmRatio.value) / fSubY.value,1 / 2))).toFixed(9);
 
         if (cellRefReqP.value < usePmin.value) {
           cellRefUseP.value = usePmin.value;
@@ -2635,7 +2770,7 @@
         }
 
         cellRefAs.value = (Math.round(cellRefUseP.value * beamWidth.value * 1000 * sbDfur.value * 1000) / 1000).toFixed(3);
-        cellRefSpacing.value = Math.floor((1000 * parseFloat(steelAb.value)) / cellRefAs.value / 10) * 10;
+        cellRefSpacing.value = Math.round((1000 * parseFloat(steelAb.value)) / cellRefAs.value / 5) * 5;
       }
 
       let firstArray = [];
@@ -2648,36 +2783,36 @@
         secondArray.push(momentTable.rows[i].cells[7].querySelector('input').value);
       }
 
-      slabSpecification(firstArray,secondArray);
+
+      mLsBarLT.value = momentTable.rows[1].cells[7].querySelector('input').value;
+      mLlBarLT.value = momentTable.rows[4].cells[7].querySelector('input').value;
+      mLsBarRT.value = momentTable.rows[1].cells[7].querySelector('input').value;
+      mLlBarRT.value = momentTable.rows[4].cells[7].querySelector('input').value;
+
+      mLsBarLB.value = Math.max(...firstArray);
+      mLlBarLB.value = Math.max(...secondArray);
+      mLsBarMB.value = Math.max(...firstArray);
+      mLlBarMB.value = Math.max(...secondArray);
+      mLsBarRB.value = Math.max(...firstArray);
+      mLlBarRB.value = Math.max(...secondArray);
+      // slabSpecification(firstArray,secondArray);
     }
 
     function tempBarsCompute() {
-      tbAst.value = 0.002 * mThicknessSay.value * 1000 * cStrip.value;
+      tbAst.value = 0.002 * mThickness.value * 1000 * cStrip.value;
       tbAb.value = (((Math.PI).toFixed(8) / 4) * (Math.pow(tbSBdiameter.value,2))).toFixed(4);
       tbS.value = ((1000 * tbAb.value) / tbAst.value).toFixed(3);
       tbUseS.value = Math.floor(tbS.value / 10) * 10;
-      twTempBarGrade.value = tbSBdiameter.value;
-      twTempBarSpacing.value = Math.min(tbUseS.value);
+      tLsBarLT.value = parseFloat(tbUseS.value);
+      tLlBarLT.value = parseFloat(tbUseS.value);
+      tLsBarRT.value = parseFloat(tbUseS.value);
+      tLlBarRT.value = parseFloat(tbUseS.value);
     }
 
-    mThicknessSay.addEventListener('input',slabSpecification);
-    sbDiameter.addEventListener('input',slabSpecification);
-    lSubLVerify.addEventListener('input',slabSpecification);
-    lSubSVerify.addEventListener('input',slabSpecification);
-    tbSBdiameter.addEventListener('input',slabSpecification);
 
-    function slabSpecification(firstArray,secondArray) {
+    // function slabSpecification(firstArray,secondArray) {
 
-
-      twMainBarGrade1.value = sbDiameter.value;
-      twMainBarGrade2.value = sbDiameter.value;
-
-      twMainBarSpacing1.value = Math.min(...firstArray);
-      twMainBarSpacing2.value = Math.min(...secondArray);
-
-      twmmWithin1.value = lSubLVerify.value;
-      twmmWithin2.value = lSubSVerify.value;
-    }
+    // }
 
   </script>
 </body>
