@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible"
+        content="IE=edge" />
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
+  <title>SC DESIGN AND ANALYSIS</title>
+  <link rel="stylesheet"
+        href="styles.css" />
+</head>
+
+<body>
+  <div id="preloader"></div>
+  <div class="bbody">
+    <div class="left">
+      <div class="container">
+        <div class="logo">
+          <a href="home.html">
+            <img src="resources\images\SC Logo.png"
+                 alt="" />
+            <span class="projname">ANALYSIS & DESIGN</span>
+          </a>
+        </div>
+      </div>
+      <div class="menu">
+        <ul class="submenu">
+          <li>
+            <a href="home.html"><img src="resources\images\home_FILL0_wght400_GRAD0_opsz48.svg"
+                   alt="" />HOME
+            </a>
+          </li>
+          <li class="submenu2">
+            <a href="slaboneway.html"><img class="rotate"
+                   src="resources\images\grid_4x4_FILL0_wght400_GRAD0_opsz48.svg"
+                   alt="" />SLABS
+            </a>
+            <ul class="dropdown">
+              <li>
+                <a href="slaboneway.html">ONE WAY</a>
+              </li>
+              <li><a href="slabtwoway.html">TWO WAY</a></li>
+            </ul>
+          </li>
+          <li class="submenu2">
+            <a class="active"
+               href="singly.html"><img src="resources\images\border_inner_FILL0_wght400_GRAD0_opsz48.svg"
+                   alt="" />BEAMS
+            </a>
+            <ul class="dropdownB dropdownshowB">
+              <li>
+                <a href="singly.html">SINGLY</a>
+              </li>
+              <li><a href="doubly.html">DOUBLY</a></li>
+              <li><a href="shear.html"
+                   style="color: #33cabb">SHEAR</a></li>
+            </ul>
+          </li>
+          <li class="submenu2">
+            <a href="loaddistribution.html"><img
+                   src="resources\images\vertical_shades_closed_FILL0_wght400_GRAD0_opsz48.svg"
+                   alt="" />COLUMNS
+            </a>
+            <ul class="dropdown">
+              <li>
+                <a href="loaddistribution.html">DISTRIBUTION</a>
+              </li>
+              <li><a href="design.html">DESIGN</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="seismic.html"><img src="resources\images\landslide_FILL0_wght400_GRAD0_opsz48.svg"
+                   alt="" />SEISMIC
+            </a>
+          </li>
+          <li>
+            <a href="gallery.html"><img src="resources\images\photo_camera_FILL0_wght400_GRAD0_opsz48.svg"
+                   alt="" />GALLERY
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="right">
+      <div class="outcontainer">
+        <div class="incontainer">
+          <div class="incontainercol2">
+            <h2>BEAM MARK: 3FB-5-1</h2>
+            <div class="cmdBtn">
+              <button id="myBtn">Project Name</button>
+              <button id="myPrint">Print/Save</button>
+              <div id="myModal"
+                   class="modal">
+                <div class="modal-content">
+                  <textarea name="text"
+                            id="text-area"
+                            cols="30"
+                            rows="5"
+                            placeholder="Project Title Here"></textarea>
+                </div>
+                <div class="modalBtn">
+                  <button id="save">Save</button>
+                  <button id="cancel">Cancel</button>
+                </div>
+              </div>
+            </div>
+            <div class="datacontainer">
+              <div class="datatables">
+
+                <div class="incontainercol">
+                  <div>
+                    <div>
+                      <span class="spantitle">Steel Reinforcement Parameters:
+                      </span>
+                    </div>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td><strong>Tension Reinforcement Bar</strong></td>
+                        </tr>
+                        <tr>
+                          <td>Select &Oslash;</td>
+                          <td>=</td>
+                          <td>
+                            <select name=""
+                                    id="tOSlash">
+                              <option value="">Select</option>
+                              <option value="1">8</option>
+                              <option value="2">10</option>
+                              <option value="3">12</option>
+                              <option value="4">16</option>
+                              <option value="5">20</option>
+                              <option value="6">25</option>
+                              <option value="7">28</option>
+                              <option value="8">32</option>
+                            </select>
+                          </td>
+                          <td>mm Deformed Bar</td>
+                        </tr>
+                        <tr>
+                          <td>f<sub>y</sub></td>
+                          <td>=</td>
+                          <td>
+                            <select name=""
+                                    id="tFy">
+                              <option value="">Select f<sub>y</sub></option>
+                              <option value="1">230</option>
+                              <option value="2">275</option>
+                              <option value="3">415</option>
+                            </select>
+                          </td>
+                          <td>Mpa</td>
+                        </tr>
+                        <tr>
+                          <td colspan="2">&emsp;</td>
+                          <td class="tFyG"></td>
+                        </tr>
+                        <tr>
+                          <td><strong>Compression Reinforcement Bar</strong></td>
+                        </tr>
+                        <tr>
+                          <td>Select &Oslash;</td>
+                          <td>=</td>
+                          <td>
+                            <select name=""
+                                    id="cOSlash">
+                              <option value="">Select</option>
+                              <option value="1">8</option>
+                              <option value="2">10</option>
+                              <option value="3">12</option>
+                              <option value="4">16</option>
+                              <option value="5">20</option>
+                              <option value="6">25</option>
+                              <option value="7">28</option>
+                              <option value="8">32</option>
+                            </select>
+                          </td>
+                          <td>mm Deformed Bar</td>
+                        </tr>
+                        <tr>
+                          <td>f<sub>y</sub></td>
+                          <td>=</td>
+                          <td>
+                            <select name=""
+                                    id="cFy">
+                              <option value="">Select f<sub>y</sub></option>
+                              <option value="1">230</option>
+                              <option value="2">275</option>
+                              <option value="3">415</option>
+                            </select>
+                          </td>
+                          <td>Mpa</td>
+                        </tr>
+                        <tr>
+                          <td colspan="2">&emsp;</td>
+                          <td class="cFyG"></td>
+                        </tr>
+                        <tr>
+                          <td><strong>Shear Reinforcement Bar</strong></td>
+                        </tr>
+                        <tr>
+                          <td>Select &Oslash;</td>
+                          <td>=</td>
+                          <td>
+                            <select name=""
+                                    id="sOSlash">
+                              <option value="">Select</option>
+                              <option value="1">8</option>
+                              <option value="2">10</option>
+                              <option value="3">12</option>
+                              <option value="4">16</option>
+                              <option value="5">20</option>
+                              <option value="6">25</option>
+                              <option value="7">28</option>
+                              <option value="8">32</option>
+                            </select>
+                          </td>
+                          <td>mm Deformed Bar</td>
+                        </tr>
+                        <tr>
+                          <td>f<sub>y</sub></td>
+                          <td>=</td>
+                          <td>
+                            <select name=""
+                                    id="sFy">
+                              <option value="">Select f<sub>y</sub></option>
+                              <option value="1">230</option>
+                              <option value="2">275</option>
+                              <option value="3">415</option>
+                            </select>
+                          </td>
+                          <td>Mpa</td>
+                        </tr>
+                        <tr>
+                          <td colspan="2">&emsp;</td>
+                          <td class="sFyG"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="incontainercol">
+                  <div>
+                    <span class="spantitle">Beam Parameters:</span>
+                  </div>
+                  <div>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td>Width, b<sub>w</sub></td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="bW"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Depth, h</td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="dH"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Minimum Cover</td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="mC"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>mm</td>
+                        </tr>
+                        <tr>
+                          <td>Bottom Ec</td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="botEc"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="" />
+                          </td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Top Ec, d'</td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="topEc"
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>f<sub>c</sub>'</td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="fsubc"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>Mpa</td>
+                        </tr>
+                        <tr>
+                          <td>&beta;</td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="bEta"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="" />
+                          </td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>&Phi;</td>
+                          <td>=</td>
+                          <td>
+                            <select name=""
+                                    id="phiSelect">
+                              <option value="">Select &Phi;</option>
+                              <option value="1">0.9</option>
+                              <option value="2">0.75</option>
+                            </select>
+                          </td>
+                          <td class="phiR"></td>
+                        </tr>
+                        <tr>
+                          <td>&lambda;</td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="lAmda"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>d<sub>effective</sub></td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="dEff"
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                          <td>mm</td>
+                        </tr>
+                        <tr>
+                          <td>L<sub>1</sub></td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="lOne"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>m</td>
+                        </tr>
+                        <tr>
+                          <td>L<sub>2</sub></td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="lTwo"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>m</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="incontainercol">
+                  <div>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td>&rho;<sub>B</sub></td>
+                          <td>=</td>
+                          <td>
+                            0.85f<sub>c</sub>'β(600)/600(f<sub>y</sub>+600)
+                          </td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="rHoSubB"
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>&rho;<sub>max</sub></td>
+                          <td>=</td>
+                          <td>(3/4)&rho;<sub>B</sub></td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="rHoMax"
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>&rho;<sub>min</sub></td>
+                          <td>=</td>
+                          <td>√f<sub>c</sub>'/4f<sub>y</sub></td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="rHoMin"
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td>≥</td>
+                          <td>1.4/<sub>y</sub></td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="rHoMinLt"
+                                   min="0"
+                                   max="999999" />
+                          </td>
+
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td colspan="3"></td>
+                          <td>use</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="rHoUse"
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="datacontainer">
+              <div class="datatables">
+                <div class="incontainercol">
+                  <div>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td>Total Dead Load (D<sub>L</sub>)</td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="totalDeadLoad"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>kN &middot; m</td>
+                        </tr>
+                        <tr>
+                          <td>Total Live Load (L<sub>L</sub>)</td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="totalLiveLoad"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>kN &middot; m</td>
+                        </tr>
+                        <tr>
+                          <td>Lateral Pressure (H)</td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="lateralPressure"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>kN &middot; m</td>
+                        </tr>
+                        <tr>
+                          <td>Roof Live Load (L<sub>Lr</sub>)</td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="roofLiveLoad"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>kN &middot; m</td>
+                        </tr>
+                        <tr>
+                          <td>Wind Pressure (W)</td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="windPressure"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>kN &middot; m</td>
+                        </tr>
+                        <tr>
+                          <td>Earthquake Load (E)</td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="earthquakeLoad"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>kN &middot; m</td>
+                        </tr>
+                        <tr>
+                          <td>f<sub>1</sub></td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="fSubOne"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>kN &middot; m</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="incontainercol">
+                  <div>
+                    <table id="shearTbl">
+                      <tbody>
+                        <tr>
+                          <td>203-1</td>
+                          <td>1.4 D<sub>L</sub></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   id=""
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                          <td>kN</td>
+                        </tr>
+                        <tr>
+                          <td>203-2</td>
+                          <td>1.2 D<sub>L</sub></td>
+                          <td>+</td>
+                          <td>1.6 L<sub>L</sub></td>
+                          <td>+</td>
+                          <td>0.5 L<sub>Lr</sub></td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   id=""
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                          <td>kN</td>
+                        </tr>
+                        <tr>
+                          <td>203-3</td>
+                          <td>1.2 D<sub>L</sub></td>
+                          <td>+</td>
+                          <td>1 L<sub>L</sub></td>
+                          <td>+</td>
+                          <td>1.6 L<sub>Lr</sub></td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   id=""
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                          <td>kN</td>
+                        </tr>
+                        <tr>
+                          <td>203-4</td>
+                          <td>1.2 D<sub>L</sub></td>
+                          <td>+</td>
+                          <td>1.6 L<sub>Lr</sub></td>
+                          <td>+</td>
+                          <td>0.5 W</td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   id=""
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                          <td>kN</td>
+                        </tr>
+                        <tr>
+                          <td>203-5</td>
+                          <td>1.2 D<sub>L</sub></td>
+                          <td>+</td>
+                          <td>0.5 L<sub>LLr</sub></td>
+                          <td>+</td>
+                          <td>1 W</td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   id=""
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                          <td>kN</td>
+                        </tr>
+                        <tr>
+                          <td>203-6</td>
+                          <td>0.9 D<sub>L</sub></td>
+                          <td>+</td>
+                          <td>1 W</td>
+                          <td>+</td>
+                          <td>1.6 H</td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   id=""
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                          <td>kN</td>
+                        </tr>
+                        <tr>
+                          <td>203-7</td>
+                          <td>1.462 D<sub>L</sub></td>
+                          <td>+</td>
+                          <td>1 L<sub>L</sub></td>
+                          <td>+</td>
+                          <td>1.25 E<sub>h</sub></td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   id=""
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                          <td>kN</td>
+                        </tr>
+                        <tr>
+                          <td>203-8</td>
+                          <td>1.162 D<sub>L</sub></td>
+                          <td>+</td>
+                          <td>1.25 E<sub>h</sub></td>
+                          <td>+</td>
+                          <td>1.6 H</td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   id=""
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                          <td>kN</td>
+                        </tr>
+                        <tr>
+                          <td>203-9</td>
+                          <td>1.2 D<sub>L</sub></td>
+                          <td>+</td>
+                          <td>1 L<sub>L</sub></td>
+                          <td>+</td>
+                          <td>2.8 E<sub>h</sub></td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   id=""
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                          <td>kN</td>
+                        </tr>
+                        <tr>
+                          <td>203-10</td>
+                          <td>0.9 D<sub>L</sub></td>
+                          <td>+</td>
+                          <td colspan="">2.8 E<sub>h</sub></td>
+                          <td></td>
+                          <td></td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   id=""
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                          <td>kN</td>
+                        </tr>
+                        <tr>
+                          <td>203-11</td>
+                          <td>0.9 D<sub>L</sub></td>
+                          <td>-</td>
+                          <td colspan="">2.8 E<sub>h</sub></td>
+                          <td></td>
+                          <td></td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   id=""
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                          <td>kN</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="incontainercol">
+                  <div>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td>Shear Factor</td>
+                          <td>=</td>
+                          <td>
+                            <select name=""
+                                    id="shearFactor">
+                              <option value="">Select Factor</option>
+                              <option>1/2</option>
+                              <option>23/40</option>
+                            </select>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Ultimate Uniform Load</td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="uUL"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>N/m</td>
+                        </tr>
+                        <tr>
+                          <td>Reaction At face of Support</td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="rxnface"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>N</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="sidenote">
+                <span>f<sub>1</sub> = 1.0 For floors in places of public
+                  assembly, for live load in excess of 4.8 kPa and for garage
+                  live load</span>
+                <span>f<sub>1</sub> = 0.5 for other live loads</span>
+              </div>
+            </div>
+            <div class="datacontainer">
+              <div class="datatables">
+                <div class="incontainercol">
+                  <div>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <strong>Ultimate Shear Force</strong>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>V<sub>u</sub></td>
+                          <td>=</td>
+                          <td>R - W<sub>u</sub>d</td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="uSF"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>N</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <strong>Shear Capacity of Concrete, Vc </strong>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>V<sub>c</sub></td>
+                          <td>=</td>
+                          <td>
+                            0.17 &lambda; &Sqrt; f<sub>c</sub>' b
+                            <sub>w</sub>d
+                          </td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="sCC"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>N</td>
+                        </tr>
+                        <tr>
+                          <td colspan="3">&Phi;V<sub>c</sub></td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="phisCC"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>N</td>
+                        </tr>
+                        <tr>
+                          <td colspan="3">1/2 &Phi;V<sub>c</sub></td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="oHphisCC"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>N</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <strong>Shear force of Steel, Vs </strong>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>V<sub>s</sub></td>
+                          <td>=</td>
+                          <td>V<sub>u</sub>/&Oslash; - V<sub>c</sub></td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="vS"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>N</td>
+                        </tr>
+                        <tr>
+                          <td>Remarks:</td>
+                          <td class="vSR"></td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <strong>Spacing Limits for Shear Reinforcement
+                            </strong>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>V<sub>s</sub></td>
+                          <td>&lt;</td>
+                          <td>0.33&Sqrt; f<sub>c</sub>' b <sub>w</sub>d</td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="vSlt"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="6">
+                            For Non-Prestressed Members, If True Smax = D/2 or
+                            600;If False Smax = D/4 or 300
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="3">S<sub>max</sub></td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="sMax"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>mm</td>
+                        </tr>
+                        <tr>
+                          <td colspan="3"></td>
+                          <td>or</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="sMaxoR"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>mm</td>
+                        </tr>
+                        <tr>
+                          <td colspan="3">Use S<sub>max</sub></td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="useSmax"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>mm</td>
+                        </tr>
+                        <tr>
+                          <td colspan="3"></td>
+                          <td>say</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="useSmaxoR"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>mm</td>
+                        </tr>
+                        <tr>
+                          <td colspan="6">
+                            Note: Due to Seismic Provision first stirrups must
+                            be spaced 50 mm from face of support
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <strong>Stirrup Details </strong>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Use Seismic Hook: Closed hoop With 135 ⁰ Bend Hook
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="4">No. of legs:</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="nLegs"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="3">Av</td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="aV"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>mm<sup>2</sup></td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Use Seismic Hook: Closed hoop With 135 ⁰ Bend Hook
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="4">Location:</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="loC"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>mm from face of support</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div>
+                    <table id="shearTbl2">
+                      <thead>
+                        <tr>
+                          <th>Distance(mm)</th>
+                          <th>Vu</th>
+                          <th>Vs</th>
+                          <th>Srequired(mm)</th>
+                          <th>Sprovided(mm)</th>
+                          <th>No</th>
+                          <th>Say</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><input type="number"
+                                   name=""
+                                   id=""
+                                   placeholder="Enter Value" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   id="" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   id="" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   id="" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   id="" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   id="" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   id=""
+                                   placeholder="Enter Value" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   id="" /></td>
+                        </tr>
+                        <tr>
+                          <td><input type="number"
+                                   name=""
+                                   id=""
+                                   placeholder="Enter Value" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   id="" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   id="" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   id="" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   id="" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   id="" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   id="" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   id="" /></td>
+                        </tr>
+                        <tr>
+                          <td><input type="number"
+                                   name=""
+                                   id=""
+                                   placeholder="Enter Value" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   id="" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   id="" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   id="" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   id="" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   id="" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   id="" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   id="" /></td>
+                        </tr>
+                        <tr>
+                          <td>Rest At</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class=""
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                          <td>To Midspan</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="datacontainer">
+              <div class="datatables">
+                <div class="incontainercol">
+                  <div>
+                    <table id="shearSpecs">
+                      <thead>
+                        <tr>
+                          <th colspan="11">
+                            Beam Shear Reinforcement Specification
+                          </th>
+                        </tr>
+                        <tr>
+                          <th>Beam No.:</th>
+                          <th colspan="2"
+                              rowspan="2">
+                            <input type="text"
+                                   name=""
+                                   id="" />
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Quantity</td>
+                          <td>Spacing</td>
+                          <td>&Oslash;</td>
+                          <td>Description</td>
+                        </tr>
+                        <tr>
+                          <td><input type="number"
+                                   name=""
+                                   id="" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   id="" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   id="" /></td>
+                          <td>mm DB</td>
+                          <td>
+                            <select name=""
+                                    id="">
+                              <option value="">Select Grade</option>
+                              <option value="1">Grade 33</option>
+                              <option value="2">Grade 40</option>
+                              <option value="3">Grade 60</option>
+                            </select>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><input type="number"
+                                   name=""
+                                   id="" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   id="" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   id="" /></td>
+                        </tr>
+                        <tr>
+                          <td><input type="number"
+                                   name=""
+                                   id="" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   id="" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   id="" /></td>
+                        </tr>
+                        <tr>
+                          <td>Rest at</td>
+                          <td><input type="number"
+                                   name=""
+                                   id="" /></td>
+                          <td>mm O.C. to CL</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="index.js"></script>
+  <script>
+    window.onload = function () {
+      var preloader = document.getElementById("preloader");
+      preloader.style.opacity = "0";
+      setTimeout(function () {
+        preloader.style.display = "none";
+      },500);
+    };
+    const bW = document.querySelector('.bW');
+    const dH = document.querySelector('.dH');
+    const mC = document.querySelector('.mC');
+    const botEc = document.querySelector('.botEc');
+    const topEc = document.querySelector('.topEc');
+    const fsubc = document.querySelector('.fsubc');
+    const bEta = document.querySelector('.bEta');
+    const phiSelect = document.getElementById('phiSelect');
+    const phiR = document.querySelector('.phiR');
+    const lAmda = document.querySelector('.lAmda');
+    const dEff = document.querySelector('.dEff');
+    const lOne = document.querySelector('.lOne');
+    const lTwo = document.querySelector('.lTwo');
+    const rHoSubB = document.querySelector('.rHoSubB');
+    const rHoMax = document.querySelector('.rHoMax');
+    const rHoMin = document.querySelector('.rHoMin');
+    const rHoMinLt = document.querySelector('.rHoMinLt');
+    const rHoUse = document.querySelector('.rHoUse');
+    const tOSlash = document.getElementById('tOSlash');
+    const tFy = document.getElementById('tFy');
+    const tFyG = document.querySelector('.tFyG');
+    const cOSlash = document.getElementById('cOSlash');
+    const cFy = document.getElementById('cFy');
+    const cFyG = document.querySelector('.cFyG');
+    const sOSlash = document.getElementById('sOSlash');
+    const sFy = document.getElementById('sFy');
+    const sFyG = document.querySelector('.sFyG');
+    const totalDeadLoad = document.querySelector(".totalDeadLoad");
+    const totalLiveLoad = document.querySelector(".totalLiveLoad");
+    const lateralPressure = document.querySelector(".lateralPressure");
+    const roofLiveLoad = document.querySelector(".roofLiveLoad");
+    const windPressure = document.querySelector(".windPressure");
+    const earthquakeLoad = document.querySelector(".earthquakeLoad");
+    const fSubOne = document.querySelector(".fSubOne");
+    const shearFactor = document.getElementById("shearFactor");
+    const uUL = document.querySelector(".uUL");
+    const rxnface = document.querySelector(".rxnface");
+    const uSF = document.querySelector(".uSF");
+    const sCC = document.querySelector(".sCC");
+    const phisCC = document.querySelector(".phisCC");
+    const oHphisCC = document.querySelector(".oHphisCC");
+    const vS = document.querySelector(".vS");
+    const vSR = document.querySelector(".vSR");
+    const vSlt = document.querySelector(".vSlt");
+    const sMax = document.querySelector(".sMax");
+    const sMaxoR = document.querySelector(".sMaxoR");
+    const useSmax = document.querySelector(".useSmax");
+    const useSmaxoR = document.querySelector(".useSmaxoR");
+    const nLegs = document.querySelector(".nLegs");
+    const aV = document.querySelector(".aV");
+    const loC = document.querySelector(".loC");
+    const shearTbl = document.getElementById('shearTbl');
+
+
+
+
+
+
+
+    bW.addEventListener('input',shearCompute);
+    dH.addEventListener('input',shearCompute);
+    mC.addEventListener('input',shearCompute);
+    // botEc.addEventListener('input',shearCompute);
+    // topEc.addEventListener('input',shearCompute);
+    fsubc.addEventListener('input',shearCompute);
+    // bEta.addEventListener('input',shearCompute);
+    lAmda.addEventListener('input',shearCompute);
+    dEff.addEventListener('input',shearCompute);
+    lOne.addEventListener('input',shearCompute);
+    lTwo.addEventListener('input',shearCompute);
+    nLegs.addEventListener('input',shearCompute);
+
+    shearFactor.addEventListener('change',shearCompute);
+    phiSelect.addEventListener('change',shearCompute);
+    tOSlash.addEventListener('change',shearCompute);
+    tFy.addEventListener('change',shearCompute);
+    cOSlash.addEventListener('change',shearCompute);
+    cFy.addEventListener('change',shearCompute);
+    sOSlash.addEventListener('change',shearCompute);
+    sFy.addEventListener('change',shearCompute);
+
+    totalDeadLoad.addEventListener('input',shearCompute);
+    totalLiveLoad.addEventListener('input',shearCompute);
+    lateralPressure.addEventListener('input',shearCompute);
+    roofLiveLoad.addEventListener('input',shearCompute);
+    windPressure.addEventListener('input',shearCompute);
+    earthquakeLoad.addEventListener('input',shearCompute);
+    fSubOne.addEventListener('input',shearCompute);
+
+    var rowO = shearTbl2.rows[1].cells[0].querySelector('input');
+    var rowT = shearTbl2.rows[2].cells[0].querySelector('input');
+    var rowTh = shearTbl2.rows[3].cells[0].querySelector('input');
+    rowO.addEventListener('input',shearCompute);
+    rowT.addEventListener('input',shearCompute);
+    rowTh.addEventListener('input',shearCompute);
+    shearTbl2.rows[1].cells[6].querySelector('input').addEventListener('input',shearCompute);
+
+
+
+
+
+
+
+
+
+    function shearCompute() {
+
+      let phiSelectValue = parseFloat(phiSelect.options[phiSelect.selectedIndex].innerHTML);
+
+      let tFyValue = parseFloat(tFy.options[tFy.selectedIndex].innerHTML);
+      let cFyValue = parseFloat(cFy.options[cFy.selectedIndex].innerHTML);
+      let sFyValue = parseFloat(sFy.options[sFy.selectedIndex].innerHTML);
+
+      let tenPhiValue = parseFloat(tOSlash.options[tOSlash.selectedIndex].innerHTML);
+      let compPhiValue = parseFloat(cOSlash.options[cOSlash.selectedIndex].innerHTML);
+      let shearPhiValue = parseFloat(sOSlash.options[sOSlash.selectedIndex].innerHTML);
+
+      botEc.value = parseFloat(mC.value) + shearPhiValue + tenPhiValue / 2;
+      topEc.value = parseFloat(mC.value) + shearPhiValue + compPhiValue / 2;
+
+      if (fsubc.value > 56) {
+        bEta.value = 0.65;
+      } else if (fsubc.value < 28.1) {
+        bEta.value = 0.85;
+      } else {
+        bEta.value = 0.85 - 0.05 * ((fsubc.value - 28) / 7);
+      }
+
+      if (phiSelect.value == 1) {
+        phiR.textContent = "for Flexure";
+      } else if (phiSelect.value == 2) {
+        phiR.textContent = "for Shear";
+      } else if (phiSelect.value === "") {
+        phiR.textContent = " ";
+      }
+
+      dEff.value = parseFloat(dH.value) - botEc.value;
+      rHoSubB.value = ((0.85 * fsubc.value * bEta.value * 600) / (600 * (tFyValue + 600))).toFixed(9);
+      rHoMax.value = (0.75 * rHoSubB.value).toFixed(9);
+      rHoMin.value = (Math.sqrt(fsubc.value) / (4 * tFyValue)).toFixed(9);
+      rHoMinLt.value = (1.4 / tFyValue).toFixed(9);
+      rHoUse.value = (Math.max(rHoMin.value,rHoMinLt.value)).toFixed(9);
+      const grades = {
+        "1": "Grade 33",
+        "2": "Grade 40",
+        "3": "Grade 60",
+        "": "",
+      };
+
+      tFyG.textContent = grades[tFy.value];
+      cFyG.textContent = grades[cFy.value];
+      sFyG.textContent = grades[sFy.value];
+
+      var totalDeadLoadValue = parseFloat(totalDeadLoad.value) || 0;
+      var totalLiveLoadValue = parseFloat(totalLiveLoad.value) || 0;
+      var lateralPressureValue = parseFloat(lateralPressure.value) || 0;
+      var roofLiveLoadValue = parseFloat(roofLiveLoad.value) || 0;
+      var windPressureValue = parseFloat(windPressure.value) || 0;
+      var earthquakeLoadValue = parseFloat(earthquakeLoad.value) || 0;
+      var fSubOneValue = parseFloat(fSubOne.value) || 0;
+
+      shearTbl.rows[0].cells[7].querySelector('input').value = 1.4 * totalDeadLoadValue;
+      shearTbl.rows[1].cells[7].querySelector('input').value = (1.2 * totalDeadLoadValue) + (1.6 * totalLiveLoadValue) + (0.5 * roofLiveLoadValue);
+      shearTbl.rows[2].cells[7].querySelector('input').value = (1.2 * totalDeadLoadValue) + (1 * totalLiveLoadValue) + (1.6 * roofLiveLoadValue);
+      shearTbl.rows[3].cells[7].querySelector('input').value = (1.2 * totalDeadLoadValue) + (1.6 * roofLiveLoadValue) + (0.5 * windPressureValue);
+      shearTbl.rows[4].cells[7].querySelector('input').value = (1.2 * totalDeadLoadValue) + (0.5 * roofLiveLoadValue) + (1 * windPressureValue);
+      shearTbl.rows[5].cells[7].querySelector('input').value = (0.9 * totalDeadLoadValue) + (1 * windPressureValue) + (1.6 * lateralPressureValue);
+      shearTbl.rows[6].cells[7].querySelector('input').value = (1.462 * totalDeadLoadValue) + (1 * totalLiveLoadValue) + (1.25 * earthquakeLoadValue);
+      shearTbl.rows[7].cells[7].querySelector('input').value = (1.162 * totalDeadLoadValue) + (1.25 * earthquakeLoadValue) + (1.6 * lateralPressureValue);
+      shearTbl.rows[8].cells[7].querySelector('input').value = (1.2 * totalDeadLoadValue) + (1 * totalLiveLoadValue) + (2.8 * earthquakeLoadValue);
+      shearTbl.rows[9].cells[7].querySelector('input').value = (0.9 * totalDeadLoadValue) + (2.8 * earthquakeLoadValue);
+      shearTbl.rows[10].cells[7].querySelector('input').value = (0.9 * totalDeadLoadValue) - (2.8 * earthquakeLoadValue);
+
+      let shearAr = [];
+
+      for (let i = 0; i < shearTbl.rows.length - 1; i++) {
+        shearAr.push(parseFloat(shearTbl.rows[i].cells[7].querySelector('input').value));
+      }
+
+      var shearValue;
+      if (shearFactor.selectedIndex == 1) {
+        shearValue = 0.5;
+      } else if (shearFactor.selectedIndex == 2) {
+        shearValue = 0.575;
+      } else if (shearFactor.selectedIndex == -1) {
+        shearValue = 0;
+      }
+
+      var lAdd = parseFloat(lOne.value) + parseFloat(lTwo.value);
+
+      uUL.value = ((Math.max(...shearAr) / (parseFloat(shearValue) * lAdd)) * 1000).toFixed(5);
+      rxnface.value = (Math.max(...shearAr)) * 1000;
+      uSF.value = (rxnface.value - (uUL.value * (dEff.value / 1000))).toFixed(5);
+      sCC.value = (0.17 * lAmda.value * (Math.sqrt(fsubc.value)) * bW.value * dEff.value).toFixed(5);
+      phisCC.value = (sCC.value * phiSelectValue).toFixed(5);
+      oHphisCC.value = (phisCC.value / 2).toFixed(5);
+      vS.value = ((uSF.value / phiSelectValue) - sCC.value).toFixed(5);
+      if (uSF.value > phisCC.value) {
+        result = "Design Stirrups";
+      } else {
+        if (uSF.value > phisCC.value) {
+          result = "Provide Minimum Stirrups";
+        } else {
+          result = "Stirrups not Required";
+        }
+      }
+      vSlt.value = 0.33 * (Math.sqrt(fsubc.value)) * bW.value * dEff.value;
+
+      if (parseFloat(vS.value) < parseFloat(vSlt.value)) {
+        sMax.value = dEff.value / 2;
+        sMaxoR.value = 600;
+      } else {
+        sMax.value = dEff.value / 4;
+        sMaxoR.value = 300;
+      }
+
+
+      useSmax.value = Math.min(sMax.value,sMaxoR.value);
+      useSmaxoR.value = Math.floor(useSmax.value / 25) * 25;
+      aV.value = (nLegs.value * (Math.PI / 4) * (shearPhiValue ** 2)).toFixed(3);
+      loC.value = (((lOne.value * 1000) * (rxnface.value - phisCC.value)) / (2 * rxnface.value)).toFixed(3);
+
+      shearTbl2.rows[1].cells[4].querySelector('input').value = rowO.value;
+      shearTbl2.rows[1].cells[7].querySelector('input').value = shearTbl2.rows[1].cells[4].querySelector('input').value * shearTbl2.rows[1].cells[6].querySelector('input').value;
+
+      shearTbl2.rows[2].cells[1].querySelector('input').value = (parseFloat(rxnface.value) - (parseFloat(uUL.value) * (parseFloat(rowT.value) / 1000))).toFixed(3); //ok
+      shearTbl2.rows[2].cells[2].querySelector('input').value = ((parseFloat(shearTbl2.rows[2].cells[1].querySelector('input').value) / phiSelectValue) - parseFloat(sCC.value)).toFixed(3);
+      shearTbl2.rows[2].cells[3].querySelector('input').value = ((aV.value * dEff.value * sFyValue) / shearTbl2.rows[2].cells[2].querySelector('input').value).toFixed(3);
+      if (shearTbl2.rows[2].cells[3].querySelector('input').value < useSmaxoR.value) {
+        shearTbl2.rows[2].cells[4].querySelector('input').value = Math.floor(shearTbl2.rows[2].cells[3].querySelector('input').value / 25) * 25;
+      } else {
+        shearTbl2.rows[2].cells[4].querySelector('input').value = useSmaxoR.value;
+      }
+      shearTbl2.rows[2].cells[5].querySelector('input').value = (shearTbl2.rows[2].cells[2].querySelector('input').value / (aV.value * sFyValue)).toFixed(3);
+      shearTbl2.rows[2].cells[6].querySelector('input').value = Math.ceil(shearTbl2.rows[2].cells[5].querySelector('input').value);
+      shearTbl2.rows[2].cells[7].querySelector('input').value = (parseFloat(shearTbl2.rows[1].cells[7].querySelector('input').value) + (parseFloat(shearTbl2.rows[2].cells[6].querySelector('input').value) * parseFloat(shearTbl2.rows[2].cells[4].querySelector('input').value))).toFixed(2);
+
+      shearTbl2.rows[3].cells[1].querySelector('input').value = (parseFloat(rxnface.value) - (parseFloat(uUL.value) * (parseFloat(rowTh.value) / 1000))).toFixed(3); //ok
+      shearTbl2.rows[3].cells[2].querySelector('input').value = ((parseFloat(shearTbl2.rows[3].cells[1].querySelector('input').value) / phiSelectValue) - parseFloat(sCC.value)).toFixed(3);
+      shearTbl2.rows[3].cells[3].querySelector('input').value = ((aV.value * dEff.value * sFyValue) / shearTbl2.rows[3].cells[2].querySelector('input').value).toFixed(3);
+      if (shearTbl2.rows[3].cells[3].querySelector('input').value < useSmaxoR.value) {
+        shearTbl2.rows[3].cells[4].querySelector('input').value = Math.floor(shearTbl2.rows[3].cells[3].querySelector('input').value / 25) * 25;
+      } else {
+        shearTbl2.rows[3].cells[4].querySelector('input').value = useSmaxoR.value;
+      }
+      shearTbl2.rows[3].cells[5].querySelector('input').value = (shearTbl2.rows[3].cells[2].querySelector('input').value / (aV.value * sFyValue)).toFixed(3);
+      shearTbl2.rows[3].cells[6].querySelector('input').value = Math.ceil(shearTbl2.rows[3].cells[5].querySelector('input').value);
+      shearTbl2.rows[3].cells[7].querySelector('input').value = (parseFloat(shearTbl2.rows[2].cells[7].querySelector('input').value) + (parseFloat(shearTbl2.rows[3].cells[6].querySelector('input').value) * parseFloat(shearTbl2.rows[3].cells[4].querySelector('input').value))).toFixed(2);
+
+      shearTbl2.rows[4].cells[1].querySelector('input').value = useSmaxoR.value;
+
+      shearSpecs.rows[3].cells[0].querySelector('input').value = shearTbl2.rows[1].cells[6].querySelector('input').value;
+      shearSpecs.rows[4].cells[0].querySelector('input').value = shearTbl2.rows[2].cells[6].querySelector('input').value;
+      shearSpecs.rows[5].cells[0].querySelector('input').value = shearTbl2.rows[3].cells[6].querySelector('input').value;
+
+      shearSpecs.rows[3].cells[1].querySelector('input').value = shearTbl2.rows[1].cells[4].querySelector('input').value;
+      shearSpecs.rows[4].cells[1].querySelector('input').value = shearTbl2.rows[2].cells[4].querySelector('input').value;
+      shearSpecs.rows[5].cells[1].querySelector('input').value = shearTbl2.rows[3].cells[4].querySelector('input').value;
+      shearSpecs.rows[6].cells[1].querySelector('input').value = useSmaxoR.value;
+
+
+      shearSpecs.rows[3].cells[2].querySelector('input').value = shearPhiValue;
+    }
+
+
+
+  </script>
+</body>
+
+</html>
