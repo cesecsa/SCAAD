@@ -6,7 +6,7 @@
   --font2: "Outfit";
 
   --font-size1: 1rem;
-  --font-size2: 1.50rem;
+  --font-size2: 1.5rem;
   --font-size3: 1.75rem;
   --font-size4: 2rem;
 
@@ -78,7 +78,6 @@ body {
 
 .getstarted {
   margin-top: clamp(1rem, -0.143rem + 1.786vw, 2rem);
-
 }
 
 .getstarted a {
@@ -117,9 +116,7 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(0deg,
-      var(--color5),
-      var(--color5)),
+  background: linear-gradient(0deg, var(--color5), var(--color5)),
     url(resources/images/pexels-gerzon-piñata-9511941.jpg);
   background-size: cover;
   position: fixed;
@@ -199,7 +196,7 @@ body {
   font-family: "Outfit", sans-serif;
   font-size: clamp(1.5rem, 0.929rem + 0.893vw, 2rem);
   gap: 10px;
-  transition: all 0.2s ease;
+  transition: all 1s ease;
 }
 
 .submenu li img {
@@ -208,18 +205,35 @@ body {
 
 li a:hover {
   color: #33cabb;
+
 }
 
 .dropdown {
   height: 0;
   overflow: hidden;
-  transition: all 0.4s ease;
+  transition: all 0.5s ease;
   padding-left: 40px;
 }
 
 .submenu2:hover .dropdown {
+  transition: all 0.5s ease;
   gap: 5px;
   height: clamp(3.125rem, 2.551rem + 2.041vw, 5rem);
+  /* height: clamp(3.856rem, -0.308rem + 6.506vw, 7.5rem); */
+}
+
+.dropdownB {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  padding-left: 40px;
+}
+
+.submenu2:hover .dropdownB {
+  transition: all 0.5s ease;
+  gap: 5px;
+  /* height: clamp(3.125rem, 2.551rem + 2.041vw, 5rem); */
+  height: clamp(3.856rem, -0.308rem + 6.506vw, 7.5rem);
 }
 
 .active {
@@ -231,6 +245,10 @@ li a:hover {
 
 .dropdownshow {
   height: clamp(3.125rem, 2.551rem + 2.041vw, 5rem);
+}
+
+.dropdownshowB {
+  height: clamp(3.856rem, -0.308rem + 6.506vw, 7.5rem);
 }
 
 .right {
@@ -262,8 +280,6 @@ li a:hover {
   border-radius: 5px;
   background: #f0f0f0;
 }
-
-
 
 .incontainer,
 .datacontainer {
@@ -313,7 +329,6 @@ li a:hover {
   justify-content: flex-end;
 }
 
-
 .spantitle {
   font-weight: bold;
   /* margin: 1vh auto; */
@@ -324,7 +339,6 @@ li a:hover {
   padding: 2vh 0;
   text-align: center;
   background-color: #33cabb;
-
 }
 
 .outcontainer h3,
@@ -340,10 +354,9 @@ li a:hover {
   font-size: clamp(0.7rem, 0.357rem + 0.536vw, 1rem);
 }
 
-input[type=number] {
+input[type="number"] {
   outline: none;
   width: clamp(4rem, 1.143rem + 4.464vw, 6.5rem);
-
 }
 
 input::-webkit-outer-spin-button,
@@ -657,7 +670,6 @@ button:hover::before {
   margin: 2vh 0;
   align-self: center;
   text-align: center;
-
 }
 
 .cardbox {
@@ -676,7 +688,6 @@ button:hover::before {
   align-items: center;
   transition: 0.2s ease all;
   border-radius: 5px;
-
 }
 
 .cardfront {
@@ -729,8 +740,8 @@ button:hover::before {
 }
 
 .focus-in-expand {
-  -webkit-animation: focus-in-expand 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-  animation: focus-in-expand 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  -webkit-animation: focus-in-expand 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: focus-in-expand 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .teammember {
@@ -846,12 +857,98 @@ button:hover::before {
 #slabSpec tbody tr td:first-child {
   text-align: left;
 }
-.oneWayImg{
+
+.oneWayImg {
   display: flex;
-  justify-content: center ;
+  justify-content: center;
 }
-.oneWayImg img{
+
+.oneWayImg img {
   width: 87%;
+}
+
+#slabSpecDesign input[type="text"] {
+  width: clamp(4rem, 1.143rem + 4.464vw, 6.5rem);
+}
+
+#slabSpecDesign th,
+#slabSpecDesign td {
+  /* border: 1px solid; */
+  border-collapse: collapse;
+  /* width: 10rem; */
+  text-align: center;
+}
+
+#slabSpecDesign tbody tr td:nth-child(2) {
+  width: 3rem;
+}
+
+#sSlabSpec thead tr:nth-child(3) {
+  text-align: center;
+}
+
+#sSlabSpec tbody tr:nth-child(1) {
+  text-align: center;
+}
+
+.singlyBox {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.singlyImg img {
+  width: 75%;
+  text-align: center;
+}
+
+.doublyImg img {
+  width: 120%;
+  text-align: center;
+}
+
+.tnSpc {
+  position: relative;
+  bottom: 25%;
+  left: 20%;
+  width: fit-content;
+}
+
+.cBrs {
+  position: relative;
+  bottom: 54%;
+  left: 20%;
+  width: fit-content;
+}
+
+.tBrs {
+  position: relative;
+  bottom: 22%;
+  left: 20%;
+  width: fit-content;
+}
+
+#dBeam>tbody>tr>td>input[type="number"] {
+  width: fit-content;
+}
+
+#dBeam thead tr:nth-child(3),
+#dBeam tbody tr:nth-child(1) {
+  text-align: center;
+}
+
+#shearTbl2 thead tr th,
+#shearSpecs tbody tr td {
+  text-align: center;
+}
+
+#shearTbl2 tbody tr td input {
+  width: clamp(5.4rem, 2.429rem + 4.643vw, 8rem);
+}
+
+#shearSpecs tbody tr td input {
+  width: 6rem;
 }
 
 @-webkit-keyframes focus-in-expand {
@@ -885,8 +982,8 @@ button:hover::before {
 }
 
 .fade-in {
-  -webkit-animation: fade-in 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-  animation: fade-in 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  -webkit-animation: fade-in 3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 @-webkit-keyframes fade-in {
@@ -990,7 +1087,6 @@ button:hover::before {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-
 .modal-content {
   padding: 20px;
   width: 80%;
@@ -1054,7 +1150,6 @@ button:hover::before {
     margin-right: 0.5cm;
   }
 
-
   ::after {
     content: none !important;
   }
@@ -1067,9 +1162,7 @@ button:hover::before {
     margin-left: 0;
   }
 
-
-
-  input[type=number] {
+  input[type="number"] {
     border: 2px solid var(--color5);
   }
 
