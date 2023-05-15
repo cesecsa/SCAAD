@@ -49,12 +49,13 @@
                href="singly.html"><img src="resources\images\border_inner_FILL0_wght400_GRAD0_opsz48.svg"
                    alt="" />BEAMS
             </a>
-            <ul class="dropdown dropdownshow">
+            <ul class="dropdownB dropdownshowB">
               <li>
                 <a href="singly.html"
                    style="color: #33cabb">SINGLY</a>
               </li>
               <li><a href="doubly.html">DOUBLY</a></li>
+              <li><a href="shear.html">SHEAR</a></li>
             </ul>
           </li>
           <li class="submenu2">
@@ -103,7 +104,6 @@
                   <button id="save">Save</button>
                   <button id="cancel">Cancel</button>
                 </div>
-
               </div>
             </div>
             <div class="datacontainer">
@@ -519,9 +519,7 @@
                         <tr>
                           <td>&rho;<sub>min</sub></td>
                           <td>=</td>
-                          <td>
-                            √f<sub>c</sub>'/4f<sub>y</sub>
-                          </td>
+                          <td>√f<sub>c</sub>'/4f<sub>y</sub></td>
                           <td>=</td>
                           <td>
                             <input type="number"
@@ -530,13 +528,12 @@
                                    min="0"
                                    max="999999" />
                           </td>
-
                         </tr>
                         <tr>
                           <td></td>
                           <td>≥</td>
                           <td>1.4/<sub>y</sub></td>
-                          <td>=
+                          <td>=</td>
                           <td>
                             <input type="number"
                                    name=""
@@ -544,7 +541,7 @@
                                    min="0"
                                    max="999999" />
                           </td>
-                          </td>
+
                           <td></td>
                         </tr>
                         <tr>
@@ -942,65 +939,6 @@
                         <br />
                       </tbody>
                     </table>
-                    <div class="beamspecs">
-                      <table>
-                        <tbody>
-                          <tr>
-                            <th>BEAM SPECIFICATIONS</th>
-                          </tr>
-                          <tr>
-                            <td><strong>Width, b</strong></td>
-                            <td><input type="number"
-                                     name=""
-                                     class="specsWidth"
-                                     min="0"
-                                     max="999999" /></td>
-                            <td>mm</td>
-                          </tr>
-                          <tr>
-                            <td><strong>Depth, h</strong></td>
-                            <td><input type="number"
-                                     name=""
-                                     class="specsDepth"
-                                     min="0"
-                                     max="999999" /></td>
-                            <td>mm</td>
-                          </tr>
-                          <tr>
-                            <td><strong>Tension Bars</strong></td>
-                          </tr>
-                          <tr>
-                            <td></td>
-                            <th>No.</th>
-                            <th>&Oslash;</th>
-                            <th>Unit</th>
-                            <th>Spacing</th>
-                          </tr>
-                          <tr>
-                            <td></td>
-                            <td><input type="number"
-                                     name=""
-                                     class="tensionNo"
-                                     min="0"
-                                     max="999999" /></td>
-                            <td><input type="number"
-                                     name=""
-                                     class="tensionSlash"
-                                     min="0"
-                                     max="999999" /></td>
-                            <td>mm</td>
-                            <td>
-                              <input type="number"
-                                     name=""
-                                     class="tensionSpacing"
-                                     min="0"
-                                     max="999999" />
-                            </td>
-                            <td>mm C.S.</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
                   </div>
                 </div>
                 <div class="incontainercol">
@@ -1016,20 +954,24 @@
                         </tr>
                         <tr>
                           <td>Width, b</td>
-                          <td><input type="number"
+                          <td>
+                            <input type="number"
                                    name=""
                                    class="firstWidth"
                                    min="0"
-                                   max="999999" /></td>
+                                   max="999999" />
+                          </td>
                           <td>mm</td>
                         </tr>
                         <tr>
                           <td>Depth, h</td>
-                          <td><input type="number"
+                          <td>
+                            <input type="number"
                                    name=""
                                    class="firstDepth"
                                    min="0"
-                                   max="999999" /></td>
+                                   max="999999" />
+                          </td>
                           <td>mm</td>
                         </tr>
                         <tr>
@@ -1341,59 +1283,179 @@
                         <br />
                       </tbody>
                     </table>
-                    <div class="beamspecs">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="datacontainer">
+              <div class="datatables">
+                <div class="incontainercol">
+                  <div>
+                    <table id="sSlabSpec">
+                      <thead>
+                        <tr>
+                          <th colspan="11">BEAM SPECIFICATIONS</th>
+                        </tr>
+                        <tr>
+                          <th colspan="2">BEAM DIMENSION in mm</th>
+                          <th colspan="9">MAIN STEEL REINFORCEMENT</th>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td></td>
+                          <td>REBAR SIZE</td>
+                          <td colspan="2">LEFT SUPPORT</td>
+                          <td colspan="2">MIDSPAN SUPPORT</td>
+                          <td colspan="2">RIGHT SUPPORT</td>
+                          <td colspan="2">SPACING(mm)</td>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>B</td>
+                          <td>D</td>
+                          <td></td>
+                          <td>TOP</td>
+                          <td>BOTTOM</td>
+                          <td>TOP</td>
+                          <td>BOTTOM</td>
+                          <td>TOP</td>
+                          <td>BOTTOM</td>
+                          <td>TOP</td>
+                          <td>BOTTOM</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="singlyB"
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="singlyD"
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="sRebar"
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="lST"
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="lSB"
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="mST"
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="mSB"
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="rST"
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="rSB"
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="spT"
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="spB"
+                                   min="0"
+                                   max="999999" />
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="datacontainer">
+              <div class="datatables">
+                <div class="incontainercol">
+                  <div class="singlyBox">
+                    <div class="singlyImg">
+                      <img src="resources\images\singly1.png"
+                           alt="" />
+                    </div>
+                    <div class="tnSpc">
                       <table>
-                        <tbody>
+                        <thead>
+                          <!-- <tr>
+                              <th colspan="6">TENSION BARS</th>
+                            </tr> -->
                           <tr>
-                            <th>BEAM SPECIFICATIONS</th>
-                          </tr>
-                          <tr>
-                            <td><strong>Width, b</strong></td>
-                            <td><input type="number"
-                                     name=""
-                                     class="specsWidth2"
-                                     min="0"
-                                     max="999999" /></td>
-                            <td>mm</td>
-                          </tr>
-                          <tr>
-                            <td><strong>Depth, h</strong></td>
-                            <td><input type="number"
-                                     name=""
-                                     class="specsDepth2"
-                                     min="0"
-                                     max="999999" /></td>
-                            <td>mm</td>
-                          </tr>
-                          <tr>
-                            <td><strong>Tension Bars</strong></td>
-                          </tr>
-                          <tr>
-                            <td></td>
                             <th>No.</th>
                             <th>&Oslash;</th>
                             <th>Unit</th>
-                            <th>Spacing</th>
+                            <th colspan="3">Spacing</th>
                           </tr>
+                        </thead>
+                        <tbody>
                           <tr>
-                            <td></td>
-                            <td><input type="number"
+                            <td>
+                              <input type="number"
                                      name=""
-                                     class="tensionNo2"
+                                     class="tBNo"
                                      min="0"
-                                     max="999999" /></td>
-                            <td><input type="number"
+                                     max="999999" />
+                            </td>
+                            <td>
+                              <input type="number"
                                      name=""
-                                     class="tensionSlash2"
+                                     class="tBO"
                                      min="0"
-                                     max="999999" /></td>
+                                     max="999999" />
+                            </td>
                             <td>mm</td>
-                            <td><input type="number"
+                            <td>
+                              <input type="number"
                                      name=""
-                                     class="tensionSpacing2"
+                                     class="tBSp"
                                      min="0"
-                                     max="999999" /></td>
-                            <td>mm C.S.</td>
+                                     max="999999" />
+                            </td>
+                            <td>mm</td>
+                            <td>C.S.</td>
                           </tr>
                         </tbody>
                       </table>
@@ -1417,84 +1479,102 @@
       },500);
     };
 
-    const totalLiveLoad = document.querySelector('.totalLiveLoad');
-    const lateralPressure = document.querySelector('.lateralPressure');
-    const totalDeadLoad = document.querySelector('.totalDeadLoad');
-    const roofLiveLoad = document.querySelector('.roofLiveLoad');
-    const windPressure = document.querySelector('.windPressure');
-    const earthquakeLoad = document.querySelector('.earthquakeLoad');
-    const fSubOne = document.querySelector('.fSubOne');
-    const fSubC = document.querySelector('.fSubC');
-    const fSubY = document.querySelector('.fSubY');
-    const bETA = document.querySelector('.bETA');
-    const pHI = document.querySelector('.pHI');
-    const rHoSubB = document.querySelector('.rHoSubB');
-    const rHoMax = document.querySelector('.rHoMax');
-    const rHoMin = document.querySelector('.rHoMin');
-    const rHoMinLt = document.querySelector('.rHoMinLt');
-    const rHoUse = document.querySelector('.rHoUse');
-    const rHoPercent = document.querySelector('.rHoPercent');
-    const userHoPercent = document.querySelector('.userHoPercent');
-    const oMega = document.querySelector('.oMega');
-    const rSubN = document.querySelector('.rSubN');
-    const beamWidth = document.querySelector('.beamWidth');
-    const beamWidthD = document.querySelector('.beamWidthD');
-    const aS = document.querySelector('.aS');
-    const tensionReinforcement = document.querySelector('.tensionReinforcement');
-    const tensionN = document.querySelector('.tensionN');
-    const useTensionN = document.querySelector('.useTensionN');
-    const tensionAs = document.querySelector('.tensionAs');
-    const minimumCC = document.querySelector('.minimumCC');
-    const shearReinforcement = document.querySelector('.shearReinforcement');
-    const shearS = document.querySelector('.shearS');
-    const shearRemark = document.querySelector('.shearRemark');
-    const totalBeam = document.querySelector('.totalBeam');
-    const totalBeamSay = document.querySelector('.totalBeamSay');
-    const beamMinThickness = document.querySelector('.beamMinThickness');
-    const beamRemark = document.querySelector('.beamRemark');
-    const checkMinBeam = document.querySelector('.checkMinBeam');
-    const minBeamRemark = document.querySelector('.minBeamRemark');
-    const actualAs = document.querySelector('.actualAs');
-    const aSRemark = document.querySelector('.aSRemark');
-    const specsWidth = document.querySelector('.specsWidth');
-    const specsDepth = document.querySelector('.specsDepth');
-    const tensionNo = document.querySelector('.tensionNo');
-    const tensionSlash = document.querySelector('.tensionSlash');
-    const tensionSpacing = document.querySelector('.tensionSpacing');
-    const firstWidth = document.querySelector('.firstWidth');
-    const firstDepth = document.querySelector('.firstDepth');
-    const reqDepth = document.querySelector('.reqDepth');
-    const reqM = document.querySelector('.reqM');
-    const reqRu = document.querySelector('.reqRu');
-    const reqMinDepth = document.querySelector('.reqMinDepth');
-    const assume = document.querySelector('.assume');
-    const crRu = document.querySelector('.crRu');
-    const rHoSteelRatio = document.querySelector('.rHoSteelRatio');
-    const areaSteel = document.querySelector('.areaSteel');
-    const tensionSteel = document.querySelector('.tensionSteel');
-    const tensionNAs = document.querySelector('.tensionNAs');
-    const tensionNAsUse = document.querySelector('.tensionNAsUse');
-    const aSProvided = document.querySelector('.aSProvided');
-    const actualMCC = document.querySelector('.actualMCC');
-    const actualShear = document.querySelector('.actualShear');
-    const actualS = document.querySelector('.actualS');
-    const actualSRemark = document.querySelector('.actualSRemark');
-    const actualEffectiveDepth = document.querySelector('.actualEffectiveDepth');
-    const actualERemark = document.querySelector('.actualERemark');
-    const aSratioProvided = document.querySelector('.aSratioProvided');
-    const aSratioRemark = document.querySelector('.aSratioRemark');
-    const specsWidth2 = document.querySelector('.specsWidth2');
-    const specsDepth2 = document.querySelector('.specsDepth2');
-    const tensionNo2 = document.querySelector('.tensionNo2');
-    const tensionSlash2 = document.querySelector('.tensionSlash2');
-    const tensionSpacing2 = document.querySelector('.tensionSpacing2');
+    const totalLiveLoad = document.querySelector(".totalLiveLoad");
+    const lateralPressure = document.querySelector(".lateralPressure");
+    const totalDeadLoad = document.querySelector(".totalDeadLoad");
+    const roofLiveLoad = document.querySelector(".roofLiveLoad");
+    const windPressure = document.querySelector(".windPressure");
+    const earthquakeLoad = document.querySelector(".earthquakeLoad");
+    const fSubOne = document.querySelector(".fSubOne");
+    const fSubC = document.querySelector(".fSubC");
+    const fSubY = document.querySelector(".fSubY");
+    const bETA = document.querySelector(".bETA");
+    const pHI = document.querySelector(".pHI");
+    const rHoSubB = document.querySelector(".rHoSubB");
+    const rHoMax = document.querySelector(".rHoMax");
+    const rHoMin = document.querySelector(".rHoMin");
+    const rHoMinLt = document.querySelector(".rHoMinLt");
+    const rHoUse = document.querySelector(".rHoUse");
+    const rHoPercent = document.querySelector(".rHoPercent");
+    const userHoPercent = document.querySelector(".userHoPercent");
+    const oMega = document.querySelector(".oMega");
+    const rSubN = document.querySelector(".rSubN");
+    const beamWidth = document.querySelector(".beamWidth");
+    const beamWidthD = document.querySelector(".beamWidthD");
+    const aS = document.querySelector(".aS");
+    const tensionReinforcement = document.querySelector(
+      ".tensionReinforcement"
+    );
+    const tensionN = document.querySelector(".tensionN");
+    const useTensionN = document.querySelector(".useTensionN");
+    const tensionAs = document.querySelector(".tensionAs");
+    const minimumCC = document.querySelector(".minimumCC");
+    const shearReinforcement = document.querySelector(".shearReinforcement");
+    const shearS = document.querySelector(".shearS");
+    const shearRemark = document.querySelector(".shearRemark");
+    const totalBeam = document.querySelector(".totalBeam");
+    const totalBeamSay = document.querySelector(".totalBeamSay");
+    const beamMinThickness = document.querySelector(".beamMinThickness");
+    const beamRemark = document.querySelector(".beamRemark");
+    const checkMinBeam = document.querySelector(".checkMinBeam");
+    const minBeamRemark = document.querySelector(".minBeamRemark");
+    const actualAs = document.querySelector(".actualAs");
+    const aSRemark = document.querySelector(".aSRemark");
+    const specsWidth = document.querySelector(".specsWidth");
+    const specsDepth = document.querySelector(".specsDepth");
+    const tensionNo = document.querySelector(".tensionNo");
+    const tensionSlash = document.querySelector(".tensionSlash");
+    const tensionSpacing = document.querySelector(".tensionSpacing");
+    const firstWidth = document.querySelector(".firstWidth");
+    const firstDepth = document.querySelector(".firstDepth");
+    const reqDepth = document.querySelector(".reqDepth");
+    const reqM = document.querySelector(".reqM");
+    const reqRu = document.querySelector(".reqRu");
+    const reqMinDepth = document.querySelector(".reqMinDepth");
+    const assume = document.querySelector(".assume");
+    const crRu = document.querySelector(".crRu");
+    const rHoSteelRatio = document.querySelector(".rHoSteelRatio");
+    const areaSteel = document.querySelector(".areaSteel");
+    const tensionSteel = document.querySelector(".tensionSteel");
+    const tensionNAs = document.querySelector(".tensionNAs");
+    const tensionNAsUse = document.querySelector(".tensionNAsUse");
+    const aSProvided = document.querySelector(".aSProvided");
+    const actualMCC = document.querySelector(".actualMCC");
+    const actualShear = document.querySelector(".actualShear");
+    const actualS = document.querySelector(".actualS");
+    const actualSRemark = document.querySelector(".actualSRemark");
+    const actualEffectiveDepth = document.querySelector(
+      ".actualEffectiveDepth"
+    );
+    const actualERemark = document.querySelector(".actualERemark");
+    const aSratioProvided = document.querySelector(".aSratioProvided");
+    const aSratioRemark = document.querySelector(".aSratioRemark");
+    const specsWidth2 = document.querySelector(".specsWidth2");
+    const specsDepth2 = document.querySelector(".specsDepth2");
+    const tensionNo2 = document.querySelector(".tensionNo2");
+    const tensionSlash2 = document.querySelector(".tensionSlash2");
+    const tensionSpacing2 = document.querySelector(".tensionSpacing2");
+    const singlyB = document.querySelector(".singlyB");
+    const singlyD = document.querySelector(".singlyD");
+    const sRebar = document.querySelector(".sRebar");
+    const lST = document.querySelector(".lST");
+    const lSB = document.querySelector(".lSB");
+    const mST = document.querySelector(".mST");
+    const mSB = document.querySelector(".mSB");
+    const rST = document.querySelector(".rST");
+    const rSB = document.querySelector(".rSB");
+    const spT = document.querySelector(".spT");
+    const spB = document.querySelector(".spB");
+    const tBNo = document.querySelector(".tBNo");
+    const tBO = document.querySelector(".tBO");
+    const tBSp = document.querySelector(".tBSp");
 
-    totalDeadLoad.addEventListener('input',loadTable);
-    totalLiveLoad.addEventListener('input',loadTable);
-    roofLiveLoad.addEventListener('input',loadTable);
-    windPressure.addEventListener('input',loadTable);
-    lateralPressure.addEventListener('input',loadTable);
-    earthquakeLoad.addEventListener('input',loadTable);
+    totalDeadLoad.addEventListener("input",loadTable);
+    totalLiveLoad.addEventListener("input",loadTable);
+    roofLiveLoad.addEventListener("input",loadTable);
+    windPressure.addEventListener("input",loadTable);
+    lateralPressure.addEventListener("input",loadTable);
+    earthquakeLoad.addEventListener("input",loadTable);
 
     function loadTable() {
       let totalDeadLoadValue = parseFloat(totalDeadLoad.value);
@@ -1528,37 +1608,84 @@
         earthquakeLoadValue = 0;
       }
 
-      loadCombinationTable.rows[0].cells[7].querySelector('input').value = (1.4 * totalDeadLoadValue).toFixed(8);
-      loadCombinationTable.rows[1].cells[7].querySelector('input').value = ((1.2 * totalDeadLoadValue) + (1.6 * totalLiveLoadValue) + (0.5 * roofLiveLoadValue)).toFixed(8);
-      loadCombinationTable.rows[2].cells[7].querySelector('input').value = ((1.2 * totalDeadLoadValue) + (1 * totalLiveLoadValue) + (1.6 * roofLiveLoadValue)).toFixed(8);
-      loadCombinationTable.rows[3].cells[7].querySelector('input').value = ((1.2 * totalDeadLoadValue) + (1.6 * roofLiveLoadValue) + (0.5 * windPressureValue)).toFixed(8);
-      loadCombinationTable.rows[4].cells[7].querySelector('input').value = ((1.2 * totalDeadLoadValue) + (0.5 * roofLiveLoadValue) + (1 * windPressureValue)).toFixed(8);
-      loadCombinationTable.rows[5].cells[7].querySelector('input').value = ((0.9 * totalDeadLoadValue) + (1 * windPressureValue) + (1.6 * lateralPressureValue)).toFixed(8);
-      loadCombinationTable.rows[6].cells[7].querySelector('input').value = ((1.462 * totalDeadLoadValue) + (1 * totalLiveLoadValue) + (1.25 * earthquakeLoadValue)).toFixed(8);
-      loadCombinationTable.rows[7].cells[7].querySelector('input').value = ((1.132 * totalDeadLoadValue) + (1.25 * earthquakeLoadValue) + (1.6 * lateralPressureValue)).toFixed(8);
-      loadCombinationTable.rows[8].cells[7].querySelector('input').value = ((1.2 * totalDeadLoadValue) + (1 * lateralPressureValue) + (2.8 * earthquakeLoadValue)).toFixed(8);
-      loadCombinationTable.rows[9].cells[5].querySelector('input').value = ((0.9 * totalDeadLoadValue) + (2.8 * earthquakeLoadValue)).toFixed(8);
-      loadCombinationTable.rows[10].cells[5].querySelector('input').value = ((0.9 * totalDeadLoadValue) - (2.8 * earthquakeLoadValue)).toFixed(8);
+      loadCombinationTable.rows[0].cells[7].querySelector("input").value = (
+        1.4 * totalDeadLoadValue
+      ).toFixed(8);
+      loadCombinationTable.rows[1].cells[7].querySelector("input").value = (
+        1.2 * totalDeadLoadValue +
+        1.6 * totalLiveLoadValue +
+        0.5 * roofLiveLoadValue
+      ).toFixed(8);
+      loadCombinationTable.rows[2].cells[7].querySelector("input").value = (
+        1.2 * totalDeadLoadValue +
+        1 * totalLiveLoadValue +
+        1.6 * roofLiveLoadValue
+      ).toFixed(8);
+      loadCombinationTable.rows[3].cells[7].querySelector("input").value = (
+        1.2 * totalDeadLoadValue +
+        1.6 * roofLiveLoadValue +
+        0.5 * windPressureValue
+      ).toFixed(8);
+      loadCombinationTable.rows[4].cells[7].querySelector("input").value = (
+        1.2 * totalDeadLoadValue +
+        0.5 * roofLiveLoadValue +
+        1 * windPressureValue
+      ).toFixed(8);
+      loadCombinationTable.rows[5].cells[7].querySelector("input").value = (
+        0.9 * totalDeadLoadValue +
+        1 * windPressureValue +
+        1.6 * lateralPressureValue
+      ).toFixed(8);
+      loadCombinationTable.rows[6].cells[7].querySelector("input").value = (
+        1.462 * totalDeadLoadValue +
+        1 * totalLiveLoadValue +
+        1.25 * earthquakeLoadValue
+      ).toFixed(8);
+      loadCombinationTable.rows[7].cells[7].querySelector("input").value = (
+        1.132 * totalDeadLoadValue +
+        1.25 * earthquakeLoadValue +
+        1.6 * lateralPressureValue
+      ).toFixed(8);
+      loadCombinationTable.rows[8].cells[7].querySelector("input").value = (
+        1.2 * totalDeadLoadValue +
+        1 * lateralPressureValue +
+        2.8 * earthquakeLoadValue
+      ).toFixed(8);
+      loadCombinationTable.rows[9].cells[5].querySelector("input").value = (
+        0.9 * totalDeadLoadValue +
+        2.8 * earthquakeLoadValue
+      ).toFixed(8);
+      loadCombinationTable.rows[10].cells[5].querySelector("input").value = (
+        0.9 * totalDeadLoadValue -
+        2.8 * earthquakeLoadValue
+      ).toFixed(8);
 
       let tableArray1 = [];
       for (let i = 0; i < loadCombinationTable.rows.length - 4; i++) {
-        tableArray1.push(parseFloat(loadCombinationTable.rows[i].cells[7].querySelector('input').value));
+        tableArray1.push(
+          parseFloat(
+            loadCombinationTable.rows[i].cells[7].querySelector("input").value
+          )
+        );
       }
 
       let tableArray2 = [];
       for (let i = 9; i < 11; i++) {
-        tableArray2.push(parseFloat(loadCombinationTable.rows[i].cells[5].querySelector('input').value));
+        tableArray2.push(
+          parseFloat(
+            loadCombinationTable.rows[i].cells[5].querySelector("input").value
+          )
+        );
       }
 
       let newTableArray = tableArray1.concat(tableArray2);
 
-      loadCombinationTable.rows[11].cells[2].querySelector('input').value = Math.max(...newTableArray) * Math.pow(10,6);
-
+      loadCombinationTable.rows[11].cells[2].querySelector("input").value =
+        Math.max(...newTableArray) * Math.pow(10,6);
     }
 
-    fSubC.addEventListener('input',betaValue);
+    fSubC.addEventListener("input",betaValue);
     function betaValue() {
-
       if (fSubC.value > 56) {
         bETA.value = 0.65;
       } else if (fSubC.value < 28.1) {
@@ -1566,42 +1693,41 @@
       } else {
         bETA.value = 0.85 - 0.05 * ((fSubC.value - 28) / 7);
       }
-
     }
 
-
-    fSubC.addEventListener('input',steelRatioLimitations);
-    fSubY.addEventListener('input',steelRatioLimitations);
+    fSubC.addEventListener("input",steelRatioLimitations);
+    fSubY.addEventListener("input",steelRatioLimitations);
     function steelRatioLimitations() {
-
       let fSubCValue = parseFloat(fSubC.value);
       let bETAValue = parseFloat(bETA.value);
       let fSubYValue = parseFloat(fSubY.value);
 
-      rHoSubB.value = ((0.85 * fSubCValue * bETAValue * 600) / (600 * (fSubYValue + 600))).toFixed(8);
+      rHoSubB.value = (
+        (0.85 * fSubCValue * bETAValue * 600) /
+        (600 * (fSubYValue + 600))
+      ).toFixed(8);
       rHoMax.value = 0.75 * rHoSubB.value;
       rHoMin.value = (Math.sqrt(fSubCValue) / (4 * fSubYValue)).toFixed(8);
       rHoMinLt.value = (1.4 / fSubYValue).toFixed(8);
       let rhoUseMax = [rHoMin.value,rHoMinLt.value];
       rHoUse.value = Math.max(...rhoUseMax);
-
     }
 
-    fSubC.addEventListener('input',positiveMoment);
-    fSubY.addEventListener('input',positiveMoment);
-    rHoPercent.addEventListener('input',positiveMoment);
-    pHI.addEventListener('input',positiveMoment);
-    beamWidth.addEventListener('input',positiveMoment);
-    tensionReinforcement.addEventListener('input',positiveMoment);
-    minimumCC.addEventListener('input',positiveMoment);
-    shearReinforcement.addEventListener('input',positiveMoment);
-    assume.addEventListener('input',positiveMoment);
-    tensionSteel.addEventListener('input',positiveMoment);
-    actualMCC.addEventListener('input',positiveMoment);
-    actualShear.addEventListener('input',positiveMoment);
-
+    fSubC.addEventListener("input",positiveMoment);
+    fSubY.addEventListener("input",positiveMoment);
+    rHoPercent.addEventListener("input",positiveMoment);
+    pHI.addEventListener("input",positiveMoment);
+    beamWidth.addEventListener("input",positiveMoment);
+    tensionReinforcement.addEventListener("input",positiveMoment);
+    minimumCC.addEventListener("input",positiveMoment);
+    shearReinforcement.addEventListener("input",positiveMoment);
+    assume.addEventListener("input",positiveMoment);
+    tensionSteel.addEventListener("input",positiveMoment);
+    actualMCC.addEventListener("input",positiveMoment);
+    actualShear.addEventListener("input",positiveMoment);
+    // useTensionN.addEventListener('change',positiveMoment);
+    // tensionNAsUse.addEventListener('change',positiveMoment);
     function positiveMoment() {
-
       let rHoPercentValue = parseFloat(rHoPercent.value);
       let beamWidthValue = parseFloat(beamWidth.value);
       let tensionReinforcementValue = parseFloat(tensionReinforcement.value);
@@ -1612,9 +1738,11 @@
       let actualMCCValue = parseFloat(actualMCC.value);
       let actualShearValue = parseFloat(actualShear.value);
 
-
-      let maxPositive = loadCombinationTable.rows[11].cells[2].querySelector('input').value;
-      let Lc = parseFloat(loadCombinationTable.rows[12].cells[2].querySelector('input').value);
+      let maxPositive =
+        loadCombinationTable.rows[11].cells[2].querySelector("input").value;
+      let Lc = parseFloat(
+        loadCombinationTable.rows[12].cells[2].querySelector("input").value
+      );
 
       if (isNaN(tensionReinforcementValue)) {
         tensionReinforcementValue = 0;
@@ -1640,43 +1768,68 @@
         actualShearValue = 0;
       }
 
-      userHoPercent.value = ((rHoPercentValue / 100) * rHoSubB.value).toFixed(8);
+      userHoPercent.value = ((rHoPercentValue / 100) * rHoSubB.value).toFixed(
+        8
+      );
       oMega.value = (userHoPercent.value * fSubY.value) / fSubC.value;
-      rSubN.value = (fSubC.value * oMega.value) * (1 - (0.59 * oMega.value));
-      beamWidthD.value = (Math.pow((maxPositive) / (pHI.value * rSubN.value * beamWidthValue),1 / 2)).toFixed(8);
+      rSubN.value = fSubC.value * oMega.value * (1 - 0.59 * oMega.value);
+      beamWidthD.value = Math.pow(
+        maxPositive / (pHI.value * rSubN.value * beamWidthValue),
+        1 / 2
+      ).toFixed(8);
       aS.value = userHoPercent.value * beamWidthValue * beamWidthD.value;
-      tensionN.value = (4 * aS.value) / (Math.PI * Math.pow(parseFloat(tensionReinforcementValue),2));
+      tensionN.value =
+        (4 * aS.value) /
+        (Math.PI * Math.pow(parseFloat(tensionReinforcementValue),2));
       useTensionN.value = Math.ceil(tensionN.value);
-      tensionAs.value = (Math.PI / 4) * Math.pow(tensionReinforcement.value,2) * useTensionN.value;
-      shearS.value = (parseFloat(beamWidthValue) - (2 * parseFloat(minimumCCValue)) - (2 * parseFloat(shearReinforcementValue)) - (useTensionN.value * tensionReinforcementValue)) / (useTensionN.value - 1);
+      tensionAs.value =
+        (Math.PI / 4) *
+        Math.pow(tensionReinforcement.value,2) *
+        useTensionN.value;
+      shearS.value =
+        (parseFloat(beamWidthValue) -
+          2 * parseFloat(minimumCCValue) -
+          2 * parseFloat(shearReinforcementValue) -
+          useTensionN.value * tensionReinforcementValue) /
+        (useTensionN.value - 1);
       if (shearS.value > 25) {
         shearRemark.textContent = "TENSION BARS IN ONE LAYER";
       } else {
-        shearRemark.textContent = "PLACE TENSION BARS IN TWO LAYER OR ADJUST BAR DIAMETER";
+        shearRemark.textContent =
+          "PLACE TENSION BARS IN TWO LAYER OR ADJUST BAR DIAMETER";
       }
 
-      totalBeam.value = parseFloat(beamWidthD.value) + (tensionReinforcementValue / 2) + shearReinforcementValue + minimumCCValue;
+      totalBeam.value =
+        parseFloat(beamWidthD.value) +
+        tensionReinforcementValue / 2 +
+        shearReinforcementValue +
+        minimumCCValue;
 
       totalBeamSay.value = Math.ceil(totalBeam.value / 25) * 25;
 
       if (fSubY.value === 415) {
         beamMinThickness.value = Lc / 18.5;
       } else {
-        beamMinThickness.value = (Lc / 18.5) * (0.4 + (fSubY.value / 400));
+        beamMinThickness.value = (Lc / 18.5) * (0.4 + fSubY.value / 400);
       }
       if (totalBeamSay.value > beamMinThickness.value) {
         beamRemark.textContent = "BEAM SECTION IS ADEQUATE";
       } else {
         beamRemark.textContent = "RE-DESIGN BEAM";
       }
-      checkMinBeam.value = totalBeamSay.value - (tensionReinforcementValue / 2) - shearReinforcementValue - minimumCCValue;
+      checkMinBeam.value =
+        totalBeamSay.value -
+        tensionReinforcementValue / 2 -
+        shearReinforcementValue -
+        minimumCCValue;
       if (checkMinBeam.value > beamWidthD.value) {
         minBeamRemark.textContent = "BEAM SECTION IS ADEQUATE";
       } else {
         minBeamRemark.textContent = "RE-DESIGN BEAM";
       }
 
-      actualAs.value = (tensionAs.value / (beamWidthValue * checkMinBeam.value));
+      actualAs.value =
+        tensionAs.value / (beamWidthValue * checkMinBeam.value);
 
       if (rHoUse.value < actualAs.value && actualAs.value < rHoMax.value) {
         aSRemark.textContent = "BEAM IS UNDER-REINFORCED";
@@ -1684,57 +1837,94 @@
         aSRemark.textContent = "BEAM IS OVER-REINFORCED";
       }
 
-      specsWidth.value = beamWidth.value;
-      specsDepth.value = totalBeamSay.value;
-      tensionNo.value = useTensionN.value;
-      tensionSlash.value = tensionReinforcementValue;
-      tensionSpacing.value = shearS.value;
+      // specsWidth.value = beamWidth.value;
+      // specsDepth.value = totalBeamSay.value;
+      // tensionNo.value = useTensionN.value;
+      // tensionSlash.value = tensionReinforcementValue;
+      // tensionSpacing.value = shearS.value;
 
       //Maximum Negative Moment
 
-      firstWidth.value = specsWidth.value;
-      firstDepth.value = specsDepth.value;
+      firstWidth.value = beamWidth.value;
+      firstDepth.value = totalBeamSay.value;
 
       reqDepth.value = (0.18 * (fSubC.value / fSubY.value)).toFixed(8);
       reqM.value = (fSubY.value / (0.85 * fSubC.value)).toFixed(8);
-      reqRu.value = (reqDepth.value * fSubY.value * (1 - ((reqDepth.value * reqM.value) / 2))).toFixed(8);
-      reqMinDepth.value = Math.pow(maxPositive / (pHI.value * firstWidth.value * reqRu.value),0.5);
-      crRu.value = parseFloat(maxPositive) / parseFloat((pHI.value) * parseFloat(firstWidth.value) * Math.pow(assumeValue,2));
+      reqRu.value = (
+        reqDepth.value *
+        fSubY.value *
+        (1 - (reqDepth.value * reqM.value) / 2)
+      ).toFixed(8);
+      reqMinDepth.value = Math.pow(
+        maxPositive / (pHI.value * firstWidth.value * reqRu.value),
+        0.5
+      );
+      crRu.value =
+        parseFloat(maxPositive) /
+        parseFloat(
+          pHI.value * parseFloat(firstWidth.value) * Math.pow(assumeValue,2)
+        );
 
-      rHoSteelRatio.value = (1 / reqM.value) * (1 - Math.pow((1 - ((2 * crRu.value * reqM.value) / fSubY.value)),1 / 2));
+      rHoSteelRatio.value =
+        (1 / reqM.value) *
+        (1 -
+          Math.pow(1 - (2 * crRu.value * reqM.value) / fSubY.value,1 / 2));
       areaSteel.value = firstWidth.value * assumeValue * rHoSteelRatio.value;
 
-      tensionNAs.value = (4 * areaSteel.value) / (Math.PI * Math.pow(parseFloat(tensionSteelValue),2));
+      tensionNAs.value =
+        (4 * areaSteel.value) /
+        (Math.PI * Math.pow(parseFloat(tensionSteelValue),2));
       tensionNAsUse.value = Math.ceil(tensionNAs.value);
-      aSProvided.value = (Math.PI / 4) * Math.pow(tensionSteelValue,2) * tensionNAsUse.value;
+      aSProvided.value =
+        (Math.PI / 4) * Math.pow(tensionSteelValue,2) * tensionNAsUse.value;
 
-      actualS.value = (parseFloat(firstWidth.value) - (2 * parseFloat(actualMCCValue)) - (2 * parseFloat(actualShearValue)) - (tensionNAsUse.value * tensionSteelValue)) / (tensionNAsUse.value - 1);
+      actualS.value =
+        (parseFloat(firstWidth.value) -
+          2 * parseFloat(actualMCCValue) -
+          2 * parseFloat(actualShearValue) -
+          tensionNAsUse.value * tensionSteelValue) /
+        (tensionNAsUse.value - 1);
 
       if (actualS.value > 25) {
         actualSRemark.textContent = "TENSION BARS IN ONE LAYER";
       } else {
-        actualSRemark.textContent = "PLACE TENSION BARS IN TWO LAYER OR ADJUST BAR DIAMETER";
+        actualSRemark.textContent =
+          "PLACE TENSION BARS IN TWO LAYER OR ADJUST BAR DIAMETER";
       }
 
-      actualEffectiveDepth.value = firstDepth.value - (tensionSteelValue / 2) - actualShearValue - actualMCCValue;
+      actualEffectiveDepth.value =
+        firstDepth.value -
+        tensionSteelValue / 2 -
+        actualShearValue -
+        actualMCCValue;
       if (actualEffectiveDepth.value > assumeValue) {
         actualERemark.textContent = "BEAM SECTION IS ADEQUATE";
       } else {
         actualERemark.textContent = "RE-DESIGN BEAM";
       }
 
-      aSratioProvided.value = (aSProvided.value / (firstWidth.value * actualEffectiveDepth.value));
-      if (rHoUse.value < aSratioProvided.value && aSratioProvided.value < rHoMax.value) {
+      aSratioProvided.value =
+        aSProvided.value / (firstWidth.value * actualEffectiveDepth.value);
+      if (
+        rHoUse.value < aSratioProvided.value &&
+        aSratioProvided.value < rHoMax.value
+      ) {
         aSratioRemark.textContent = "BEAM IS UNDER-REINFORCED";
       } else {
         aSratioRemark.textContent = "BEAM IS OVER-REINFORCED";
       }
 
-      specsWidth2.value = firstWidth.value;
-      specsDepth2.value = firstDepth.value;
-      tensionNo2.value = tensionNAsUse.value;
-      tensionSlash2.value = tensionSteelValue;
-      tensionSpacing2.value = actualS.value;
+      singlyB.value = beamWidth.value;
+      singlyD.value = totalBeamSay.value;
+      sRebar.value = tBO.value = tensionReinforcement.value;
+      lST.value = mST.value = rST.value = parseFloat(tensionNAsUse.value);
+      lSB.value =
+        mSB.value =
+        rSB.value =
+        tBNo.value =
+        parseFloat(useTensionN.value);
+      spT.value = parseFloat(actualS.value);
+      spB.value = tBSp.value = parseFloat(shearS.value);
     }
   </script>
 </body>
