@@ -46,11 +46,12 @@
             <a href="singly.html"><img src="resources\images\border_inner_FILL0_wght400_GRAD0_opsz48.svg"
                    alt="" />BEAMS
             </a>
-            <ul class="dropdown">
+            <ul class="dropdownB">
               <li>
                 <a href="singly.html">SINGLY</a>
               </li>
               <li><a href="doubly.html">DOUBLY</a></li>
+              <li><a href="shear.html">SHEAR</a></li>
             </ul>
           </li>
           <li class="submenu2">
@@ -101,7 +102,7 @@
                   <button id="save">Save</button>
                   <button id="cancel">Cancel</button>
                 </div>
-            
+
               </div>
             </div>
             <div class="datacontainer">
@@ -609,6 +610,20 @@
                           <td>%</td>
                         </tr>
                         <tr>
+                          <td>Length of Column</td>
+                          <td colspan="2"></td>
+                          <td>=</td>
+                          <td>
+                            <input type="number"
+                                   name=""
+                                   class="lengthCol"
+                                   min="0"
+                                   max="999999"
+                                   placeholder="Enter value" />
+                          </td>
+                          <td>mm</td>
+                        </tr>
+                        <tr>
                           <td>Minimum Cover</td>
                           <td colspan="2"></td>
                           <td>=</td>
@@ -1048,126 +1063,141 @@
               <div class="datatables">
                 <div class="incontainercol">
                   <div>
-                    <span class="spantitle">COLUMN SPECIFICATIONS</span>
-                  </div>
-                  <div>
-                    <table>
+                    <table id="slabSpecDesign">
+                      <thead>
+                        <tr>
+                          <th>COLUMN SPECIFICATIONS</th>
+                          <th colspan="5">DESIGNATION</th>
+                        </tr>
+                      </thead>
                       <tbody>
                         <tr>
-                          <th></th>
-                        </tr>
-                        <tr>
-                          <td>Cross-sectional Dimension</td>
-                        </tr>
-                        <tr>
-                          <td><strong>b</strong></td>
-                          <td>=</td>
-                          <td>
-                            <input type="number"
+                          <td rowspan="2">DIMENSION</td>
+                          <td>B</td>
+                          <td><input type="number"
                                    name=""
-                                   class="bI"
+                                   class="dimensionB"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td>mm</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>H</td>
+                          <td><input type="number"
+                                   name=""
+                                   class="dimensionH"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td>mm</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td colspan="2">LONGITUDINAL BARS</td>
+                          <td><input type="number"
+                                   name=""
+                                   class="longColA"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   class="longColB"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td> &oslash; mm &#64;</td>
+                          <td><input type="number"
+                                   name=""
+                                   class="longColD"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td>c.s.</td>
+                        </tr>
+                        <tr>
+                          <td rowspan="4"
+                              colspan="2">LATERAL TIES</td>
+                          <td>
+                            <input type="text"
+                                   name=""
+                                   class=""
                                    min="0"
                                    max="999999" />
                           </td>
+                          <td><input type="number"
+                                   name=""
+                                   class="lTiesRowA"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td> &oslash; mm &#64;</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td><input type="number"
+                                   name=""
+                                   class="lTiesRowBA"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   class="lTiesRowBB"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   class="lTiesRowBC"
+                                   min="0"
+                                   max="999999" /></td>
                           <td>mm</td>
                         </tr>
                         <tr>
-                          <td><strong>h</strong></td>
-                          <td>=</td>
-                          <td>
-                            <input type="number"
+                          <td><input type="number"
                                    name=""
-                                   class="iH"
+                                   class="lTiesRowCA"
                                    min="0"
-                                   max="999999" />
-                          </td>
+                                   max="999999" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   class="lTiesRowCB"
+                                   min="0"
+                                   max="999999" /></td>
+                          <td><input type="number"
+                                   name=""
+                                   class="lTiesRowCC"
+                                   min="0"
+                                   max="999999" /></td>
                           <td>mm</td>
                         </tr>
                         <tr>
-                          <td><strong>Longitudinal Steel bars</strong></td>
-                        </tr>
-                        <tr>
-                          <th>No.</th>
-                          <th></th>
-                          <th></th>
-                          <th>Spacing</th>
-                        </tr>
-                        <tr>
-                          <td>
-                            <input type="number"
+                          <td><input type="text"
                                    name=""
-                                   class="sNo"
+                                   class=""
                                    min="0"
-                                   max="999999" />
-                          </td>
-                          <td>
-                            <input type="number"
+                                   max="999999" /></td>
+                          <td><input type="number"
                                    name=""
-                                   class="sSpace"
+                                   class=""
                                    min="0"
-                                   max="999999" />
-                          </td>
-                          <td>&Oslash; mm @</td>
-                          <td>
-                            <input type="number"
+                                   max="999999" /></td>
+                          <td><input type="number"
                                    name=""
-                                   class="space"
+                                   class="lTiesRowDC"
                                    min="0"
-                                   max="999999" />
-                          </td>
-                          <td>C.S.</td>
-                        </tr>
-                        <tr>
-                          <td><strong>Lateral Ties</strong></td>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <th>No.</th>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <td>1</td>
-                          <td>SPCD @</td>
-
-                          <td>
-                            <input type="number"
-                                   name=""
-                                   class="noOne"
-                                   min="0"
-                                   max="999999" />
-                          </td>
-                          <td>mm</td>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <td>3</td>
-                          <td>SPCD @</td>
-
-                          <td>
-                            <input type="number"
-                                   name=""
-                                   class="noThree"
-                                   min="0"
-                                   max="999999" />
-                          </td>
-                          <td>mm</td>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <td>Rest</td>
-                          <td>SPCD @</td>
-
-                          <td>
-                            <input type="number"
-                                   name=""
-                                   class="noRest"
-                                   min="0"
-                                   max="999999" />
-                          </td>
+                                   max="999999" /></td>
                           <td>mm</td>
                         </tr>
                       </tbody>
                     </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="datacontainer">
+              <div class="datatables">
+                <div class="incontainercol">
+                  <div class="oneWayImg">
+                    <img src="resources\images\column1.png"
+                         alt="">
                   </div>
                 </div>
               </div>
@@ -1177,7 +1207,7 @@
       </div>
     </div>
   </div>
-    <script src="index.js"></script>
+  <script src="index.js"></script>
   <script>
     window.onload = function () {
       var preloader = document.getElementById("preloader");
@@ -1206,6 +1236,7 @@
     const fSubC = document.querySelector(".fSubC");
     const fSubY = document.querySelector(".fSubY");
     // const colType = document.querySelector('.colType');
+    const lengthCol = document.querySelector(".lengthCol");
     const ultLF = document.querySelector(".ultLF");
     const eccF = document.querySelector(".eccF");
     const steelR = document.getElementById("steelR");
@@ -1245,6 +1276,20 @@
     const noOne = document.querySelector(".noOne");
     const noThree = document.querySelector(".noThree");
     const noRest = document.querySelector(".noRest");
+
+    const dimensionB = document.querySelector(".dimensionB");
+    const dimensionH = document.querySelector(".dimensionH");
+    const longColA = document.querySelector(".longColA");
+    const longColB = document.querySelector(".longColB");
+    const longColD = document.querySelector(".longColD");
+    const lTiesRowA = document.querySelector(".lTiesRowA");
+    const lTiesRowBA = document.querySelector(".lTiesRowBA");
+    const lTiesRowBB = document.querySelector(".lTiesRowBB");
+    const lTiesRowBC = document.querySelector(".lTiesRowBC");
+    const lTiesRowCA = document.querySelector(".lTiesRowCA");
+    const lTiesRowCB = document.querySelector(".lTiesRowCB");
+    const lTiesRowCC = document.querySelector(".lTiesRowCC");
+    const lTiesRowDC = document.querySelector(".lTiesRowDC");
 
     cDL.addEventListener("input",ddToLc);
     cLL.addEventListener("input",ddToLc);
@@ -1477,6 +1522,24 @@
         eccF.value = 0.85;
       }
     });
+    reqDuse.addEventListener('input',colSpec);
+    byreqDuse.addEventListener('input',colSpec);
+    nSteel.addEventListener('change',colSpec);
+    mainLB.addEventListener('change',colSpec);
+    eS.addEventListener('change',colSpec);
+    latT.addEventListener('change',colSpec);
+    lengthCol.addEventListener('input',colSpec);
+    eS4use.addEventListener('change',colSpec);
+    function colSpec() {
+      dimensionB.value = reqDuse.value;
+      dimensionH.value = byreqDuse.value;
+      longColA.value = nSteel.value;
+      longColB.value = parseFloat(mainLB.options[mainLB.selectedIndex].innerHTML);
+      longColD.value = Math.round(parseFloat(eS.value) / 10) * 10;
+      lTiesRowA.value = parseFloat(latT.options[latT.selectedIndex].innerHTML);
+      lTiesRowCA.value = Math.round(parseFloat(lengthCol.value) / 4 / 100);
+      lTiesRowDC.value = Math.round(eS4use.value / 50) * 50;
+    }
   </script>
 </body>
 
