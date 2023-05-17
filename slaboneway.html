@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"
-      id="slaboneway">
-
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-CoMPatible"
@@ -12,7 +10,6 @@
   <link rel="stylesheet"
         href="styles.css" />
 </head>
-
 <body>
   <div id="preloader"></div>
   <div class="mainbody">
@@ -377,7 +374,9 @@
                               <input type="number"
                                      name=""
                                      id=""
-                                     min="0"
+                                     class="concrete
+                                     min="
+                                     0"
                                      max="999999"
                                      placeholder="Enter value" />
                             </td>
@@ -1206,6 +1205,7 @@
     const fy = document.querySelector(".fy");
     const liveLoad = document.querySelector(".liveLoad");
     const deadLoad = document.querySelector(".deadLoad");
+    const concrete = document.querySelector(".concrete");
     const factoredLl = document.querySelector(".factoredLl");
     const factoredDl = document.querySelector(".factoredDl");
     const selfWeight = document.querySelector(".selfWeight");
@@ -1279,6 +1279,7 @@
     minThickness.addEventListener("input",updateRatio);
     Ll.addEventListener("input",updateRatio);
     Ls.addEventListener("input",updateRatio);
+    concrete.addEventListener("input",updateRatio);
 
     tempBar.addEventListener("input",tempBarAt);
     fy.addEventListener("input",tempBarAt);
@@ -1369,7 +1370,7 @@
         (minThickness.value / 1000)
       ).toFixed(2);
       selfWeight.value = parseFloat(
-        23.6 * (minThickness.value / 1000) * 1.2
+        concrete.value * (minThickness.value / 1000) * 1.2
       ).toFixed(2);
 
       const factoredValues = [
@@ -1386,7 +1387,7 @@
 
 
 
-      llDl.value = factoredLl.value / 1.6 / (selfWeight.value / 1.2);
+      llDl.value = (factoredLl.value / 1.6 / (selfWeight.value / 1.2)).toFixed(9);
       if (isNaN(factoredLl.value.value) || isNaN(selfWeight.value)) {
         valLlDl.textContent = "";
       }
