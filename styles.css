@@ -232,9 +232,8 @@ li a:hover {
 .submenu2:hover .dropdownB {
   transition: all 0.5s ease;
   gap: 5px;
-  /* height: clamp(3.125rem, 2.551rem + 2.041vw, 5rem); */
-/*   height: clamp(3.856rem, -0.308rem + 6.506vw, 7.5rem); */
-    height: clamp(5.68rem, 3.6rem + 3.25vw, 7.5rem);
+  height: clamp(5.68rem, 3.6rem + 3.25vw, 7.5rem);
+  /* height: clamp(3.9rem, -0.308rem + 6.506vw, 7.5rem); */
 }
 
 .active {
@@ -249,8 +248,8 @@ li a:hover {
 }
 
 .dropdownshowB {
-    height: clamp(5.68rem, 3.6rem + 3.25vw, 7.5rem);
-/*   height: clamp(3.856rem, -0.308rem + 6.506vw, 7.5rem); */
+  height: clamp(5.68rem, 3.6rem + 3.25vw, 7.5rem);
+  /* height: clamp(3.856rem, -0.308rem + 6.506vw, 7.5rem); */
 }
 
 .right {
@@ -953,6 +952,16 @@ button:hover::before {
   width: 6rem;
 }
 
+.shearBox{
+  width: 70.3vw;
+}
+
+.shearBoxImg{
+  display: flex;
+  justify-content: center;
+}
+
+
 @-webkit-keyframes focus-in-expand {
   0% {
     letter-spacing: -0.5em;
@@ -1201,6 +1210,8 @@ button:hover::before {
   .incontainercol2 h2 {
     text-align: center;
     position: relative;
-    transform: translate(40%, 0);
+
+    /* width: fit-content; */
+    width: 210%;
   }
 }
